@@ -1,0 +1,228 @@
+.app-widget-social-icons.app-grid-0 .app-widget-container,
+.app-widget-social-icons.app-grid-mobile-0 .app-widget-container,
+.app-widget-social-icons.app-grid-tablet-0 .app-widget-container {
+  line-height:1;
+  font-size:0
+}
+.app-widget-social-icons:not(.app-grid-0):not(.app-grid-tablet-0):not(.app-grid-mobile-0) .app-grid {
+  display:inline-grid
+}
+.app-widget-social-icons .app-grid {
+  grid-column-gap:var(--grid-column-gap,5px);
+  grid-row-gap:var(--grid-row-gap,5px);
+  grid-template-columns:var(--grid-template-columns);
+  justify-content:var(--justify-content,center);
+  justify-items:var(--justify-content,center)
+}
+.app-icon.app-social-icon {
+  font-size:var(--icon-size,25px);
+  line-height:var(--icon-size,25px);
+  width:calc(var(--icon-size, 25px) + (2 * var(--icon-padding, .5em)));
+  height:calc(var(--icon-size, 25px) + (2 * var(--icon-padding, .5em)))
+}
+.app-social-icon {
+  --social-icon-icon-color:#fff;
+  display:inline-flex;
+  background-color:#69727d;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  cursor:pointer;
+}
+.app-social-icon i {
+  color:var(--social-icon-icon-color);
+}
+.app-social-icon svg {
+  fill:var(--social-icon-icon-color);
+}
+.app-social-icon:last-child {
+  margin:0;
+}
+.app-social-icon:hover {
+  opacity:.9;
+  color:#fff;
+}
+.app-social-icon-android {
+  background-color:#a4c639;
+}
+.app-social-icon-apple {
+  background-color:#999;
+}
+.app-social-icon-behance {
+  background-color:#1769ff;
+}
+.app-social-icon-bitbucket {
+  background-color:#205081;
+}
+.app-social-icon-codepen {
+  background-color:#000;
+}
+.app-social-icon-delicious {
+  background-color:#39f;
+}
+.app-social-icon-deviantart {
+  background-color:#05cc47;
+}
+.app-social-icon-digg {
+  background-color:#005be2;
+}
+.app-social-icon-dribbble {
+  background-color:#ea4c89;
+}
+.app-social-icon-app {
+  background-color:#d30c5c;
+}
+.app-social-icon-envelope {
+  background-color:#ea4335;
+}
+.app-social-icon-facebook,
+.app-social-icon-facebook-f {
+  background-color:#3b5998;
+}
+.app-social-icon-flickr {
+  background-color:#0063dc;
+}
+.app-social-icon-foursquare {
+  background-color:#2d5be3
+}
+.app-social-icon-free-code-camp,
+.app-social-icon-freecodecamp {
+  background-color:#006400;
+}
+.app-social-icon-github {
+  background-color:#333;
+}
+.app-social-icon-gitlab {
+  background-color:#e24329;
+}
+.app-social-icon-globe {
+  background-color:#69727d;
+}
+.app-social-icon-google-plus,
+.app-social-icon-google-plus-g {
+  background-color:#dd4b39;
+}
+.app-social-icon-houzz {
+  background-color:#7ac142;
+}
+.app-social-icon-instagram {
+  background-color:#262626;
+}
+.app-social-icon-jsfiddle {
+  background-color:#487aa2;
+}
+.app-social-icon-link {
+  background-color:#818a91;
+}
+.app-social-icon-linkedin,
+.app-social-icon-linkedin-in {
+  background-color:#0077b5;
+}
+.app-social-icon-medium {
+  background-color:#00ab6b;
+}
+.app-social-icon-meetup {
+  background-color:#ec1c40;
+}
+.app-social-icon-mixcloud {
+  background-color:#273a4b;
+}
+.app-social-icon-odnoklassniki {
+  background-color:#f4731c;
+}
+.app-social-icon-pinterest {
+  background-color:#bd081c;
+}
+.app-social-icon-product-hunt {
+  background-color:#da552f;
+}
+.app-social-icon-reddit {
+  background-color:#ff4500;
+}
+.app-social-icon-rss {
+  background-color:#f26522;
+}
+.app-social-icon-shopping-cart {
+  background-color:#4caf50;
+}
+.app-social-icon-skype {
+  background-color:#00aff0;
+}
+.app-social-icon-slideshare {
+  background-color:#0077b5;
+}
+.app-social-icon-snapchat {
+  background-color:#fffc00;
+}
+.app-social-icon-soundcloud {
+  background-color:#f80;
+}
+.app-social-icon-spotify {
+  background-color:#2ebd59;
+}
+.app-social-icon-stack-overflow {
+  background-color:#fe7a15;
+}
+.app-social-icon-steam {
+  background-color:#00adee;
+}
+.app-social-icon-stumbleupon {
+  background-color:#eb4924;
+}
+.app-social-icon-telegram {
+  background-color:#2ca5e0;
+}
+.app-social-icon-thumb-tack {
+  background-color:#1aa1d8;
+}
+.app-social-icon-tripadvisor {
+  background-color:#589442;
+}
+.app-social-icon-tumblr {
+  background-color:#35465c;
+}
+.app-social-icon-twitch {
+  background-color:#6441a5;
+}
+.app-social-icon-twitter {
+  background-color:#1da1f2;
+}
+.app-social-icon-viber {
+  background-color:#665cac;
+}
+.app-social-icon-vimeo {
+  background-color:#1ab7ea;
+}
+.app-social-icon-vk {
+  background-color:#45668e;
+}
+.app-social-icon-weibo {
+  background-color:#dd2430;
+}
+.app-social-icon-weixin {
+  background-color:#31a918;
+}
+.app-social-icon-whatsapp {
+  background-color:#25d366;
+}
+.app-social-icon-wordpress {
+  background-color:#21759b;
+}
+.app-social-icon-xing {
+  background-color:#026466;
+}
+.app-social-icon-yelp {
+  background-color:#af0606;
+}
+.app-social-icon-youtube {
+  background-color:#cd201f;
+}
+.app-social-icon-500px {
+  background-color:#0099e5;
+}
+.app-shape-rounded .app-icon.app-social-icon {
+  border-radius:10%;
+}
+.app-shape-circle .app-icon.app-social-icon {
+  border-radius:50%;
+}

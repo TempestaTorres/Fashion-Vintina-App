@@ -1,0 +1,48 @@
+.app-home .app-element.app-element-favorites-section > .app-container {
+  max-width: 1280px;
+}
+.app-home .app-element.app-element-favorites-section {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 80px 0 80px 0;
+}
+.app-home .app-element.app-element-favorites-section > .app-container > .app-element-top-column > .app-element-populated {
+  padding: 0;
+}
+.app-home .app-element.app-element-favorites-section-text {
+  text-align: center;
+  color: var( --global-color-text );
+  font-family: var( --global-typography-text-font-family ),  sans-serif;
+  font-size: var( --global-typography-text-font-size );
+  font-weight: var( --global-typography-text-font-weight );
+  text-transform: var( --global-typography-text-text-transform );
+}
+.app-home .app-element.app-element-favorites-section-text > .app-widget-container {
+  margin: 0;
+  padding: 0 25% 0 25%;
+}
+
+/*============================================= 1024 ================================================*/
+@media(max-width:1024px) {
+  .app-home .app-element.app-element-favorites-section {
+    padding: 80px 15px 80px 15px;
+  }
+  .app-home .app-element.app-element-favorites-section-text {
+    font-size: var( --global-typography-text-font-size );
+  }
+  .app-home .app-element.app-element-favorites-section-text > .app-widget-container {
+    padding: 0 15% 0 15%;
+  }
+}
+/*============================================= 767 ===================================================*/
+@media(max-width:767px) {
+  .app-home .app-element.app-element-favorites-section {
+    padding: 80px 10px 80px 10px;
+  }
+  .app-home .app-element.app-element-favorites-section-text {
+    font-size: var( --global-typography-text-font-size );
+  }
+  .app-home .app-element.app-element-favorites-section-text > .app-widget-container {
+    padding: 0;
+  }
+}

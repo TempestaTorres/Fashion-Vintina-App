@@ -1,0 +1,467 @@
+.app {
+  --global-bg-color-classic: var(--global-color-secondary);
+}
+.app-heading-title {
+    padding:0;
+    margin:0;
+    line-height:1
+}
+.app-widget-heading .app-heading-title[class*=app-size-]>a {
+    color:inherit;
+    font-size:inherit;
+    line-height:inherit
+}
+.app-widget-heading .app-heading-title.app-size-small {
+    font-size:15px;
+}
+.app-widget-heading .app-heading-title.app-size-medium {
+    font-size:19px;
+}
+.app-widget-heading .app-heading-title.app-size-large {
+    font-size:29px;
+}
+.app-widget-heading .app-heading-title.app-size-xl {
+    font-size:39px;
+}
+.app-widget-heading .app-heading-title.app-size-xxl {
+    font-size:59px;
+}
+/* Text */
+.app .app-element.app-element-text-global {
+  text-align:left;
+  color:var( --global-color-text );
+  font-family:var( --global-typography-text-font-family ), sans-serif;
+  font-size:var( --global-typography-text-font-size );
+  font-weight:var( --global-typography-text-font-weight );
+  text-transform:var( --global-typography-text-text-transform );
+}
+.app .app-element.app-element-text-global > .app-widget-container,
+.app .app-element.app-element-text-primary > .app-widget-container {
+  margin:0 0 -15px 0;
+}
+.app .app-element.app-element-text-primary {
+  text-align:left;
+  color:var( --global-color-primary );
+  font-family:var( --global-typography-text-font-family ), sans-serif;
+  font-size:var( --global-typography-text-font-size );
+  font-weight:var( --global-typography-text-font-weight );
+  text-transform:var( --global-typography-text-text-transform );
+}
+
+.app .app-element.app-element-text-white {
+  color: #FFFFFF;
+  font-family: var( --global-typography-33b7874-font-family ),  sans-serif;
+  font-size: var( --global-typography-33b7874-font-size );
+  font-weight: var( --global-typography-33b7874-font-weight );
+}
+.app .app-element.app-element-card-global-text {
+  color: #595959;
+  font-family: var( --global-typography-text-font-family ),  sans-serif;
+  font-size: var( --global-typography-text-font-size );
+  font-weight: var( --global-typography-text-font-weight );
+  text-transform: var( --global-typography-text-text-transform );
+}
+/*Divider*/
+.app .app-element.app-element-default-divider {
+  --divider-border-style:solid;
+  --divider-color:#DBC5B2;
+  --divider-border-width:1px;
+}
+.app .app-element.app-element-default-divider .app-divider-separator {
+  width:100%;
+  margin: 0 auto 0 0;
+}
+.app .app-element.app-element-default-divider .app-divider {
+  text-align:left;
+  padding-top:2px;
+  padding-bottom:2px;
+}
+/*Icon list*/
+.app .app-element.app-element-default-icon-list .app-icon-list-items:not(.app-inline-items) .app-icon-list-item:not(:last-child) {
+  padding-bottom:calc(10px/2);
+}
+.app .app-element.app-element-default-icon-list .app-icon-list-items:not(.app-inline-items) .app-icon-list-item:not(:first-child) {
+  margin-top:calc(10px/2);
+}
+.app .app-element.app-element-default-icon-list .app-icon-list-items.app-inline-items .app-icon-list-item {
+  margin-right:calc(10px/2);
+  margin-left:calc(10px/2);
+}
+.app .app-element.app-element-default-icon-list .app-icon-list-items.app-inline-items {
+  margin-right:calc(-10px/2);
+  margin-left:calc(-10px/2);
+}
+body.rtl .app .app-element.app-element-default-icon-list .app-icon-list-items.app-inline-items .app-icon-list-item:after {
+  left:calc(-10px/2);
+}
+body:not(.rtl) .app .app-element.app-element-default-icon-list .app-icon-list-items.app-inline-items .app-icon-list-item:after {
+  right:calc(-10px/2);
+}
+.app .app-element.app-element-default-icon-list .app-icon-list-icon i {
+  color:var( --global-color-accent );
+  transition:color 0.3s;
+}
+.app .app-element.app-element-default-icon-list .app-icon-list-icon svg {
+  fill:var( --global-color-accent );
+  transition:fill 0.3s;
+}
+.app .app-element.app-element-default-icon-list {
+  --icon-list-icon-size:14px;
+  --icon-vertical-offset:0px;
+}
+.app .app-element.app-element-default-icon-list .app-icon-list-item > .app-icon-list-text,
+.app .app-element.app-element-default-icon-list .app-icon-list-item > a {
+  font-family:var( --global-typography-text-font-family ), sans-serif;
+  font-size:var( --global-typography-text-font-size );
+  font-weight:var( --global-typography-text-font-weight );
+  text-transform:var( --global-typography-text-text-transform );
+}
+.app .app-element.app-element-default-icon-list .app-icon-list-text {
+  color:var( --global-color-text );
+  transition:color 0.3s;
+}
+/*Social Icons*/
+.app .app-element.app-widget-jkit_social_share .jeg-app-kit.jkit-social-share {
+  text-align:left;
+}
+.app .app-element.app-widget-jkit_social_share .jeg-app-kit.jkit-social-share .social-share-list > li a {
+  text-align:left;
+  color:var( --global-color-accent );
+}
+.app .app-element.app-widget-jkit_social_share .jeg-app-kit.jkit-social-share .social-share-list > li {
+  display:inline-block;
+  margin:0 12px 0 12px;
+}
+.app .app-element.app-widget-jkit_social_share .jeg-app-kit.jkit-social-share .social-share-list > li a svg {
+  fill:var( --global-color-accent );
+}
+.app-element.app-widget-jkit_social_share .jeg-app-kit.jkit-social-share .social-share-list > li a {
+  margin-right: auto;
+}
+
+/* Social icons */
+.app .app-element.app-element-default-social-icons {
+  --grid-template-columns:repeat(0, auto);
+  --icon-size:16px;
+  --grid-column-gap:17px;
+  --grid-row-gap:0;
+  --margin-right: 17px;
+}
+.app .app-element.app-element-default-social-icons .app-widget-container {
+  text-align:left;
+}
+.app .app-element.app-element-default-social-icons .app-social-icon {
+  background-color:#02010100;
+  --icon-padding:0em;
+}
+.app .app-grid-0 .app-grid .app-grid-item {
+  margin-right: var(--margin-right);
+}
+.app .app-element.app-element-default-social-icons .app-social-icon i {
+  color:#000000;
+}
+.app .app-element.app-element-default-social-icons .app-social-icon svg {
+  fill:#000000;
+}
+.app .app-element.app-element-default-social-icons .app-social-icon:hover {
+  background-color:#87796400;
+}
+.app .app-element.app-element-default-social-icons > .app-widget-container {
+  margin:20px 0 0 0;
+}
+/* Jkit Heading primary */
+.app .app-element.app-widget-jkit_heading-primary .jeg-app-kit.jkit-heading {
+  text-align: left;
+}
+.app .app-element.app-widget-jkit_heading-primary .jeg-app-kit.jkit-heading .heading-title {
+  font-family: var( --global-typography-primary-font-family ),  sans-serif;
+  font-size: var( --global-typography-primary-font-size );
+  font-weight: var( --global-typography-primary-font-weight );
+  text-transform: var( --global-typography-primary-text-transform );
+  color: #FFFFFF;
+}
+.app .app-element.app-widget-jkit_heading-primary .jeg-app-kit.jkit-heading .heading-title > span {
+  font-family: var( --global-typography-74e5376-font-family ),  sans-serif;
+  font-size: var( --global-typography-74e5376-font-size );
+  font-weight: var( --global-typography-74e5376-font-weight );
+  text-transform: var( --global-typography-74e5376-text-transform );
+  font-style: var( --global-typography-74e5376-font-style );
+}
+/* JKit Heading global */
+.app .app-element.app-widget-jkit_heading-global .jeg-app-kit.jkit-heading {
+  text-align: left;
+}
+.app .app-element.app-widget-jkit_heading-global .jeg-app-kit.jkit-heading .heading-title {
+  font-family: var( --global-typography-fc0661c-font-family ),  sans-serif;
+  font-size: var( --global-typography-fc0661c-font-size );
+  font-weight: var( --global-typography-fc0661c-font-weight );
+  text-transform: var( --global-typography-fc0661c-text-transform );
+  line-height: var( --global-typography-fc0661c-line-height );
+}
+.app .app-element.app-widget-jkit_heading-global .jeg-app-kit.jkit-heading .heading-section-title {
+  margin: 0 0 -15px 0;
+}
+.app .app-element.app-widget-jkit_heading-global .jeg-app-kit.jkit-heading .heading-section-subtitle {
+  color: var( --global-color-text );
+  font-family: var( --global-typography-text-font-family ),  sans-serif;
+  font-size: var( --global-typography-text-font-size );
+  font-weight: var( --global-typography-text-font-weight );
+  text-transform: var( --global-typography-text-text-transform );
+  margin: 0;
+}
+/* Heading secondary */
+.app .app-element.app-element-heading-secondary .app-heading-title {
+  color: #000000;
+  font-family: var( --global-typography-secondary-font-family ),  sans-serif;
+  font-size: var( --global-typography-secondary-font-size );
+  font-weight: var( --global-typography-secondary-font-weight );
+  text-transform: var( --global-typography-secondary-text-transform );
+}
+/* Button secondary */
+.app .app-element.app-element-button-secondary .app-button {
+  font-family: var( --global-typography-accent-font-family ),  sans-serif;
+  font-size: var( --global-typography-accent-font-size );
+  font-weight: var( --global-typography-accent-font-weight );
+  fill: var( --global-color-bbd710c );
+  color: var( --global-color-bbd710c );
+  background-color: #720917;
+  border-style: solid;
+  border-width: 1px 1px 1px 1px;
+  border-color: #720917;
+  border-radius: 0;
+  padding: 18px 38px 18px 38px;
+}
+.app .app-element.app-element-button-secondary > .app-widget-container {
+  margin: 0;
+}
+.app .app-element.app-element-button-secondary {
+  width: auto;
+  max-width: 100%;
+}
+/* Button outline */
+.app .app-element.app-element-button-outline .app-button {
+  font-family: var( --global-typography-accent-font-family ),  sans-serif;
+  font-size: var( --global-typography-accent-font-size );
+  font-weight: var( --global-typography-accent-font-weight );
+  fill: #FFFFFF;
+  color: #FFFFFF;
+  background-color: #72091700;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #FFFFFF;
+  border-radius: 0;
+  padding: 18px 38px 18px 38px;
+}
+.app .app-element.app-element-button-outline .app-button:hover,
+.app .app-element.app-element-button-outline .app-button:focus {
+  color: #FFFFFF;
+  background-color: #720917;
+  border-color: #720917;
+}
+.app .app-element.app-element-button-outline .app-button:hover svg,
+.app .app-element.app-element-button-outline .app-button:focus svg {
+  fill: #FFFFFF;
+}
+.app .app-element.app-element-button-outline {
+  width: auto;
+  max-width: 100%;
+}
+.app .app-element.app-element-padding-traditional > .app-element-populated {
+  padding: 0;
+}
+.app .app-element.app-inner-section {
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+.app .app-element.app-element-teaser-image:not(.app-motion-effects-element-type-background) > .app-widget-wrap,
+.app .app-element.app-element-teaser-image > .app-widget-wrap > .app-motion-effects-container > .app-motion-effects-layer {
+  background-position: center right;
+  background-size: cover;
+}
+.app .app-element.app-element-teaser-image > .app-element-populated {
+  transition: background 0.3s,  border 0.3s,  border-radius 0.3s,  box-shadow 0.3s;
+  padding: 0;
+}
+.app .app-element.app-element-teaser-image > .app-element-populated > .app-background-overlay {
+  transition: background 0.3s,  border-radius 0.3s,  opacity 0.3s;
+}
+/* Icon Box */
+.app .app-element.app-element-icon-box-global.app-view-stacked .app-icon {
+  background-color: #720917;
+}
+.app .app-element.app-element-icon-box-global.app-view-framed .app-icon,
+.app .app-element.app-element-icon-box-global.app-view-default .app-icon {
+  fill: #720917;
+  color: #720917;
+  border-color: #720917;
+}
+.app .app-element.app-element-icon-box-global {
+  --icon-box-icon-margin: 20px;
+}
+.app .app-element.app-element-icon-box-global .app-icon {
+  font-size: 45px;
+}
+.app .app-element.app-element-icon-box-global .app-icon-box-title {
+  margin-bottom: 8px;
+  color: #000000;
+}
+.app .app-element.app-element-icon-box-global .app-icon-box-title,
+.app .app-element.app-element-icon-box-global .app-icon-box-title a {
+  font-family: var( --global-typography-5f59136-font-family ),  sans-serif;
+  font-size: var( --global-typography-5f59136-font-size );
+  font-weight: var( --global-typography-5f59136-font-weight );
+  text-transform: var( --global-typography-5f59136-text-transform );
+}
+.app .app-element.app-element-icon-box-global .app-icon-box-description {
+  font-family: var( --global-typography-text-font-family ),  sans-serif;
+  font-size: var( --global-typography-text-font-size );
+  font-weight: var( --global-typography-text-font-weight );
+  text-transform: var( --global-typography-text-text-transform );
+}
+.app .app-element.app-element-page-section {
+  --display: flex;
+  --flex-direction: column;
+  --container-widget-width: 100%;
+  --container-widget-height: initial;
+  --container-widget-flex-grow: 0;
+  --container-widget-align-self: initial;
+  --flex-wrap-mobile: wrap;
+  --padding-top: 100px;
+  --padding-bottom: 100px;
+  --padding-left: 0;
+  --padding-right: 0;
+}
+/*==================================================== Mobile =============================================*/
+@media(max-width:1024px) and (min-width:768px) {
+  .app .app-element.app-element-teaser-image {
+    width: 100%;
+  }
+}
+@media(max-width:1024px) {
+  .app .app-element.app-element-page-section {
+    --padding-top: 94px;
+    --padding-bottom: 70px;
+  }
+  .app .app-element.app-element-text-global,
+  .app .app-element.app-element-card-global-text {
+    font-size:var( --global-typography-text-font-size );
+  }
+  .app .app-element.app-element-text-primary {
+    font-size:var( --global-typography-text-font-size );
+  }
+  .app .app-element.app-element-default-divider .app-divider-separator {
+    width:100%;
+  }
+  .app .app-element.app-element-default-icon-list .app-icon-list-item > .app-icon-list-text,
+  .app .app-element.app-element-default-icon-list .app-icon-list-item > a {
+    font-size:var( --global-typography-text-font-size );
+  }
+  .app-element.app-widget-jkit_social_share .jeg-app-kit.jkit-social-share .social-share-list > li a {
+    margin-left: auto;
+    margin-right: unset;
+  }
+  .app .app-element.app-element-default-social-icons > .app-widget-container {
+    margin:0;
+  }
+  .app .app-element.app-widget-jkit_heading-primary .jeg-app-kit.jkit-heading .heading-title {
+    font-size: var( --global-typography-primary-font-size );
+  }
+  .app .app-element.app-widget-jkit_heading-primary .jeg-app-kit.jkit-heading .heading-title > span {
+    font-size: var( --global-typography-74e5376-font-size );
+  }
+  .app .app-element.app-widget-jkit_heading-global .jeg-app-kit.jkit-heading .heading-title {
+    font-size: var( --global-typography-fc0661c-font-size );
+    line-height: var( --global-typography-fc0661c-line-height );
+  }
+  .app .app-element.app-widget-jkit_heading-global .jeg-app-kit.jkit-heading .heading-section-subtitle {
+    font-size: var( --global-typography-text-font-size );
+  }
+  .app .app-element.app-element-text-white {
+    font-size: var( --global-typography-33b7874-font-size );
+  }
+  .app .app-element.app-element-button-secondary .app-button {
+    font-size: var( --global-typography-accent-font-size );
+  }
+  .app .app-element.app-element-button-outline .app-button {
+    font-size: var( --global-typography-accent-font-size );
+  }
+  .app .app-element.app-element-heading-secondary .app-heading-title {
+    font-size: var( --global-typography-secondary-font-size );
+  }
+  /*Icon box*/
+  .app .app-element.app-element-icon-box-global .app-icon-box-wrapper {
+    text-align: left;
+  }
+  .app .app-element.app-element-icon-box-global .app-icon-box-title,
+  .app .app-element.app-element-icon-box-global .app-icon-box-title a {
+    font-size: var( --global-typography-5f59136-font-size );
+  }
+  .app .app-element.app-element-icon-box-global .app-icon-box-description {
+    font-size: var( --global-typography-text-font-size );
+  }
+}
+/*==================================================== 767 =================================================*/
+@media(max-width:767px) {
+  .app .app-element.app-element-page-section {
+    --padding-bottom: 30px;
+  }
+  .app .app-element.app-element-text-global,
+  .app .app-element.app-element-card-global-text {
+    font-size:var( --global-typography-text-font-size );
+  }
+  .app .app-element.app-element-text-primary {
+    font-size:var( --global-typography-text-font-size );
+  }
+  .app .app-element.app-element-default-icon-list .app-icon-list-item > .app-icon-list-text,
+  .app .app-element.app-element-default-icon-list .app-icon-list-item > a {
+    font-size:var( --global-typography-text-font-size );
+  }
+  .app-element.app-widget-jkit_social_share .jeg-app-kit.jkit-social-share .social-share-list > li a {
+    margin-left: auto;
+    margin-right: unset;
+  }
+  .app .app-element.app-element-default-social-icons .app-widget-container {
+    text-align:left;
+  }
+  .app .app-element.app-widget-jkit_heading-primary .jeg-app-kit.jkit-heading .heading-title {
+    font-size: var( --global-typography-primary-font-size );
+  }
+  .app .app-element.app-widget-jkit_heading-primary .jeg-app-kit.jkit-heading .heading-title > span {
+    font-size: var( --global-typography-74e5376-font-size );
+  }
+  .app .app-element.app-element-text-white {
+    font-size: var( --global-typography-33b7874-font-size );
+  }
+  .app .app-element.app-element-button-secondary .app-button {
+    font-size: var( --global-typography-accent-font-size );
+  }
+  .app .app-element.app-element-button-outline .app-button {
+    font-size: var( --global-typography-accent-font-size );
+  }
+  .app .app-element.app-element-heading-secondary .app-heading-title {
+    font-size: var( --global-typography-secondary-font-size );
+  }
+  .app .app-element.app-widget-jkit_heading-global .jeg-app-kit.jkit-heading .heading-title {
+    font-size: var( --global-typography-fc0661c-font-size );
+  }
+  .app .app-element.app-widget-jkit_heading-global .jeg-app-kit.jkit-heading .heading-section-subtitle {
+    font-size: var( --global-typography-text-font-size );
+  }
+  /*Icon box*/
+  .app .app-element.app-element-icon-box-global .app-icon-box-wrapper {
+    text-align: left;
+  }
+  .app .app-element.app-element-icon-box-global {
+    --icon-box-icon-margin: 10px;
+  }
+  .app .app-element.app-element-icon-box-global .app-icon {
+    font-size: 40px;
+  }
+  .app .app-element.app-element-icon-box-global .app-icon-box-title,
+  .app .app-element.app-element-icon-box-global .app-icon-box-title a {
+    font-size: var( --global-typography-5f59136-font-size );
+  }
+  .app .app-element.app-element-icon-box-global .app-icon-box-description {
+    font-size: var( --global-typography-text-font-size );
+  }
+}

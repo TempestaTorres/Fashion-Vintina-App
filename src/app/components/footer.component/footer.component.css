@@ -1,0 +1,323 @@
+.app-home .app-element.app-element-footer-top-section > .app-container {
+  max-width:1280px;
+}
+.app-home .app-element.app-element-footer-top-section:not(.app-motion-effects-element-type-background),
+.app-home .app-element.app-element-footer-top-section > .app-motion-effects-container > .app-motion-effects-layer {
+  background-color:var(--global-bg-color-classic);
+}
+.app-home .app-element.app-element-footer-top-section {
+  transition:background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+  margin-top:0;
+  margin-bottom:0;
+  padding:80px 0 60px 0;
+  z-index:0;
+}
+.app-home .app-element.app-element-footer-top-section-vintina > .app-element-populated {
+  margin:0 40px 0 0;
+  --column-margin-right:40px;
+  --column-margin-left:0;
+  padding:0;
+}
+.app-home .app-element.app-element-footer-top-section-image {
+  text-align:left;
+}
+.app-home .app-element.app-element-footer-top-section-image > .app-widget-container {
+  margin-bottom: -8px;
+}
+.app-home .app-element.app-element-footer-top-section-image img {
+  width:43%;
+}
+.app-home .app-element.app-element-footer-top-section-quick-links > .app-element-populated {
+  padding:0;
+}
+.app-home .app-element.app-element-footer-top-section-heading .app-heading-title {
+  color:#000000;
+  font-family:var( --global-typography-ea479d8-font-family ), sans-serif;
+  font-size:var( --global-typography-ea479d8-font-size );
+  font-weight:var( --global-typography-ea479d8-font-weight );
+  text-transform:var( --global-typography-ea479d8-text-transform );
+  line-height:36px;
+}
+/* Icon list */
+.app-home .app-element.app-element-footer-top-section-icon-list .app-icon-list-items:not(.app-inline-items) .app-icon-list-item:not(:last-child) {
+  padding-bottom:calc(10px/2);
+}
+.app-home .app-element.app-element-footer-top-section-icon-list .app-icon-list-items:not(.app-inline-items) .app-icon-list-item:not(:first-child) {
+  margin-top:calc(10px/2);
+}
+.app-home .app-element.app-element-footer-top-section-icon-list .app-icon-list-items.app-inline-items .app-icon-list-item {
+  margin-right:calc(10px/2);
+  margin-left:calc(10px/2);
+}
+.app-home .app-element.app-element-footer-top-section-icon-list .app-icon-list-items.app-inline-items {
+  margin-right:calc(-10px/2);
+  margin-left:calc(-10px/2);
+}
+body.rtl .app-home .app-element.app-element-footer-top-section-icon-list .app-icon-list-items.app-inline-items .app-icon-list-item:after {
+  left:calc(-10px/2);
+}
+body:not(.rtl) .app-home .app-element.app-element-footer-top-section-icon-list .app-icon-list-items.app-inline-items .app-icon-list-item:after {
+  right:calc(-10px/2);
+}
+.app-home .app-element.app-element-footer-top-section-icon-list .app-icon-list-icon i {
+  color:#FBFBFB;
+  transition:color 0.3s;
+}
+.app-home .app-element.app-element-footer-top-section-icon-list .app-icon-list-icon svg {
+  fill:#FBFBFB;
+  transition:fill 0.3s;
+}
+.app-home .app-element.app-element-footer-top-section-icon-list .app-icon-list-item:hover .app-icon-list-icon i {
+  color:#E1D6CB;
+}
+.app-home .app-element.app-element-footer-top-section-icon-list .app-icon-list-item:hover .app-icon-list-icon svg {
+  fill:#E1D6CB;
+}
+.app-home .app-element.app-element-footer-top-section-icon-list {
+  --icon-list-icon-size:14px;
+  --icon-vertical-offset:0px;
+}
+.app-home .app-element.app-element-footer-top-section-icon-list .app-icon-list-item > .app-icon-list-text,
+.app-home .app-element.app-element-footer-top-section-icon-list .app-icon-list-item > a {
+  font-family:var( --global-typography-text-font-family ), sans-serif;
+  font-size:var( --global-typography-text-font-size );
+  font-weight:var( --global-typography-text-font-weight );
+  text-transform:var( --global-typography-text-text-transform );
+}
+.app-home .app-element.app-element-footer-top-section-icon-list .app-icon-list-text {
+  color:#000000;
+  transition:color 0.3s;
+}
+.app-home .app-element.app-element-footer-top-section-icon-list .app-icon-list-item > a:hover > .app-icon-list-text {
+  color: #a27070;
+}
+.app-home .app-element.app-element-footer-top-section-contactus > .app-element-populated {
+  padding:0;
+}
+.app-home .app-element.app-element-footer-text-icon-list .app-icon-list-icon i {
+  transition:color 0.3s;
+}
+.app-home .app-element.app-element-footer-text-icon-list .app-icon-list-icon svg {
+  transition:fill 0.3s;
+}
+.app-home .app-element.app-element-footer-text-icon-list {
+  --icon-list-icon-size:14px;
+  --icon-vertical-offset:0;
+}
+.app-home .app-element.app-element-footer-text-icon-list .app-icon-list-item > .app-icon-list-text,
+.app-home .app-element.app-element-footer-text-icon-list .app-icon-list-item > a {
+  font-family:var( --global-typography-text-font-family ), sans-serif;
+  font-size:var( --global-typography-text-font-size );
+  font-weight:var( --global-typography-text-font-weight );
+  text-transform:var( --global-typography-text-text-transform );
+}
+.app-home .app-element.app-element-footer-text-icon-list .app-icon-list-text {
+  color:#000000;
+  transition:color 0.3s;
+}
+/* Signup */
+.app-home .app-element.app-element-footer-top-section-signup > .app-element-populated {
+  --column-margin-right:0;
+  --column-margin-left:0;
+  padding:0;
+  margin:0;
+}
+.app-home .app-element.app-element-footer-top-section-text {
+  color:#000000;
+}
+
+.app-home .app-element.app-widget-jkit_mailchimp .jeg-app-kit.jkit-mailchimp .jkit-form-control:focus {
+  outline: 1px solid var(--global-bg-color-classic);
+}
+/* Bottom footer */
+.app-home .app-element.app-element-footer-bottom-section > .app-container {
+  max-width:1280px;
+}
+.app-home .app-element.app-element-footer-bottom-section:not(.app-motion-effects-element-type-background),
+.app-home .app-element.app-element-footer-bottom-section > .app-motion-effects-container > .app-motion-effects-layer {
+  background-color:var( --global-color-secondary );
+}
+.app-home .app-element.app-element-footer-bottom-section {
+  border-style:solid;
+  border-width:1px 0 0 0;
+  border-color:#DBC5B2;
+  transition:background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+  padding:10px 0 10px 0;
+}
+.app-home .app-element.app-element-footer-bottom-section,
+.app-home .app-element.app-element-footer-bottom-section > .app-background-overlay {
+  border-radius:0;
+}
+.app-home .app-element.app-element-footer-bottom-section > .app-background-overlay {
+  transition:background 0.3s, border-radius 0.3s, opacity 0.3s;
+}
+.app-home .app-element.app-element-footer-bottom-copyright > .app-element-populated,
+.app-home .app-element.app-element-footer-bottom-credit-cards > .app-element-populated {
+  padding:0;
+}
+.app-home .app-element.app-element-footer-bottom-copyright-text {
+  text-align:left;
+  color:var( --global-color-primary );
+}
+.app-home .app-element.app-element-footer-bottom-copyright-text > .app-widget-container {
+  margin:0;
+}
+/*  Icon List  */
+.app-home .app-element.app-element-footer-bottom-icon-list .app-icon-list-items:not(.app-inline-items) .app-icon-list-item:not(:last-child) {
+  padding-bottom:calc(15px/2);
+}
+.app-home .app-element.app-element-footer-bottom-icon-list .app-icon-list-items:not(.app-inline-items) .app-icon-list-item:not(:first-child) {
+  margin-top:calc(15px/2);
+}
+.app-home .app-element.app-element-footer-bottom-icon-list .app-icon-list-items.app-inline-items .app-icon-list-item {
+  margin-right:calc(15px/2);
+  margin-left:calc(15px/2);
+}
+.app-home .app-element.app-element-footer-bottom-icon-list .app-icon-list-items.app-inline-items {
+  margin-right:calc(-15px/2);
+  margin-left:calc(-15px/2);
+}
+body.rtl .app-home .app-element.app-element-footer-bottom-icon-list .app-icon-list-items.app-inline-items .app-icon-list-item:after {
+  left:calc(-15px/2);
+}
+body:not(.rtl) .app-home .app-element.app-element-footer-bottom-icon-list .app-icon-list-items.app-inline-items .app-icon-list-item:after {
+  right:calc(-15px/2);
+}
+.app-home .app-element.app-element-footer-bottom-icon-list .app-icon-list-icon i {
+  color:var( --global-color-primary );
+  transition:color 0.3s;
+}
+.app-home .app-element.app-element-footer-bottom-icon-list .app-icon-list-icon svg {
+  fill:var( --global-color-primary );
+  transition:fill 0.3s;
+}
+.app-home .app-element.app-element-footer-bottom-icon-list {
+  --icon-list-icon-size:20px;
+  --icon-list-icon-align:left;
+  --icon-list-icon-margin:0 calc(var(--icon-list-icon-size, 1em) * 0.25) 0 0;
+  --icon-vertical-offset:0px;
+}
+.app-home .app-element.app-element-footer-bottom-icon-list .app-icon-list-icon {
+  padding-right:0;
+}
+.app-home .app-element.app-element-footer-bottom-icon-list .app-icon-list-text {
+  transition:color 0.3s;
+}
+/*============================================== 1024 ==========================================================*/
+@media(max-width:1024px) {
+  .app-home .app-element.app-element-footer-top-section {
+    padding:80px 15px 40px 15px;
+  }
+  .app-home .app-element.app-element-footer-top-section-vintina > .app-element-populated {
+    margin:0 60px 20px 0;
+    --column-margin-right:60px;
+    --column-margin-left:0;
+    padding:0;
+  }
+  .app-home .app-element.app-element-footer-top-section-quick-links > .app-element-populated {
+    margin:0 0 40px 74px;
+    --column-margin-right:0;
+    --column-margin-left:74px;
+    padding:0;
+  }
+  .app-home .app-element.app-element-footer-top-section-heading .app-heading-title {
+    font-size:var( --global-typography-ea479d8-font-size );
+  }
+  .app-home .app-element.app-element-footer-top-section-icon-list {
+    --icon-list-icon-size:14px;
+  }
+  .app-home .app-element.app-element-footer-top-section-icon-list .app-icon-list-item > .app-icon-list-text,
+  .app-home .app-element.app-element-footer-top-section-icon-list .app-icon-list-item > a {
+    font-size:var( --global-typography-text-font-size );
+  }
+  .app-home .app-element.app-element-footer-top-section-contactus > .app-element-populated {
+    margin:0;
+    --column-margin-right:0px;
+    --column-margin-left:0px;
+    padding:0;
+  }
+  .app-home .app-element.app-element-footer-text-icon-list .app-icon-list-item > .app-icon-list-text,
+  .app-home .app-element.app-element-footer-text-icon-list .app-icon-list-item > a {
+    font-size:var( --global-typography-text-font-size );
+  }
+  .app-home .app-element.app-element-footer-top-section-signup > .app-element-populated {
+    --column-margin-right:0px;
+    --column-margin-left:74px;
+    padding:0;
+    margin:0 0 0 74px;
+  }
+  .app-home .app-element.app-element-footer-bottom-section {
+    padding:10px 15px 10px 15px;
+  }
+}
+/*============================================== 767 ============================================================*/
+@media(max-width:767px) {
+  .app-home .app-element.app-element-footer-top-section {
+    padding:80px 10px 40px 10px;
+  }
+  .app-home .app-element.app-element-footer-top-section-vintina > .app-element-populated {
+    margin:0 0 40px 0;
+    --column-margin-right:0;
+    --column-margin-left:0;
+  }
+  .app-home .app-element.app-element-footer-top-section-quick-links > .app-element-populated {
+    margin:0 0 40px 0;
+    --column-margin-right:0;
+    --column-margin-left:0;
+  }
+  .app-home .app-element.app-element-footer-top-section-heading .app-heading-title {
+    font-size:var( --global-typography-ea479d8-font-size );
+  }
+  .app-home .app-element.app-element-footer-top-section-icon-list {
+    --icon-list-icon-size:12px;
+  }
+  .app-home .app-element.app-element-footer-top-section-icon-list .app-icon-list-item > .app-icon-list-text,
+  .app-home .app-element.app-element-footer-top-section-icon-list .app-icon-list-item > a {
+    font-size:var( --global-typography-text-font-size );
+  }
+  .app-home .app-element.app-element-footer-top-section-contactus > .app-element-populated {
+    margin:0 0 40px 0;
+    --column-margin-right:0;
+    --column-margin-left:0;
+  }
+  .app-home .app-element.app-element-footer-text-icon-list .app-icon-list-item > .app-icon-list-text,
+  .app-home .app-element.app-element-footer-text-icon-list .app-icon-list-item > a {
+    font-size:var( --global-typography-text-font-size );
+  }
+  .app-home .app-element.app-element-footer-top-section-signup > .app-element-populated {
+    margin:0;
+    --column-margin-right:0;
+    --column-margin-left:0;
+  }
+  .app-home .app-element.app-element-footer-bottom-copyright-text {
+    text-align:center;
+  }
+  .app-home .app-element.app-element-footer-bottom-copyright-text > .app-widget-container {
+    margin:0 0 10px 0;
+  }
+}
+/*================================================== min 768 ======================================================*/
+@media(min-width:768px) {
+  .app-home .app-element.app-element-footer-top-section-vintina {
+    width:30%;
+  }
+  .app-home .app-element.app-element-footer-top-section-quick-links {
+    width:17%;
+  }
+  .app-home .app-element.app-element-footer-top-section-contactus {
+    width:23%;
+  }
+  .app-home .app-element.app-element-footer-top-section-signup {
+    width:30%;
+  }
+}
+
+@media(max-width:1024px) and (min-width:768px) {
+  .app-home .app-element.app-element-footer-top-section-vintina,
+  .app-home .app-element.app-element-footer-top-section-quick-links,
+  .app-home .app-element.app-element-footer-top-section-contactus,
+  .app-home .app-element.app-element-footer-top-section-signup {
+    width:50%;
+  }
+
+}

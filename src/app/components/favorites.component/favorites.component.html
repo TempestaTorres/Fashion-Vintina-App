@@ -1,0 +1,118 @@
+<div class="app app-home">
+  <section class="app-section app-element app-element-favorites-section app-section-boxed">
+    <div class="app-container">
+      <div class="app-column app-col-100 app-element app-element-top-column" data-element_type="column">
+        <div class="app-widget-wrap app-element-populated">
+          <!-- Heading -->
+          <div
+            #favorites
+            appObserveElement
+            #intersection="intersection"
+            [isContinuous]="false"
+            (isIntersecting)="isIntersecting($event, favorites)"
+            [ngClass]="{animated: intersection._isIntersecting, fadeInDown: intersection._isIntersecting}"
+            class="app-element app-element-heading-secondary app-align-center animated-slow app-widget app-widget-heading app-invisible">
+              <div class="app-widget-container">
+                <h2 class="app-heading-title">Favorite Pieces</h2>
+              </div>
+          </div>
+          <!-- Text -->
+          <div class="app-element app-element-favorites-section-text app-widget app-widget-text-editor">
+            <div class="app-widget-container">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo
+            </div>
+          </div>
+          <!-- Products grid -->
+          @if (products && products.length > 0) {
+            <div
+              #productsGrid
+              appObserveElement
+              #intersection1="intersection"
+              [isContinuous]="false"
+              (isIntersecting)="isIntersecting($event, productsGrid)"
+              [ngClass]="{animated: intersection1._isIntersecting, fadeInUp: intersection1._isIntersecting}"
+              class="app-element animated-slow app-widget app-widget-jkit_product_grid app-invisible">
+              <div class="app-widget-container">
+                <div class="jeg-app-kit jkit-product-grid jkit-pagination-disable post-element">
+                  <div class="jkit-block-container">
+                    <div class="commerce">
+                      <!-- Products -->
+                      <ul class="products jkit-products jkit-align-left">
+                        @for (product of products; track product.id) {
+                          <!-- Product Crad -->
+                          <li class="product has-post-thumbnail sale jkit-product-block">
+                            <!-- Card -->
+                            <a class="jkit-product" [routerLink]="['/product', product.type]">
+                              <!-- Image Link -->
+                              <div class="product-link">
+                                @if (product.onSale) {
+                                  <span class="onsale text jkit-onsale-position-left jkit-onsale-position-top">Sale</span>
+                                }
+
+                                @if (product.image) {
+                                  <img [src]="product.image" alt="Sensual woman.">
+                                }
+
+                              </div>
+                              <!-- Category -->
+                              <div class="product-categories">
+                                <object>
+                                <span>
+                                  <a [routerLink]="['/product-category', product.category.name]" rel="tag">{{ product.category.name | titlecase }}</a>
+                                </span>
+                                </object>
+                              </div>
+                              <!-- Name -->
+                              <h2 class="product-title">{{ product.name }}</h2>
+                              <!-- Price -->
+                              <span class="price">
+                                @if (product.originalPrice) {
+                                  <del aria-hidden="true">
+                                <span class="price-amount">
+                                  <bdi>{{ product.originalPrice | currency: 'USD' : 'symbol' : '.2-2' : 'en-US' }}</bdi>
+                                </span>
+                              </del>
+                                }
+
+                              <ins>
+                                <span class="price-amount">
+                                  <bdi>{{ product.price | currency: 'USD' : 'symbol' : '.2-2' : 'en-US' }}</bdi>
+                                </span>
+                              </ins>
+                            </span>
+                            </a>
+                            <!-- Button Add to cart -->
+                            <a
+                              [id]="$index"
+                              [class.loading]="loading($index)"
+                              [class.added]="added($index)"
+                              (click)="addToCart($event, product)"
+                              class="button add_to_cart_button ajax_add_to_cart">
+                              <i class="fas fa-shopping-cart"></i>
+                              Add to cart
+                            </a>
+                            <!-- Button view cart -->
+                            <a (click)="viewCartClick($event)"
+                               class="added_to_cart ap-element-button"
+                               [class.active]="added($index)"
+                               title="View cart">View cart</a>
+                          </li>
+                        }
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          } @else {
+            <!-- Text -->
+            <div class="app-element app-element-favorites-section-text app-widget app-widget-text-editor">
+              <div class="app-widget-container">Products not found</div>
+            </div>
+          }
+
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

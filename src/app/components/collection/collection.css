@@ -1,0 +1,86 @@
+.app-home .app-element.app-element-section-collection > .app-container {
+  max-width: 1280px;
+}
+.app-home .app-element.app-element-section-collection {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 140px 0 140px 0;
+}
+.app-home .app-element.app-element-section-collection-text {
+  text-align: center;
+  color: var( --global-color-text );
+  font-family: var( --global-typography-text-font-family ),  sans-serif;
+  font-size: var( --global-typography-text-font-size );
+  font-weight: var( --global-typography-text-font-weight );
+  text-transform: var( --global-typography-text-text-transform );
+}
+.app-home .app-element.app-element-section-collection-text > .app-widget-container {
+  margin: 0;
+  padding: 0 25% 0 25%;
+}
+.app-home .app-element.app-element-collection-card:not(.app-motion-effects-element-type-background) > .app-widget-wrap,
+.app-home .app-element.app-element-collection-card > .app-widget-wrap > .app-motion-effects-container > .app-motion-effects-layer {
+  background-position: center center;
+  background-size: cover;
+}
+.app-home .app-element.app-element-collection-card > .app-element-populated {
+  transition: background 0.3s,  border 0.3s,  border-radius 0.3s,  box-shadow 0.3s;
+  padding: 0;
+}
+.app-home .app-element.app-element-collection-card.card-align-left > .app-element-populated {
+  --column-margin-right: 20px;
+  --column-margin-left: 0;
+  margin: 0 20px 0 0;
+}
+.app-home .app-element.app-element-collection-card.card-align-center > .app-element-populated {
+  --column-margin-right: 10px;
+  --column-margin-left: 10px;
+  margin: 0 10px 0 10px;
+}
+.app-home .app-element.app-element-collection-card.card-align-right > .app-element-populated {
+  margin: 0 0 0 20px;
+  --column-margin-right: 0px;
+  --column-margin-left: 20px;
+}
+.app-home .app-element.app-element-collection-card > .app-element-populated > .app-background-overlay {
+  transition: background 0.3s,  border-radius 0.3s,  opacity 0.3s;
+}
+/*============================================= 1024 ================================================*/
+@media(max-width:1024px) {
+  .app-home .app-element.app-element-section-collection {
+    padding: 80px 15px 80px 15px;
+  }
+  .app-home .app-element.app-element-section-collection-text {
+    font-size: var( --global-typography-text-font-size );
+  }
+  .app-home .app-element.app-element-section-collection-text > .app-widget-container {
+    padding: 0 15% 0 15%;
+  }
+}
+/*============================================= 767 ===================================================*/
+@media(max-width:767px) {
+  .app-home .app-element.app-element-section-collection {
+    padding: 80px 10px 80px 10px;
+  }
+  .app-home .app-element.app-element-section-collection-text {
+    font-size: var( --global-typography-text-font-size );
+  }
+  .app-home .app-element.app-element-section-collection-text > .app-widget-container {
+    padding: 0;
+  }
+  .app-home .app-element.app-element-collection-card.card-align-left > .app-element-populated {
+    margin: 0 0 20px 0;
+    --column-margin-right: 0;
+    --column-margin-left: 0;
+  }
+  .app-home .app-element.app-element-collection-card.card-align-center > .app-element-populated {
+    margin: 0 0 20px 0;
+    --column-margin-right: 0;
+    --column-margin-left: 0;
+  }
+  .app-home .app-element.app-element-collection-card.card-align-right > .app-element-populated {
+    margin: 0;
+    --column-margin-right: 0;
+    --column-margin-left: 0;
+  }
+}

@@ -1,0 +1,340 @@
+@import "fonts.css";
+.app-kit-3 {
+  --global-color-primary:#000000;
+  --global-color-secondary:#F2E4D8;
+  --global-color-text:#595959;
+  --global-color-accent:#720917;
+  --global-color-bbd710c:#FFFFFF;
+  --global-color-e440f85:#C2C2C2;
+  --global-typography-primary-font-family:"Cormorant";
+  --global-typography-primary-font-size:58px;
+  --global-typography-primary-font-weight:600;
+  --global-typography-primary-text-transform:uppercase;
+  --global-typography-secondary-font-family:"Cormorant";
+  --global-typography-secondary-font-size:42px;
+  --global-typography-secondary-font-weight:500;
+  --global-typography-secondary-text-transform:uppercase;
+  --global-typography-text-font-family:"Overpass";
+  --global-typography-text-font-size:16px;
+  --global-typography-text-font-weight:300;
+  --global-typography-text-text-transform:none;
+  --global-typography-accent-font-family:"Overpass";
+  --global-typography-accent-font-size:14px;
+  --global-typography-accent-font-weight:500;
+  --global-typography-74e5376-font-family:"Cormorant";
+  --global-typography-74e5376-font-size:58px;
+  --global-typography-74e5376-font-weight:400;
+  --global-typography-74e5376-text-transform:uppercase;
+  --global-typography-74e5376-font-style:italic;
+  --global-typography-33b7874-font-family:"Overpass";
+  --global-typography-33b7874-font-size:16px;
+  --global-typography-33b7874-font-weight:300;
+  --global-typography-f11fc92-font-family:"Cormorant";
+  --global-typography-f11fc92-font-size:30px;
+  --global-typography-f11fc92-font-weight:500;
+  --global-typography-f11fc92-text-transform:uppercase;
+  --global-typography-f11fc92-line-height:1.1em;
+  --global-typography-bbe8ffb-font-family:"Cormorant";
+  --global-typography-bbe8ffb-font-size:24px;
+  --global-typography-bbe8ffb-font-weight:600;
+  --global-typography-bbe8ffb-text-transform:capitalize;
+  --global-typography-bbe8ffb-line-height:1.2em;
+  --global-typography-fc0661c-font-family:"Cormorant";
+  --global-typography-fc0661c-font-size:22px;
+  --global-typography-fc0661c-font-weight:600;
+  --global-typography-fc0661c-text-transform:uppercase;
+  --global-typography-fc0661c-line-height: 33px;
+  --global-typography-5f59136-font-family:"Cormorant";
+  --global-typography-5f59136-font-size:20px;
+  --global-typography-5f59136-font-weight:600;
+  --global-typography-5f59136-text-transform:uppercase;
+  --global-typography-a3c2c27-font-family:"Cormorant";
+  --global-typography-a3c2c27-font-size:24px;
+  --global-typography-a3c2c27-font-weight:600;
+  --global-typography-a3c2c27-text-transform:uppercase;
+  --global-typography-1e6effc-font-family:"Overpass";
+  --global-typography-1e6effc-font-size:18px;
+  --global-typography-1e6effc-font-weight:600;
+  --global-typography-84e42eb-font-family:"Cormorant";
+  --global-typography-84e42eb-font-size:20px;
+  --global-typography-84e42eb-font-weight:600;
+  --global-typography-84e42eb-text-transform:uppercase;
+  --global-typography-2eafb3e-font-family:"Overpass";
+  --global-typography-2eafb3e-font-size:14px;
+  --global-typography-2eafb3e-font-weight:500;
+  --global-typography-72feb28-font-family:"Cormorant";
+  --global-typography-72feb28-font-size:22px;
+  --global-typography-72feb28-font-weight:600;
+  --global-typography-72feb28-text-transform:uppercase;
+  --global-typography-63e6229-font-family:"Palanquin";
+  --global-typography-63e6229-font-size:14px;
+  --global-typography-63e6229-font-weight:500;
+  --global-typography-ea479d8-font-family:"Cormorant Unicase";
+  --global-typography-ea479d8-font-size:24px;
+  --global-typography-ea479d8-font-weight:600;
+  --global-typography-ea479d8-text-transform:uppercase;
+  --global-typography-a09f23a-font-family:"Overpass";
+  --global-typography-a09f23a-font-size:16px;
+  --global-typography-a09f23a-font-weight:400;
+  --global-typography-a09f23a-text-transform:none;
+  --global-typography-4fff42c-font-family:"Cormorant";
+  --global-typography-4fff42c-font-size:21px;
+  --global-typography-4fff42c-font-weight:600;
+  --global-typography-238dbd0-font-family:"Cormorant";
+  --global-typography-238dbd0-font-size:28px;
+  --global-typography-238dbd0-font-weight:600;
+  --global-typography-238dbd0-text-transform:uppercase;
+  --global-typography-d10d66f-font-family:"Cormorant";
+  --global-typography-d10d66f-font-size:169px;
+  --global-typography-d10d66f-font-weight:600;
+  --global-typography-d10d66f-text-transform:uppercase;
+  --global-typography-8455a92-font-family:"Overpass";
+  --global-typography-8455a92-font-size:20px;
+  --global-typography-8455a92-font-weight:300;
+  --global-typography-8455a92-text-transform:none;
+  --global-typography-9d1d190-font-family:"Cormorant";
+  --global-typography-9d1d190-font-size:40px;
+  --global-typography-9d1d190-font-weight:500;
+  --global-typography-9d1d190-text-transform:uppercase;
+  --global-typography-fc92fea-font-family:"Cormorant";
+  --global-typography-fc92fea-font-size:50px;
+  --global-typography-fc92fea-font-weight:500;
+  --global-typography-fc92fea-text-transform:uppercase;
+  --global-typography-c7c89f4-font-family:"Overpass";
+  --global-typography-c7c89f4-font-size:28px;
+  --global-typography-c7c89f4-font-weight:400;
+  --global-typography-c7c89f4-text-transform:none;
+  --global-typography-7334ccd-font-family:"Overpass";
+  --global-typography-7334ccd-font-size:14px;
+  --global-typography-7334ccd-font-weight:300;
+  --global-typography-7334ccd-text-transform:capitalize;
+  --global-typography-6e80323-font-family:"Overpass";
+  --global-typography-6e80323-font-size:12px;
+  --global-typography-6e80323-font-weight:300;
+  --global-typography-6e80323-text-transform:none;
+  color:var( --global-color-text );
+  font-family:var( --global-typography-text-font-family ), sans-serif;
+  font-size:var( --global-typography-text-font-size );
+  font-weight:var( --global-typography-text-font-weight );
+  text-transform:var( --global-typography-text-text-transform );
+}
+.app-kit-3 a {
+  color:var( --global-color-accent );
+}
+.app-kit-3 h1 {
+  color:var( --global-color-primary );
+  font-family:var( --global-typography-primary-font-family ), sans-serif;
+  font-size:var( --global-typography-primary-font-size );
+  font-weight:var( --global-typography-primary-font-weight );
+  text-transform:var( --global-typography-primary-text-transform );
+}
+.app-kit-3 h2 {
+  color:var( --global-color-primary );
+  font-family:var( --global-typography-f11fc92-font-family ), sans-serif;
+  font-size:var( --global-typography-f11fc92-font-size );
+  font-weight:var( --global-typography-f11fc92-font-weight );
+  text-transform:var( --global-typography-f11fc92-text-transform );
+  line-height:var( --global-typography-f11fc92-line-height );
+}
+.app-kit-3 h3 {
+  color:var( --global-color-primary );
+  font-family:var( --global-typography-f11fc92-font-family ), sans-serif;
+  font-size:var( --global-typography-f11fc92-font-size );
+  font-weight:var( --global-typography-f11fc92-font-weight );
+  text-transform:var( --global-typography-f11fc92-text-transform );
+  line-height:var( --global-typography-f11fc92-line-height );
+}
+.app-kit-3 h4 {
+  color:var( --global-color-primary );
+  font-family:var( --global-typography-a3c2c27-font-family ), sans-serif;
+  font-size:var( --global-typography-a3c2c27-font-size );
+  font-weight:var( --global-typography-a3c2c27-font-weight );
+  text-transform:var( --global-typography-a3c2c27-text-transform );
+}
+.app-kit-3 h5 {
+  color:var( --global-color-primary );
+  font-family:var( --global-typography-fc0661c-font-family ), sans-serif;
+  font-size:var( --global-typography-fc0661c-font-size );
+  font-weight:var( --global-typography-fc0661c-font-weight );
+  text-transform:var( --global-typography-fc0661c-text-transform );
+}
+.app-kit-3 h6 {
+  color:var( --global-color-primary );
+  font-family:var( --global-typography-4fff42c-font-family ), sans-serif;
+  font-size:var( --global-typography-4fff42c-font-size );
+  font-weight:var( --global-typography-4fff42c-font-weight );
+}
+.app-kit-3 button,
+.app-kit-3 input[type="button"],
+.app-kit-3 input[type="submit"],
+.app-kit-3 .app-button {
+  font-family:var( --global-typography-accent-font-family ), sans-serif;
+  font-size:var( --global-typography-accent-font-size );
+  font-weight:var( --global-typography-accent-font-weight );
+  color:var( --global-color-bbd710c );
+  background-color:var( --global-color-accent );
+  border-style:solid;
+  border-width:0;
+  border-radius:0;
+  padding:18px 38px 18px 38px;
+}
+.app-kit-3 label {
+  color:var( --global-color-primary );
+  font-family:var( --global-typography-4fff42c-font-family ), sans-serif;
+  font-size:var( --global-typography-4fff42c-font-size );
+  font-weight:var( --global-typography-4fff42c-font-weight );
+}
+.app-kit-3 input:not([type="button"]):not([type="submit"]),
+.app-kit-3 textarea,
+.app-kit-3 .app-field-textual {
+  color:var( --global-color-primary );
+  border-style:solid;
+  border-width:1px 1px 1px 1px;
+  border-color:var( --global-color-e440f85 );
+  border-radius:0;
+}
+.app-kit-3 input:focus:not([type="button"]):not([type="submit"]),
+.app-kit-3 textarea:focus,
+.app-kit-3 .app-field-textual:focus {
+  color:var( --global-color-primary );
+  border-style:solid;
+  border-width:1px 1px 1px 1px;
+  border-color:var( --global-color-primary );
+}
+.app-section.app-section-boxed > .app-container {
+  max-width:1140px;
+}
+.app-con {
+  --container-max-width:1140px;
+}
+.app-widget:not(:last-child) {
+  margin-block-end:20px;
+}
+.app-element {
+  --widgets-spacing:20px 20px;
+}
+.site-header {
+  padding-right:0;
+  padding-left:0;
+}
+@media(max-width:1024px) {
+  .app-kit-3 {
+    --global-typography-primary-font-size:50px;
+    --global-typography-secondary-font-size:38px;
+    --global-typography-text-font-size:14px;
+    --global-typography-accent-font-size:14px;
+    --global-typography-74e5376-font-size:50px;
+    --global-typography-33b7874-font-size:16px;
+    --global-typography-f11fc92-font-size:26px;
+    --global-typography-bbe8ffb-font-size:21px;
+    --global-typography-fc0661c-font-size:20px;
+    --global-typography-a3c2c27-font-size:21px;
+    --global-typography-1e6effc-font-size:16px;
+    --global-typography-84e42eb-font-size:18px;
+    --global-typography-2eafb3e-font-size:14px;
+    --global-typography-72feb28-font-size:24px;
+    --global-typography-a09f23a-font-size:16px;
+    --global-typography-4fff42c-font-size:20px;
+    --global-typography-d10d66f-font-size:146px;
+    --global-typography-8455a92-font-size:18px;
+    --global-typography-fc92fea-font-size:50px;
+    --global-typography-c7c89f4-font-size:22px;
+    --global-typography-6e80323-font-size:12px;
+    --global-typography-fc0661c-line-height: 30px;
+    font-size:var( --global-typography-text-font-size );
+  }
+  .app-kit-3 h1 {
+    font-size:var( --global-typography-primary-font-size );
+  }
+  .app-kit-3 h2 {
+    font-size:var( --global-typography-f11fc92-font-size );
+    line-height:var( --global-typography-f11fc92-line-height );
+  }
+  .app-kit-3 h3 {
+    font-size:var( --global-typography-f11fc92-font-size );
+    line-height:var( --global-typography-f11fc92-line-height );
+  }
+  .app-kit-3 h4 {
+    font-size:var( --global-typography-a3c2c27-font-size );
+  }
+  .app-kit-3 h5 {
+    font-size:var( --global-typography-fc0661c-font-size );
+  }
+  .app-kit-3 h6 {
+    font-size:var( --global-typography-4fff42c-font-size );
+  }
+  .app-kit-3 button,
+  .app-kit-3 input[type="button"],
+  .app-kit-3 input[type="submit"],
+  .app-kit-3 .app-button {
+    font-size:var( --global-typography-accent-font-size );
+  }
+  .app-kit-3 label {
+    font-size:var( --global-typography-4fff42c-font-size );
+  }
+  .app-section.app-section-boxed > .app-container {
+    max-width:1024px;
+  }
+  .app-con {
+    --container-max-width:1024px;
+  }
+}
+@media(max-width:767px) {
+  .app-kit-3 {
+    --global-typography-primary-font-size:48px;
+    --global-typography-secondary-font-size:28px;
+    --global-typography-text-font-size:14px;
+    --global-typography-accent-font-size:14px;
+    --global-typography-74e5376-font-size:48px;
+    --global-typography-33b7874-font-size:14px;
+    --global-typography-f11fc92-font-size:26px;
+    --global-typography-bbe8ffb-font-size:20px;
+    --global-typography-5f59136-font-size:18px;
+    --global-typography-84e42eb-font-size:18px;
+    --global-typography-2eafb3e-font-size:12px;
+    --global-typography-72feb28-font-size:22px;
+    --global-typography-a09f23a-font-size:14px;
+    --global-typography-4fff42c-font-size:18px;
+    --global-typography-d10d66f-font-size:124px;
+    --global-typography-8455a92-font-size:18px;
+    --global-typography-fc92fea-font-size:50px;
+    --global-typography-c7c89f4-font-size:21px;
+    --global-typography-6e80323-font-size:12px;
+    font-size:var( --global-typography-text-font-size );
+  }
+  .app-kit-3 h1 {
+    font-size:var( --global-typography-primary-font-size );
+  }
+  .app-kit-3 h2 {
+    font-size:var( --global-typography-f11fc92-font-size );
+    line-height:var( --global-typography-f11fc92-line-height );
+  }
+  .app-kit-3 h3 {
+    font-size:var( --global-typography-f11fc92-font-size );
+    line-height:var( --global-typography-f11fc92-line-height );
+  }
+  .app-kit-3 h4 {
+    font-size:var( --global-typography-a3c2c27-font-size );
+  }
+  .app-kit-3 h5 {
+    font-size:var( --global-typography-fc0661c-font-size );
+  }
+  .app-kit-3 h6 {
+    font-size:var( --global-typography-4fff42c-font-size );
+  }
+  .app-kit-3 button,
+  .app-kit-3 input[type="button"],
+  .app-kit-3 input[type="submit"],
+  .app-kit-3 .app-button {
+    font-size:var( --global-typography-accent-font-size );
+  }
+  .app-kit-3 label {
+    font-size:var( --global-typography-4fff42c-font-size );
+  }
+  .app-section.app-section-boxed > .app-container {
+    max-width:767px;
+  }
+  .app-con {
+    --container-max-width:767px;
+  }
+}

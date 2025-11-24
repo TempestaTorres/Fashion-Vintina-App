@@ -1,0 +1,345 @@
+<div class="commerce commerce-page app app-home">
+  <main class="site-main">
+    <div class="app-element app-element-page-section app-con app-con-boxed a-flex">
+      <div class="app-con-inner">
+        <!-- Breadcrumb-->
+        <nav class="commerce-breadcrumb">
+          <a class="ap-element-button" [routerLink]="'/'">Home</a>
+          /
+          @if (product) {
+            <a [routerLink]="['/product-category', product.category.name]"
+               rel="tag">{{ product.category.name | titlecase }}</a>
+            / {{ product.name }}
+          }
+        </nav>
+        <!--  Notice message  -->
+        <div
+          [class.active]="addedToCart()"
+          class="commerce-notices-wrapper"
+          role="alert">
+          <div class="commerce-message">
+            <a class="button ap-element-button" (click)="viewCartClick()">
+              View cart
+            </a>
+            “{{ product?.name }}” has been added to your cart.
+          </div>
+        </div>
+        <!-- Product card  -->
+        @if (product) {
+          <div class="product">
+            @if (product.onSale) {
+              <span class="onsale">Sale!</span>
+            }
+            <!-- Product Gallery  -->
+            <div class="commerce-product-gallery images">
+              <a [routerLink]="'/shop'"
+                 class="commerce-product-gallery__trigger">🔍</a>
+              <!-- Image  -->
+              <figure class="commerce-product-gallery__wrapper">
+                <div class="commerce-product-gallery__image">
+                  <a>
+                    <img width="600" height="899" [src]="product.image" alt="Sensual woman">
+                  </a>
+                </div>
+              </figure>
+            </div>
+            <!-- Product Summary -->
+            <div class="summary">
+              <h1 class="product_title entry-title">{{ product.name }}</h1>
+              <!-- Price -->
+              <p class="price">
+                @if (product.originalPrice) {
+                  <del aria-hidden="true">
+                    <span class="price-amount">
+                      <bdi>{{ product.originalPrice | currency: 'USD' : 'symbol' : '.2-2' : 'en-US' }}</bdi>
+                    </span>
+                  </del>
+                }
+
+                <ins>
+                  <span class="price-amount">
+                    <bdi>{{ product.price | currency: 'USD' : 'symbol' : '.2-2' : 'en-US' }}</bdi>
+                  </span>
+                </ins>
+              </p>
+              <!-- Form  -->
+              <form
+                (submit)="onSubmit($event)"
+                class="cart"
+                novalidate>
+
+                <div class="quantity">
+                  <label class="screen-reader-text" for="quantity_input">{{ product.name }} quantity</label>
+                  <input
+                    [(ngModel)]="product.quantity"
+                    type="number"
+                    id="quantity_input"
+                    name="quantity"
+                    class="input-text qty text"
+                    title="Qty"
+                    size="4"
+                    min="1"
+                    max=""
+                    step="1"
+                    placeholder=""
+                    inputmode="numeric"
+                    autocomplete="off">
+                </div>
+
+                <button
+                  name="add-to-cart"
+                  class="button alt">Add to cart
+                </button>
+
+              </form>
+              <!-- Meta -->
+              <div class="product_meta">
+                <span class="posted_in">
+                  Category:
+                  <a [routerLink]="['/product-category', product.category.name]"
+                     rel="tag">{{ product.category.name | titlecase }}</a>
+                </span>
+                <span class="tagged_as">
+                  Tag:
+                  <a [routerLink]="['/product-tag', product.category.tag]"
+                     rel="tag">{{ product.category.name | titlecase }}</a>
+                </span>
+              </div>
+            </div>
+            <!-- Product Tabs -->
+            <div class="commerce-tabs">
+              <ul class="tabs">
+                <!--  Description Tab -->
+                <li
+                  [class.active]="tabDescriptionActive()"
+                  class="description_tab" role="tab">
+                  <a (click)="tabToggle(0)"
+                  role="button">Description</a>
+                </li>
+                <!-- Reviews Tab -->
+                <li
+                  [class.active]="tabReviewsActive()"
+                  class="reviews_tab" role="tab">
+                  <a (click)="tabToggle(1)"
+                  role="button">Reviews ({{ reviews.length }})</a>
+                </li>
+              </ul>
+              <!-- Description  -->
+              <div
+                   [class.active]="tabDescriptionActive()"
+                   class="panel entry-content" role="tabpanel">
+                <h2>Description</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                  et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                  aliquip ex ea commodo consequat.
+                </p>
+              </div>
+              <!-- Reviews  -->
+              <div
+                   [class.active]="tabReviewsActive()"
+                   class="panel entry-content" role="tabpanel">
+                <div id="reviews">
+                  <!--  Comments -->
+                  <div id="comments">
+                    <h2 class="reviews-title">Reviews</h2>
+
+                    @if (reviews.length === 0) {
+                      <p class="noreviews">There are no reviews yet.</p>
+                    }
+                    @else {
+                      <!-- Reviews List -->
+                      <ol class="commentlist">
+                        @for ( review of reviews; track $index) {
+
+                          <li class="review">
+                            <div class="comment_container">
+                              <img class="avatar" src="/assets/images/avatar.jpg" alt="avatar">
+                              <!-- Text -->
+                              <div class="comment-text">
+                                <!-- Rating -->
+                                <div class="star-rating" role="img">
+                                  <span>Rated<strong class="rating">{{ review.rating }}</strong> out of 5</span>
+                                </div>
+
+                                @if (!review.confirmed) {
+                                  <p class="meta">
+                                    <em>Your review is awaiting approval</em>
+                                  </p>
+                                }
+                                <!-- Comment -->
+                                <div class="description">
+                                  <p>{{ review.comment }}</p>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                        }
+                      </ol>
+                    }
+
+                  </div>
+                  <!-- Review -->
+                  <div id="review_form">
+                    <div id="respond">
+
+                      @if (reviews.length === 0) {
+                        <span>Be the first to review “{{ product.name }}”</span>
+                      }
+
+                      <!-- Respond Form -->
+                      <form
+                        (submit)="onReviewSubmit($event)"
+                        [formGroup]="reviewFormGroup"
+                        novalidate
+                        class="comment-form">
+
+                      <!-- Notes -->
+                        <p class="comment-notes">
+                          <span>Your email address will not be published.</span>
+                          <span> Required fields are marked <span>*</span></span>
+                        </p>
+                      <!-- Rating -->
+                        <div class="comment-form-rating">
+                          <label for="rating">Your rating&nbsp;<span class="required">*</span></label>
+                          <!-- Stars -->
+                          <p
+                            [class.selected]="selected()"
+                            class="stars">
+                            <span>
+                              <a
+                                (click)="starToggle(0)"
+                                [class.active]="formSignals[0]()"
+                                class="star-1">1</a>
+                              <a
+                                (click)="starToggle(1)"
+                                [class.active]="formSignals[1]()"
+                                class="star-2">2</a>
+                              <a
+                                (click)="starToggle(2)"
+                                [class.active]="formSignals[2]()"
+                                class="star-3">3</a>
+                              <a
+                                (click)="starToggle(3)"
+                                [class.active]="formSignals[3]()"
+                                class="star-4">4</a>
+                              <a
+                                (click)="starToggle(4)"
+                                [class.active]="formSignals[4]()"
+                                class="star-5">5</a>
+                            </span>
+                          </p>
+                          <!-- Select -->
+                          <select
+                            formControlName="rating"
+                            id="rating"
+                            required>
+                            <option value="">Rate…</option>
+                            <option value="5">Perfect</option>
+                            <option value="4">Good</option>
+                            <option value="3">Average</option>
+                            <option value="2">Not that bad</option>
+                            <option value="1">Very poor</option>
+                          </select>
+                        </div>
+                        <!-- Comment -->
+                        <p class="comment-form-comment">
+                          <label for="comment">Your review&nbsp;<span class="required">*</span></label>
+                          <textarea
+                            id="comment"
+                            formControlName="comment"
+                            cols="45"
+                            rows="8"
+                            required></textarea>
+                        </p>
+                        <!-- Author -->
+                        <p class="comment-form-author">
+                          <label for="author">Name&nbsp;<span class="required">*</span></label>
+                          <input
+                            id="author"
+                            formControlName="author"
+                            type="text"
+                            size="30"
+                            required>
+                        </p>
+                        <!-- Email -->
+                        <p class="comment-form-email">
+                          <label for="email">Email&nbsp;<span class="required">*</span></label>
+                          <input
+                            id="email"
+                            formControlName="email"
+                            type="email"
+                            size="30"
+                            required>
+                        </p>
+                        <!-- Check box -->
+                        <p class="comment-form-cookies-consent">
+                          <input
+                            id="comment-cookies-consent"
+                            formControlName="cookies"
+                            type="checkbox">
+                          <label for="comment-cookies-consent">&nbsp;Save my name, email, and website in this browser for the next time I comment.</label>
+                        </p>
+
+                        <!-- Button -->
+                        <p class="form-submit">
+                          <input name="submit" type="submit" id="submit" class="submit" value="Submit">
+                        </p>
+                      </form>
+                    </div>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+              </div>
+            </div>
+            <!-- Related products -->
+            <section class="app-element related-products">
+              <h2>Related products</h2>
+              <ul class="products columns-4">
+
+                @for (relProduct of relatedProducts; track $index) {
+                  <li class="product has-post-thumbnail">
+                    <a class="ap-element-button"
+                      (click)="goToNextProduct(relProduct.type)">
+
+                      @if (relProduct.onSale) {
+                        <span class="onsale">Sale!</span>
+                      }
+                      @if (relProduct.image) {
+                        <img [src]="relProduct.image" alt="Sensual woman.">
+                      }
+                      <h2 class="commerce-loop-product__title">{{ relProduct.name }}</h2>
+                      <!-- Price -->
+                      <span class="price">
+                        @if (relProduct.originalPrice) {
+                          <del aria-hidden="true">
+                            <span class="price-amount">
+                              <bdi>{{ relProduct.originalPrice | currency: 'USD' : 'symbol' : '.2-2' : 'en-US' }}</bdi>
+                            </span>
+                          </del>
+                        }
+                        <span class="price-amount">
+                          <bdi>{{ relProduct.price | currency: 'USD' : 'symbol' : '.2-2' : 'en-US' }}</bdi>
+                        </span>
+                      </span>
+                    </a>
+                    <!-- Button add-to-cart -->
+                    <a (click)="onAddToCart(relProduct, $index)"
+                      [class.added]="addedToCartButtons[$index]()"
+                      class="button ajax_add_to_cart"
+                      >Add to cart</a>
+                    <!-- Button View cart -->
+                    <a
+                      [class.active]="addedToCartButtons[$index]()"
+                      [routerLink]="'/cart'"
+                      class="button view-cart-button">View cart</a>
+                  </li>
+
+                }
+              </ul>
+            </section>
+          </div>
+        }
+      </div>
+    </div>
+  </main>
+</div>

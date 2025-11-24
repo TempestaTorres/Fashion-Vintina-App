@@ -1,0 +1,126 @@
+<div class="app app-home">
+  <!--  Collection  -->
+  <section class="app-section app-element app-element-section-collection app-section-boxed">
+    <div class="app-container">
+      <div class="app-element app-element-padding-traditional app-column app-col-100" data-element_type="column">
+        <div class="app-widget-wrap app-element-populated">
+          <!-- Heading -->
+          <div
+            #heading
+            appObserveElement
+            #intersection="intersection"
+            (isIntersecting)="isIntersecting($event, heading)"
+            [isContinuous]="false"
+            [ngClass]="{animated: intersection._isIntersecting, fadeInDown: intersection._isIntersecting}"
+            class="app-element app-element-heading-secondary app-align-center animated-slow app-widget app-widget-heading app-invisible">
+            <div class="app-widget-container">
+              <h2 class="app-heading-title">Featured Collection</h2>
+            </div>
+          </div>
+
+          <!--          Text  -->
+          <div class="app-element app-element-section-collection-text app-widget app-widget-text-editor">
+            <div class="app-widget-container">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+            </div>
+          </div>
+          <!--  Collections  -->
+          <section class="app-element app-inner-section app-section">
+            <div class="app-container">
+              <!-- Collection Card -->
+              <div
+                appObserveElement
+                #intersection1="intersection"
+                [isContinuous]="false"
+                [ngClass]="{animated: intersection1._isIntersecting, fadeInLeft: intersection1._isIntersecting, appInvisible: !intersection1._isIntersecting}"
+                class="app-column app-col-33 app-element app-element-collection-card card-align-left animated-slow">
+                <div
+                  [style.background-image]="(collections[0].image)"
+                  class="app-widget-wrap app-element-populated">
+                  <div class="app-element app-widget app-widget-jkit_icon_box">
+                    <div class="app-widget-container">
+                      <div class="jeg-app-kit jkit-icon-box">
+                        <div class="jkit-icon-box-wrapper hover-from-left">
+                          <div class="icon-box icon-box-body">
+                            <!-- Heading -->
+                            <h2 class="title">{{ collections[0].name }}</h2>
+                            <!-- Button -->
+                            <div class="icon-box-button">
+                              <div class="btn-wrapper icon-position-before">
+                                <a href="" class="icon-box-link">Shop Collection</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Collection Card -->
+              <div
+                appObserveElement
+                #intersection2="intersection"
+                [isContinuous]="false"
+                [ngClass]="{animated: intersection2._isIntersecting, fadeInUp: intersection2._isIntersecting, appInvisible: !intersection2._isIntersecting}"
+                class="app-column app-col-33 app-element app-element-collection-card card-align-center animated-slow">
+                <div
+                  [style.background-image]="(collections[1].image)"
+                  class="app-widget-wrap app-element-populated">
+                  <div class="app-element app-widget app-widget-jkit_icon_box">
+                    <div class="app-widget-container">
+                      <div class="jeg-app-kit jkit-icon-box">
+                        <div class="jkit-icon-box-wrapper hover-from-left">
+                          <div class="icon-box icon-box-body">
+                            <!-- Heading -->
+                            <h2 class="title">{{ collections[1].name }}</h2>
+                            <!-- Button -->
+                            <div class="icon-box-button">
+                              <div class="btn-wrapper icon-position-before">
+                                <a href="" class="icon-box-link">Shop Collection</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Collection Card -->
+              <div
+                appObserveElement
+                #intersection3="intersection"
+                [isContinuous]="false"
+                [ngClass]="{animated: intersection3._isIntersecting, fadeInRight: intersection3._isIntersecting, appInvisible: !intersection3._isIntersecting}"
+                class="app-column app-col-33 app-element app-element-collection-card card-align-right animated-slow">
+                <div
+                  [style.background-image]="(collections[2].image)"
+                  class="app-widget-wrap app-element-populated">
+                  <div class="app-element app-widget app-widget-jkit_icon_box">
+                    <div class="app-widget-container">
+                      <div class="jeg-app-kit jkit-icon-box">
+                        <div class="jkit-icon-box-wrapper hover-from-left">
+                          <div class="icon-box icon-box-body">
+                            <!-- Heading -->
+                            <h2 class="title">{{ collections[2].name }}</h2>
+                            <!-- Button -->
+                            <div class="icon-box-button">
+                              <div class="btn-wrapper icon-position-before">
+                                <a href="" class="icon-box-link">Shop Collection</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

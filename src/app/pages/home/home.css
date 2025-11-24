@@ -1,0 +1,272 @@
+.app-home .app-element.app-element-ventina-hero > .app-container {
+  max-width: 1280px;
+}
+.app-home .app-element.app-element-ventina-hero:not(.app-motion-effects-element-type-background),
+.app-home .app-element.app-element-ventina-hero > .app-motion-effects-container > .app-motion-effects-layer {
+  background-image: url("/assets/images/beautiful-seductive-woman-in-sexy-lingerie-posing-at-bed.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.app-home .app-element.app-element-ventina-hero > .app-background-overlay {
+  background-color: #000000;
+  opacity: 0.35;
+  transition: background 0.3s,  border-radius 0.3s,  opacity 0.3s;
+}
+.app-home .app-element.app-element-ventina-hero {
+  transition: background 0.3s,  border 0.3s,  border-radius 0.3s,  box-shadow 0.3s;
+  /*padding: 310px 0 260px 0;*/
+  padding: 420px 0 260px 0;
+}
+.app-bc-flex-widget .app-home .app-element.app-element-ventina-hero-card.app-column .app-widget-wrap {
+  align-items: flex-end;
+}
+.app-home .app-element.app-element-ventina-hero-card.app-column.app-element[data-element_type="column"] > .app-widget-wrap.app-element-populated {
+  align-content: flex-end;
+  align-items: flex-end;
+}
+.app-home .app-element.app-element-ventina-hero-card > .app-element-populated {
+  --column-margin-right: 40px;
+  --column-margin-left: 0;
+  padding: 0;
+  margin: 0 40px 0 0;
+}
+.app.app-home .app-element.app-element-button-secondary.button-shop > .app-widget-container {
+  margin: 0 20px 0 0;
+}
+.app-home .app-element.app-element-teaser-image.vintina:not(.app-motion-effects-element-type-background) > .app-widget-wrap,
+.app-home .app-element.app-element-teaser-image.vintina > .app-widget-wrap > .app-motion-effects-container > .app-motion-effects-layer {
+  background-image: url("/assets/images/pretty-girl-wearing-red-lingerie-lying-on-bed.jpg");
+}
+.app-home .app-element.app-element-teaser-spacer {
+  --spacer-size: 50px;
+}
+.app-bc-flex-widget .app-home .app-element.app-element-founder-image-card.app-column .app-widget-wrap {
+  align-items: center;
+}
+.app-home .app-element.app-element-founder-image-card.app-column.app-element[data-element_type="column"] > .app-widget-wrap.app-element-populated {
+  align-content: center;
+  align-items: center;
+}
+.app-home .app-element.app-element-founder-image-card:not(.app-motion-effects-element-type-background) > .app-widget-wrap,
+.app-home .app-element.app-element-founder-image-card > .app-widget-wrap > .app-motion-effects-container > .app-motion-effects-layer {
+  background-color: #F2E4D8;
+}
+.app-home .app-element.app-element-founder-image-card > .app-element-populated >  .app-background-overlay {
+  background-image: url("/assets/images/overlay.png");
+  background-position: 580px 575px;
+  background-repeat: no-repeat;
+  background-size: 42% auto;
+  opacity: 0.65;
+}
+.app-home .app-element.app-element-founder-image-card > .app-element-populated {
+  transition: background 0.3s,  border 0.3s,  border-radius 0.3s,  box-shadow 0.3s;
+  margin: 0;
+  --column-margin-right: 0px;
+  --column-margin-left: 0px;
+  padding: 150px 150px 150px 150px;
+}
+.app-home .app-element.app-element-founder-image-card > .app-element-populated > .app-background-overlay {
+  transition: background 0.3s,  border-radius 0.3s,  opacity 0.3s;
+}
+.app-home .app-element.app-element-quotation-heading .app-heading-title {
+  font-family: var( --global-typography-bbe8ffb-font-family ),  sans-serif;
+  font-size: var( --global-typography-bbe8ffb-font-size );
+  font-weight: var( --global-typography-bbe8ffb-font-weight );
+  text-transform: var( --global-typography-bbe8ffb-text-transform );
+  line-height: var( --global-typography-bbe8ffb-line-height );
+}
+.app-home .app-element.app-element-founder-image-card-signature {
+  width: var( --container-widget-width,  40% );
+  max-width: 40%;
+  --container-widget-width: 40%;
+  --container-widget-flex-grow: 0;
+}
+.app-home .app-element.app-element-founder-image-card-button .app-button {
+  font-family: var( --global-typography-accent-font-family ),  sans-serif;
+  font-size: var( --global-typography-accent-font-size );
+  font-weight: var( --global-typography-accent-font-weight );
+  fill: var( --global-color-bbd710c );
+  color: var( --global-color-bbd710c );
+  background-color: #720917;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #720917;
+  border-radius: 0;
+  padding: 18px 38px 18px 38px;
+}
+.app-home .app-element.app-element-founder-image-card-button > .app-widget-container {
+  margin: 20px 0 0 0;
+}
+.app-home .app-element.app-element-vintina-services > .app-container {
+  max-width: 1280px;
+}
+.app-home .app-element.app-element-vintina-services:not(.app-motion-effects-element-type-background),
+.app-home .app-element.app-element-vintina-services > .app-motion-effects-container > .app-motion-effects-layer {
+  background-color: #FFFFFF;
+}
+.app-home .app-element.app-element-vintina-services {
+  transition: background 0.3s,  border 0.3s,  border-radius 0.3s,  box-shadow 0.3s;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 80px 0 80px 0;
+}
+.app-home .app-element.app-element-vintina-services > .app-background-overlay {
+  transition: background 0.3s,  border-radius 0.3s,  opacity 0.3s;
+}
+.app-home .app-element.app-element-vintina-services .app-inner-section,
+.app-home .app-element.app-element-vintina-services .app-inner-section > .app-background-overlay {
+  border-radius: 20px;
+}
+.app-home .app-element.app-element-vintina-services .app-inner-section {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+}
+/* Service cards */
+.app-home .app-element.app-element-service-card > .app-element-populated {
+  border-style: solid;
+  border-color: #EAEAEA;
+  transition: background 0.3s,  border 0.3s,  border-radius 0.3s,  box-shadow 0.3s;
+}
+.app-home .app-element.app-element-service-card-shipping > .app-element-populated {
+  border-width: 0 1px 0 0;
+  padding: 0 0 0 70px;
+}
+.app-home .app-element.app-element-service-card > .app-element-populated > .app-background-overlay {
+  transition: background 0.3s,  border-radius 0.3s,  opacity 0.3s;
+}
+.app-home .app-element.app-element-service-card-support > .app-element-populated {
+  border-width: 0 1px 0 0;
+  padding: 0 20px 0 40px;
+}
+.app-home .app-element.app-element-service-card-return > .app-element-populated {
+  border-width: 0 1px 0 0;
+  padding: 0 20px 0 40px;
+}
+.app-home .app-element.app-element-service-card-payment > .app-element-populated {
+  padding: 0 0 0 40px;
+}
+
+/*============================================= max min ==============================================*/
+@media(max-width:1024px) and (min-width:768px) {
+  .app-home .app-element.app-element-ventina-hero-card {
+    width: 80%;
+  }
+  .app-home .app-element.app-element-founder-image-card {
+    width: 100%;
+  }
+  .app-home .app-element.app-element-service-card,
+  .app-home .app-element.app-element-service-card-payment {
+    width: 50%;
+  }
+}
+/*============================================= 1024 ================================================*/
+@media(max-width:1024px) {
+  .app-home .app-element.app-element-ventina-hero {
+    padding: 400px 15px 200px 15px;
+  }
+  .app-home .app-element.app-element-teaser-spacer {
+    --spacer-size: 460px;
+  }
+  .app-home .app-element.app-element-founder-image-card > .app-element-populated >  .app-background-overlay {
+    background-position: 460px 420px;
+    background-size: 42% auto;
+  }
+  .app-home .app-element.app-element-founder-image-card > .app-element-populated {
+    padding: 80px 80px 80px 80px;
+  }
+  .app-home .app-element.app-element-quotation-heading .app-heading-title {
+    font-size: var( --global-typography-bbe8ffb-font-size );
+    line-height: var( --global-typography-bbe8ffb-line-height );
+  }
+  .app-home .app-element.app-element-founder-image-card-button .app-button {
+    font-size: var( --global-typography-accent-font-size );
+  }
+  .app-home .app-element.app-element-vintina-services {
+    padding: 80px 15px 80px 15px;
+  }
+  .app-home .app-element.app-element-vintina-services .app-inner-section {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+  }
+  .app-home .app-element.app-element-service-card-shipping > .app-element-populated {
+    border-width: 0 1px 0 0;
+    padding: 0 0 20px 40px;
+  }
+  .app-home .app-element.app-element-service-card-support > .app-element-populated {
+    border-width: 0;
+    padding: 0 0 0 80px;
+  }
+  .app-home .app-element.app-element-service-card-return > .app-element-populated {
+    border-width: 0 1px 0 0;
+    padding: 0 0 0 40px;
+  }
+  .app-home .app-element.app-element-service-card-payment > .app-element-populated {
+    margin: 0;
+    --column-margin-right: 0;
+    --column-margin-left: 0;
+    padding: 0 0 0 80px;
+  }
+}
+/*============================================= 767 ===================================================*/
+@media(max-width:767px) {
+  .app-home .app-element.app-element-ventina-hero {
+    padding: 200px 10px 200px 10px;
+  }
+  .app-home .app-element.app-element-ventina-hero-card > .app-element-populated {
+    margin: 0;
+    --column-margin-right: 0px;
+    --column-margin-left: 0px;
+  }
+  .app-home .app-element.app-element-founder-image-card > .app-element-populated >  .app-background-overlay {
+    background-position: 236px 584px;
+    background-size: 58% auto;
+  }
+  .app-home .app-element.app-element-founder-image-card > .app-element-populated {
+    padding: 80px 40px 80px 40px;
+  }
+  .app-home .app-element.app-element-quotation-heading .app-heading-title {
+    font-size: var( --global-typography-bbe8ffb-font-size );
+    line-height: var( --global-typography-bbe8ffb-line-height );
+  }
+  .app-home .app-element.app-element-founder-image-card-button .app-button {
+    font-size: var( --global-typography-accent-font-size );
+  }
+  .app-home .app-element.app-element-vintina-services {
+    padding: 80px 10px 80px 10px;
+  }
+  .app-home .app-element.app-element-vintina-services-wrapper > .app-element-populated {
+    --column-margin-right: 0;
+    --column-margin-left: 0;
+    padding: 0;
+    margin: 0;
+  }
+  .app-home .app-element.app-element-service-card,
+  .app-home .app-element.app-element-service-card-payment {
+    width: 50%;
+  }
+  .app-home .app-element.app-element-service-card-shipping > .app-element-populated {
+    margin: 0 5px 0 0;
+    --column-margin-right: 5px;
+    --column-margin-left: 0px;
+    padding: 0;
+  }
+  .app-home .app-element.app-element-service-card-support > .app-element-populated {
+    border-width: 0;
+    padding: 0 0 0 25px;
+  }
+  .app-home .app-element.app-element-service-card-return > .app-element-populated {
+    margin: 0 5px 0 0;
+    --column-margin-right: 5px;
+    --column-margin-left: 0;
+    padding: 40px 0 0 0;
+  }
+  .app-home .app-element.app-element-service-card-payment > .app-element-populated {
+    margin: 0;
+    --column-margin-right: 0;
+    --column-margin-left: 0;
+    padding: 40px 0 0 25px;
+  }
+}

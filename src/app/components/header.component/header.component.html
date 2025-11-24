@@ -1,0 +1,206 @@
+<!--Header-->
+<header class="app app-home app-header">
+    <!-- Top header -->
+    <section class="app-element app-element-top-header app-section app-top-section app-hidden-tablet app-hidden-mobile app-section-boxed app-section-height-default">
+      <div class="app-container">
+        <div class="app-element app-element-top-header-wrapper app-column app-col-100" data-element_type="column">
+          <div class="app-widget-wrap app-element-populated">
+            <!-- Heading -->
+            <div class="app-element app-element-top-header-heading app-widget__width-auto app-widget app-widget-heading">
+              <div class="app-widget-container">
+                <h2 class="app-heading-title">Free shipping for orders over $200.</h2>
+              </div>
+            </div>
+            <!-- Button -->
+            <div class="app-element app-element-top-header-button app-widget__width-auto app-widget app-widget-jkit_button">
+              <div class="app-widget-container">
+                <div class="jeg-app-kit jkit-button icon-position-before">
+                  <a href="" class="jkit-button-wrapper">View Offer</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Main header -->
+    <section class="app-element app-element-main-header app-section app-section-boxed">
+      <div class="app-container">
+        <!-- Logo -->
+        <div class="app-element app-element-main-header-logo app-column app-col-33" data-element_type="column">
+          <div class="app-widget-wrap app-element-populated">
+            <!-- Image -->
+            <div class="app-element app-element-main-header-logo-image app-widget app-widget-image">
+              <div class="app-widget-container">
+                <a
+                  (click)="toTop($event)"
+                  href="">
+                  <img [src]="logoSrc" alt="Vintina logo" decoding="async" sizes="(max-width: 1549px) 100vw, 1549px">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Navbar -->
+        <div class="app-element app-element-main-header-navbar app-column app-col-33" data-element_type="column">
+          <div class="app-widget-wrap app-element-populated">
+              <!--Nav Menu -->
+            <div class="app-element app-element-main-header-navbar-menu app-widget app-widget-jkit_nav_menu">
+              <div class="app-widget-container">
+                <!-- Here is Navigation menu -->
+                <div class="jeg-app-kit jkit-nav-menu break-point-tablet submenu-click-title">
+
+                  <!-- Hamburger -->
+                  <button class="jkit-hamburger-menu"
+                  (click)="hamburgerOnClick()">
+                    <i aria-hidden="true" class="jki jki-menu-line"></i>
+                  </button>
+
+                  <!-- Menu Wrapper -->
+                  <div class="jkit-menu-wrapper" [class.active]="openMenu()">
+                    <!-- Menu -->
+                    <div class="jkit-menu-container">
+                      <ul class="jkit-menu jkit-menu-direction-flex jkit-submenu-position-top">
+                        <!-- Menu item -->
+                        <li class="menu-item">
+                          <a routerLink="/"
+                             routerLinkActive="active"
+                             ariaCurrentWhenActive="page"
+                             [routerLinkActiveOptions]="{exact:true}"
+                             (click)="hamburgerOnClick()">Home</a>
+                        </li>
+                        <!-- Menu item -->
+                        <li class="menu-item">
+                          <a routerLink="/about"
+                             routerLinkActive="active"
+                             ariaCurrentWhenActive="page"
+                             (click)="hamburgerOnClick()">About</a>
+                        </li>
+                        <!-- Menu item -->
+                        <li class="menu-item">
+                          <a href=""
+                             (click)="hamburgerOnClick()">Shop</a>
+                        </li>
+                        <!-- Menu with submenu -->
+                        <li class="menu-item menu-item-has-children">
+                          <a href=""
+                             (click)="submenuOnClick(0)">Pages
+                            <i aria-hidden="true" class="jki jki-chevron-down-line"></i>
+                          </a>
+                          <ul class="sub-menu" [class.dropdown-open]="openSubmenu()">
+                            <li class="menu-item">
+                              <a href=""
+                                 (click)="hamburgerOnClick()">Product Detail</a>
+                            </li>
+                            <li class="menu-item">
+                              <a href=""
+                                 (click)="hamburgerOnClick()">FAQ</a>
+                            </li>
+                            <li class="menu-item">
+                              <a href=""
+                                 (click)="hamburgerOnClick()">404 Page</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <!-- Menu with submenu -->
+                        <li class="menu-item menu-item-has-children">
+                          <a href=""
+                          (click)="submenuOnClick(1)">Blog
+                            <i aria-hidden="true" class="jki jki-chevron-down-line"></i>
+                          </a>
+                          <ul class="sub-menu" [class.dropdown-open]="openSubmenu2()">
+                            <li class="menu-item">
+                              <a href=""
+                                 (click)="hamburgerOnClick()">Blog</a>
+                            </li>
+                            <li class="menu-item">
+                              <a href=""
+                                 (click)="hamburgerOnClick()">Single Post</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <!-- Menu item -->
+                        <li class="menu-item">
+                          <a href=""
+                             (click)="hamburgerOnClick()">Contact</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <!-- Mobile panel -->
+                    <div class="jkit-nav-identity-panel">
+                      <div class="jkit-nav-site-title">
+                        <a class="jkit-nav-logo" href="">
+                          <img [src]="logoMobileSrc" alt="Vintina Logo" decoding="async">
+                        </a>
+                      </div>
+                      <button class="jkit-close-menu"
+                      (click)="hamburgerOnClick()">
+                        <i aria-hidden="true" class="jki jki-times-solid"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <!-- Overlay -->
+                  <div class="appkit-menu-overlay akit-nav-menu--overlay"
+                       [class.active]="openMenu()"
+                       (click)="hamburgerOnClick()"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Right nav panel -->
+        <div class="app-element app-element-main-header-nav-panel app-column app-col-33 app-hidden-tablet app-hidden-mobile" data-element_type="column">
+          <div class="app-widget-wrap app-element-populated">
+            <!-- Search bar -->
+            <div class="app-element app-widget__width-auto app-widget app-widget-jkit_search">
+              <div class="app-widget-container">
+                <div class="jeg-app-kit jkit-search">
+                  <!-- Button search -->
+                  <a class="jkit-search-modal" href="#" [swal]="search">
+                    <i aria-hidden="true" class="jki jki-search11-light"></i>
+                  </a>
+                  <!-- Search field -->
+                  <div class="jkit-modal-search-panel-wrapper">
+                    <!-- Search panel -->
+                    <div class="jkit-modal-search-panel" #modal>
+                      <div class="jkit-search-panel">
+                        <!-- Form -->
+                        <form class="jkit-search-group"
+                              role="search"
+                              novalidate>
+                          <input
+                            type="search"
+                            class="jkit-search-field"
+                            placeholder="Search..."
+                            name="search"
+                          >
+                          <button type="submit" class="jkit-search-button">
+                            <i aria-hidden="true" class="jki jki-search11-light"></i>
+                          </button>
+                        </form>
+                        <!-- ./Form -->
+                      </div>
+                    </div>
+                    <!-- ./ Search panel -->
+                  </div>
+                  <swal #search
+                        (didOpen)="swalDidOpen($event)"
+                        [swalOptions]="{
+                  showConfirmButton: false,
+                  showCloseButton: true,
+                  target: '.jkit-search',
+                  html: modal.outerHTML,
+                  heightAuto: false
+                  }">
+                  </swal>
+
+                </div>
+              </div>
+            </div>
+            <!-- Menu sidebar -->
+            <ng-app-sidebar></ng-app-sidebar>
+          </div>
+        </div>
+      </div>
+    </section>
+  </header>

@@ -1,0 +1,199 @@
+<div class="app app-home commerce-cart commerce-page">
+  <main id="content" class="site-main">
+    <div class="app-element app-element-page-section app-con app-con-boxed a-flex">
+      <div class="app-con-inner">
+        <!-- Heading -->
+        <div class="page-header">
+          <h1 class="entry-title">Cart</h1>
+        </div>
+        <!-- Cart Items section -->
+        <section class="commerce">
+          <!-- Notice message -->
+          <div class="commerce-notices-wrapper active" role="alert">
+            <!-- Message -->
+            @if (messages.length > 0) {
+              @for (message of messages; track $index) {
+                <div class="commerce-message">{{ message.message }}
+                  <a
+                    (click)="undo(message.id)"
+                    class="restore-item ap-element-button"
+                    ><strong>Undo?</strong></a>
+                </div>
+              }
+            }
+            @if (cartItems.length === 0) {
+              <!--  Info -->
+              <p class="commerce-info">Your cart is currently empty.</p>
+            }
+          </div>
+
+          <!-- Items or return  -->
+          @if (cartItems.length === 0) {
+            <!--  Button return -->
+            <p class="return-to-shop">
+            <a
+              class="button ap-element-button"
+            [routerLink]="'/shop'">Return to shop</a>
+          </p>
+          } @else {
+            <!-- Cart contains items -->
+          <form
+            (submit)="commerceFormSubmit($event)"
+            [class.processing]="processing"
+            class="commerce-cart-form"
+            novalidate>
+            <!-- Items Table -->
+            <table class="shop_table shop_table_responsive cart">
+              <!-- Header -->
+              <thead>
+                <tr>
+                  <th class="product-remove"><span class="screen-reader-text">Remove item</span></th>
+                  <th class="product-thumbnail"><span class="screen-reader-text">Thumbnail image</span></th>
+                  <th class="product-name">Product</th>
+                  <th class="product-price">Price</th>
+                  <th class="product-quantity">Quantity</th>
+                  <th class="product-subtotal">Subtotal</th>
+                </tr>
+              </thead>
+              <tbody>
+                @for (item of cartItems; track item.id) {
+                  <!-- Product item -->
+                  <tr class="commerce-cart cart_item">
+                    <!-- Remove Button -->
+                  <td class="product-remove">
+                    <a
+                      (click)="removeFromCart(item)"
+                      class="remove ap-element-button">×</a>
+                  </td>
+                  <!-- Thumbnail -->
+                  <td class="product-thumbnail">
+                    <a
+                      [routerLink]="['/product', item.type]"
+                      class="ap-element-button">
+                      @if (item.image) {
+                        <img [src]="item.image" alt="Sensual woman.">
+                      }
+                    </a>
+                  </td>
+                  <!-- Name -->
+                  <td class="product-name" data-title="Product">
+                    <a
+                      [routerLink]="['/product', item.type]"
+                      class="ap-element-button">{{ item.name }}</a>
+                  </td>
+                  <!-- Price -->
+                  <td class="product-price" data-title="Price">
+                    <span class="amount">
+                      <bdi>{{ item.price | currency: 'USD' : 'symbol' : '.2-2' : 'en-US' }}</bdi>
+                    </span>
+                  </td>
+                  <!-- Quantity -->
+                  <td class="product-quantity" data-title="Quantity">
+                    <div class="quantity">
+                      <label class="screen-reader-text" [for]="'quantity_input_' + item.id">{{ item.name }} quantity</label>
+                      <input
+                        [(ngModel)]="item.quantity"
+                        type="number"
+                        [id]="'quantity_input_' + item.id"
+                        name="quantity"
+                        class="input-text qty text"
+                        title="Qty"
+                        size="4"
+                        min="1"
+                        max=""
+                        step="1"
+                        placeholder=""
+                        inputmode="numeric"
+                        autocomplete="off">
+                    </div>
+                  </td>
+                  <!-- Total amount -->
+                  <td class="product-subtotal" data-title="Subtotal">
+                    <span class="amount">
+                      <bdi>{{ setTotalAmount(item) | currency: 'USD' : 'symbol' : '.2-2' : 'en-US' }}</bdi>
+                    </span>
+                  </td>
+                  </tr>
+                }
+                <!-- Actions -->
+              <tr>
+                <td
+                class="actions"
+                colspan="6">
+                  <!--Coupon -->
+                  <div class="coupon">
+                    <label for="coupon_code" class="screen-reader-text">Coupon:</label>
+                    <input
+                           [(ngModel)]="inputCoupon"
+                           type="text"
+                           name="coupon_code"
+                           class="input-text"
+                           id="coupon_code"
+                           placeholder="Coupon code"
+                           required>
+                    <!-- Button Apply -->
+                    <button class="button ap-element-button" name="apply_coupon" value="Apply coupon">Apply coupon</button>
+                  </div>
+                  <!-- Update button -->
+                  <button class="button ap-element-button"
+                          name="update_cart"
+                          value="Update cart"
+                          disabled=""
+                          aria-disabled="true">Update cart</button>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+            <!-- ./ Items Table -->
+            <!-- Loader -->
+            <div
+              [class.inactive]="loading"
+              class="loader">
+
+            </div>
+          </form>
+          <!-- Checkout -->
+          <section class="cart-collaterals">
+            <div class="cart_totals">
+              <h2>Cart totals</h2>
+              <!-- Table -->
+              <table class="shop_table shop_table_responsive">
+                <tbody>
+                  <tr class="cart-subtotal">
+                    <th>Subtotal</th>
+                    <!-- Subtotal -->
+                    <td data-title="Subtotal">
+                      <span class="amount">
+                        <bdi>{{ setCartSubTotalAmount() | currency: 'USD' : 'symbol' : '.2-2' : 'en-US' }}</bdi>
+                      </span>
+                    </td>
+                  </tr>
+                  <!-- Total -->
+                <tr class="order-total">
+                  <th>Total</th>
+                    <!-- Total -->
+                  <td data-title="Total">
+                    <strong>
+                      <bdi>{{ setCartSubTotalAmount() | currency: 'USD' : 'symbol' : '.2-2' : 'en-US' }}</bdi>
+                    </strong>
+                  </td>
+                </tr>
+                </tbody>
+              </table>
+              <!-- Proceed to checkout -->
+              <div class="ac-proceed-to-checkout">
+                <!-- Button -->
+                <a
+                  class="checkout-button button alt ap-element-button"
+                  [routerLink]="['/checkout']"
+                >Proceed to checkout</a>
+              </div>
+            </div>
+          </section>
+          }
+
+        </section>
+      </div>
+    </div>
+  </main>
+</div>

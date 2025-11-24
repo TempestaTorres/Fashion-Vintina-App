@@ -1,0 +1,297 @@
+<div class="app app-home">
+  <!-- Hero -->
+  <section class="app-element app-element-ventina-hero app-section app-section-boxed">
+    <div class="app-background-overlay"></div>
+    <div class="app-container">
+      <!-- Hero Card Column -->
+      <div class="app-element app-element-ventina-hero-card app-column app-col-50" data-element_type="column">
+        <div class="app-widget-wrap app-element-populated">
+          <!-- Heading -->
+          <div
+            appObserveElement
+            #intersection="intersection"
+            [isContinuous]="false"
+            [ngClass]="{animated: intersection._isIntersecting, fadeInLeft: intersection._isIntersecting, appInvisible: !intersection._isIntersecting}"
+            class="app-element app-widget-jkit_heading-primary animated-slow app-widget">
+            <div class="app-widget-container">
+              <div class="jeg-app-kit jkit-heading">
+                <div class="heading-section-title">
+                  <h2 class="heading-title">
+                    Dedicate To The
+                    <span class="style-color"><span>Elegant</span></span>
+                    Styling
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Text -->
+          <div
+            appObserveElement
+            #intersection="intersection"
+            [isContinuous]="false"
+            [ngClass]="{animated: intersection._isIntersecting, fadeInLeft: intersection._isIntersecting, appInvisible: !intersection._isIntersecting}"
+            class="app-element app-element-text-white animated-slow app-widget app-widget-text-editor">
+            <div class="app-widget-container">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis,
+                pulvinar dapibus leo.</p>
+            </div>
+          </div>
+          <!-- Button Shop -->
+          <div
+            #shop
+            appObserveElement
+            #intersection1="intersection"
+            (isIntersecting)="isIntersecting($event, shop)"
+            [isContinuous]="false"
+            [ngClass]="{animated: intersection1._isIntersecting, fadeInLeft: intersection1._isIntersecting}"
+            class="app-element app-element-button-secondary button-shop app-widget__width-auto animated-slow app-widget app-widget-button app-invisible">
+            <div class="app-widget-container">
+              <div class="app-button-wrapper">
+                <a class="app-button app-button-link app-size-sm" href="">
+                  <span class="app-button-content-wrapper">
+                    <span class="app-button-text">Shop Now</span>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Button Discover -->
+          <div
+            #discover
+            appObserveElement
+            #intersection2="intersection"
+            [isContinuous]="false"
+            (isIntersecting)="isIntersecting($event, discover)"
+            [ngClass]="{animated: intersection2._isIntersecting, fadeInLeft: intersection2._isIntersecting}"
+            class="app-element app-element-button-outline app-widget__width-auto animated-slow app-widget app-widget-button app-invisible">
+            <div class="app-widget-container">
+              <div class="app-button-wrapper">
+                <a class="app-button app-button-link app-size-sm" href="">
+                  <span class="app-button-content-wrapper">
+                    <span class="app-button-text">Discover</span>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--  Collection  -->
+  <ng-app-collection></ng-app-collection>
+  <!--  Founder banner -->
+  <section class="app-element app-section">
+    <div class="app-container">
+      <!-- Image -->
+      <div class="app-element app-element-teaser-image vintina app-column app-col-50">
+        <div class="app-widget-wrap app-element-populated">
+          <div class="app-element app-element-teaser-spacer app-widget app-widget-spacer">
+            <div class="app-widget-container">
+              <div class="app-spacer">
+                <div class="app-spacer-inner"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--  Founder Card  -->
+      <div class="app-element app-element-founder-image-card app-column app-col-50" data-element_type="column">
+        <div class="app-widget-wrap app-element-populated">
+          <!--Overlay-->
+          <div class="app-background-overlay"></div>
+          <!-- Heading -->
+          <div
+            #cardHeading
+            appObserveElement
+            #intersection3="intersection"
+            [isContinuous]="false"
+            (isIntersecting)="isIntersecting($event, cardHeading)"
+            [ngClass]="{animated: intersection3._isIntersecting, fadeInRight: intersection3._isIntersecting}"
+            class="app-element app-element-heading-secondary animated-slow app-widget app-widget-heading app-invisible">
+            <div class="app-widget-container">
+              <h2 class="app-heading-title">Get In The Right Shape</h2>
+            </div>
+          </div>
+          <!-- Text -->
+          <div class="app-element app-element-card-global-text app-widget app-widget-text-editor">
+            <div class="app-widget-container">
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam
+              rem aperiam, eaque ipsa quae ab illo&nbsp; dolores eos qui ratione voluptatem sequi nesciunt. inventore
+              veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas
+              sit aspernatur aut odit aut fugit, sed quia consequuntur
+            </div>
+          </div>
+          <!-- Quotation -->
+          <div class="app-element app-element-quotation-heading app-widget app-widget-heading">
+            <div class="app-widget-container">
+              <h2 class="app-heading-title">"Embrace the joys of designing a beautiful lingerie wardrobe."</h2>
+            </div>
+          </div>
+          <!-- Text -->
+          <div class="app-element app-element-card-global-text app-widget app-widget-text-editor">
+            <div class="app-widget-container">
+              Inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
+              voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur
+            </div>
+          </div>
+          <!-- Signature -->
+          <div class="app-element app-element-founder-image-card-signature app-widget__width-initial app-widget app-widget-image">
+            <div class="app-widget-container">
+              <img src="/assets/images/Signature-2.png" alt="Signature" decoding="async">
+            </div>
+          </div>
+          <!-- Heading -->
+          <div class="app-element app-widget-jkit_heading-global app-widget app-widget-jkit_heading">
+            <div class="app-widget-container">
+              <div class="jeg-app-kit jkit-heading align-left">
+                <div class="heading-section-title">
+                  <h2 class="heading-title">Elisa Schneider</h2>
+                </div>
+                <h3 class="heading-section-subtitle">Founder of Vintina</h3>
+              </div>
+            </div>
+          </div>
+          <!-- Button About  -->
+          <div
+            #aboutusbtn
+            appObserveElement
+            #intersection4="intersection"
+            [isContinuous]="false"
+            (isIntersecting)="isIntersecting($event, aboutusbtn)"
+            [ngClass]="{animated: intersection4._isIntersecting, fadeInUp: intersection4._isIntersecting}"
+            class="app-element app-element-founder-image-card-button animated-slow app-widget app-widget-button app-invisible">
+            <div class="app-widget-container">
+              <div class="app-button-wrapper">
+                <a
+                  routerLink="/about"
+                  class="app-button">
+                  <span class="app-button-content-wrapper">
+                    <span class="app-button-text">About Us</span>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--  Services  -->
+  <section class="app-section app-element app-element-vintina-services app-section-boxed">
+    <div class="app-container">
+      <div class="app-element app-element-vintina-services-wrapper app-column app-col-100" data-element_type="column">
+        <div class="app-widget-wrap app-element-populated">
+          <!-- Inner section -->
+          <section
+            #services
+            appObserveElement
+            #intersection5="intersection"
+            [isContinuous]="false"
+            (isIntersecting)="isIntersecting($event, services)"
+            [ngClass]="{animated: intersection5._isIntersecting, fadeInDown: intersection5._isIntersecting}"
+            class="app-section app-inner-section app-element animated-slow app-invisible">
+
+            <div class="app-container">
+              <!-- Column shipping -->
+              <div class="app-column app-col-25 app-element app-element-service-card app-element-service-card-shipping">
+                <div class="app-widget-wrap app-element-populated">
+                  <!-- Icon box -->
+                  <div class="app-element app-element-icon-box-global app-view-default app-position-left app-vertical-align-middle app-mobile-position-top app-widget app-widget-icon-box">
+                    <div class="app-widget-container">
+                      <div class="app-icon-box-wrapper">
+                        <!-- Icon -->
+                        <div class="app-icon-box-icon">
+                          <span class="app-icon">
+                            <i aria-hidden="true" class="jki jki-truck-1-light"></i>
+                          </span>
+                        </div>
+                        <!-- Description -->
+                        <div class="app-icon-box-content">
+                          <h4 class="app-icon-box-title"><span>Free Shipping</span></h4>
+                          <p class="app-icon-box-description">Orders Over $200</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Column support -->
+              <div class="app-column app-col-25 app-element app-element-service-card app-element-service-card-support">
+                <div class="app-widget-wrap app-element-populated">
+                  <!-- Icon box -->
+                  <div class="app-element app-element-icon-box-global app-view-default app-position-left app-vertical-align-middle app-mobile-position-top app-widget app-widget-icon-box">
+                    <div class="app-widget-container">
+                      <div class="app-icon-box-wrapper">
+                        <!-- Icon -->
+                        <div class="app-icon-box-icon">
+                          <span class="app-icon">
+                            <i aria-hidden="true" class="jki jki-support-light"></i>
+                          </span>
+                        </div>
+                        <!-- Description -->
+                        <div class="app-icon-box-content">
+                          <h4 class="app-icon-box-title"><span>24/7 Support</span></h4>
+                          <p class="app-icon-box-description">Ready For You</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Column Free return -->
+              <div class="app-column app-col-25 app-element app-element-service-card app-element-service-card-return">
+                <div class="app-widget-wrap app-element-populated">
+                  <!-- Icon box -->
+                  <div class="app-element app-element-icon-box-global app-view-default app-position-left app-vertical-align-middle app-mobile-position-top app-widget app-widget-icon-box">
+                    <div class="app-widget-container">
+                      <div class="app-icon-box-wrapper">
+                        <!-- Icon -->
+                        <div class="app-icon-box-icon">
+                          <span class="app-icon">
+                            <i aria-hidden="true" class="jki jki-money-light"></i>
+                          </span>
+                        </div>
+                        <!-- Description -->
+                        <div class="app-icon-box-content">
+                          <h4 class="app-icon-box-title"><span>14 Days Return</span></h4>
+                          <p class="app-icon-box-description">Free Return</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Column payment -->
+              <div class="app-column app-col-25 app-element app-element-service-card-payment">
+                <div class="app-widget-wrap app-element-populated">
+                  <!-- Icon box -->
+                  <div class="app-element app-element-icon-box-global app-view-default app-position-left app-vertical-align-middle app-mobile-position-top app-widget app-widget-icon-box">
+                    <div class="app-widget-container">
+                      <div class="app-icon-box-wrapper">
+                        <!-- Icon -->
+                        <div class="app-icon-box-icon">
+                          <span class="app-icon">
+                            <i aria-hidden="true" class="jki jki-credit-card1-light"></i>
+                          </span>
+                        </div>
+                        <!-- Description -->
+                        <div class="app-icon-box-content">
+                          <h4 class="app-icon-box-title"><span>Quick Payment</span></h4>
+                          <p class="app-icon-box-description">100% Secure</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Favorites-->
+  <ng-app-favorites></ng-app-favorites>
+</div>

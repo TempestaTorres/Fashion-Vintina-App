@@ -22,10 +22,21 @@
               {
                 "glob": "**/*",
                 "input": "public"
+              },
+              {
+                "glob": "**/*",
+                "input": "src/assets/",
+                "output": "/assets/"
               }
             ],
             "styles": [
+              "src/plugins/jkiticon/jkiticons.css",
+              "src/plugins/css/all.min.css",
               "src/styles.css"
+            ],
+            "scripts": [
+              "src/plugins/js/jquery.js",
+              "src/plugins/js/jquery.zoom.js"
             ]
           },
           "configurations": {
@@ -33,13 +44,13 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kB",
-                  "maximumError": "1MB"
+                  "maximumWarning": "10MB",
+                  "maximumError": "10MB"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "4kB",
-                  "maximumError": "8kB"
+                  "maximumWarning": "150kB",
+                  "maximumError": "150kB"
                 }
               ],
               "outputHashing": "all"
@@ -79,6 +90,11 @@
               {
                 "glob": "**/*",
                 "input": "public"
+              },
+              {
+                "glob": "**/*",
+                "input": "src/assets/",
+                "output": "/assets/"
               }
             ],
             "styles": [

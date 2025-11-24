@@ -1,0 +1,172 @@
+.app-widget.app-icon-list--layout-inline .app-widget-container {
+  overflow:hidden
+}
+.app-widget .app-icon-list-items.app-inline-items {
+  margin-right:-8px;
+  margin-left:-8px
+}
+.app-widget .app-icon-list-items.app-inline-items .app-icon-list-item {
+  margin-right:8px;
+  margin-left:8px
+}
+.app-widget .app-icon-list-items.app-inline-items .app-icon-list-item:after {
+  width:auto;
+  left:auto;
+  position:relative;
+  height:100%;
+  border-top:0;
+  border-bottom:0;
+  border-right:0;
+  border-left-width:1px;
+  border-style:solid;
+  right:-8px
+}
+.app-widget .app-icon-list-items {
+  list-style-type:none;
+  margin:0;
+  padding:0
+}
+.app-widget .app-icon-list-item {
+  margin:0;
+  padding:0;
+  position:relative
+}
+.app-widget .app-icon-list-item:after {
+  position:absolute;
+  bottom:0;
+  width:100%
+}
+.app-widget .app-icon-list-item,
+.app-widget .app-icon-list-item a {
+  display:flex;
+  font-size:inherit;
+  align-items:var(--icon-vertical-align,center)
+}
+.app-widget .app-icon-list-icon+.app-icon-list-text {
+  align-self:center;
+  padding-left:5px;
+}
+.app-widget .app-icon-list-icon {
+  display:flex;
+  position:relative;
+  top:var(--icon-vertical-offset,initial);
+}
+.app-widget .app-icon-list-icon svg {
+  width:var(--icon-list-icon-size,1em);
+  height:var(--icon-list-icon-size,1em);
+}
+.app-widget .app-icon-list-icon i {
+  width:1.25em;
+  font-size:var(--icon-list-icon-size);
+}
+.app-widget.app-widget-icon-list .app-icon-list-icon {
+  text-align:var(--icon-list-icon-align);
+}
+.app-widget.app-widget-icon-list .app-icon-list-icon svg {
+  margin:var(--icon-list-icon-margin,0 calc(var(--icon-list-icon-size, 1em) * .25) 0 0)
+}
+.app-widget.app-list-item-link-full_width a {
+  width:100%;
+}
+.app-widget.app-align-center .app-icon-list-item,
+.app-widget.app-align-center .app-icon-list-item a {
+  justify-content:center;
+}
+.app-widget.app-align-center .app-icon-list-item:after {
+  margin:auto;
+}
+.app-widget.app-align-center .app-inline-items {
+  justify-content:center;
+}
+.app-widget.app-align-left .app-icon-list-item,
+.app-widget.app-align-left .app-icon-list-item a {
+  justify-content:flex-start;
+  text-align:left;
+}
+.app-widget.app-align-left .app-inline-items {
+  justify-content:flex-start;
+}
+.app-widget.app-align-right .app-icon-list-item,
+.app-widget.app-align-right .app-icon-list-item a {
+  justify-content:flex-end;
+  text-align:right;
+}
+.app-widget.app-align-right .app-icon-list-items {
+  justify-content:flex-end;
+}
+.app-widget:not(.app-align-right) .app-icon-list-item:after {
+  left:0;
+}
+.app-widget:not(.app-align-left) .app-icon-list-item:after {
+  right:0;
+}
+
+@media (max-width:1024px) {
+  .app-widget.app-tablet-align-center .app-icon-list-item,
+  .app-widget.app-tablet-align-center .app-icon-list-item a {
+    justify-content:center;
+  }
+  .app-widget.app-tablet-align-center .app-icon-list-item:after {
+    margin:auto;
+  }
+  .app-widget.app-tablet-align-center .app-inline-items {
+    justify-content:center;
+  }
+  .app-widget.app-tablet-align-left .app-icon-list-item,
+  .app-widget.app-tablet-align-left .app-icon-list-item a {
+    justify-content:flex-start;
+    text-align:left;
+  }
+  .app-widget.app-tablet-align-left .app-inline-items {
+    justify-content:flex-start;
+  }
+  .app-widget.app-tablet-align-right .app-icon-list-item,
+  .app-widget.app-tablet-align-right .app-icon-list-item a {
+    justify-content:flex-end;
+    text-align:right;
+  }
+  .app-widget.app-tablet-align-right .app-icon-list-items {
+    justify-content:flex-end;
+  }
+  .app-widget:not(.app-tablet-align-right) .app-icon-list-item:after {
+    left:0;
+  }
+  .app-widget:not(.app-tablet-align-left) .app-icon-list-item:after {
+    right:0;
+  }
+}
+
+@media (max-width:767px) {
+  .app-widget.app-mobile-align-center .app-icon-list-item,
+  .app-widget.app-mobile-align-center .app-icon-list-item a {
+    justify-content:center;
+  }
+  .app-widget.app-mobile-align-center .app-icon-list-item:after {
+    margin:auto;
+  }
+  .app-widget.app-mobile-align-center .app-inline-items {
+    justify-content:center;
+  }
+  .app-widget.app-mobile-align-left .app-icon-list-item,
+  .app-widget.app-mobile-align-left .app-icon-list-item a {
+    justify-content:flex-start;
+    text-align:left;
+  }
+  .app-widget.app-mobile-align-left .app-inline-items {
+    justify-content:flex-start;
+  }
+  .app-widget.app-mobile-align-right .app-icon-list-item,
+  .app-widget.app-mobile-align-right .app-icon-list-item a {
+    justify-content:flex-end;
+    text-align:right;
+  }
+  .app-widget.app-mobile-align-right .app-icon-list-items {
+    justify-content:flex-end;
+  }
+  .app-widget:not(.app-mobile-align-right) .app-icon-list-item:after {
+    left:0;
+  }
+  .app-widget:not(.app-mobile-align-left) .app-icon-list-item:after {
+    right:0;
+  }
+}

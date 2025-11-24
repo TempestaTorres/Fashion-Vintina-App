@@ -1,0 +1,189 @@
+<div class="app-home">
+  <!-- Menu sidebar -->
+  <div class="app-element app-widget-jkit_off_canvas app-widget__width-auto app-widget">
+    <div class="app-widget-container">
+      <div class="jeg-app-kit jkit-off-canvas">
+        <!-- Toggle Button -->
+        <div class="toggle-wrapper">
+          <a href=""
+             class="offcanvas-sidebar-button"
+             (click)="toggleSidebar($event)">
+            <i aria-hidden="true" class="jki jki-menu-7-light"></i>
+          </a>
+        </div>
+        <!-- Offcanvas sidebar -->
+        <div class="offcanvas-sidebar position-right" [class.active]="sidebarOpened()">
+          <!--  Overlay -->
+          <div class="bg-overlay" (click)="toggleSidebar($event)"></div>
+          <!-- Side bar -->
+          <div class="sidebar-widget">
+            <div class="widget-container">
+              <!-- Heading -->
+              <div class="widget-heading">
+                <!-- Close button -->
+                <a
+                  class="offcanvas-close-button"
+                  (click)="toggleSidebar($event)"
+                  href="">
+                  <i aria-hidden="true" class="jki jki-times-solid"></i>
+                </a>
+              </div>
+              <!-- Content -->
+              <div class="widget-content">
+                <div class="app app-home">
+                  <!-- Side bar content -->
+                  <section class="app-element app-element-sidebar app-section app-section-boxed">
+                    <div class="app-container">
+                      <!-- Column -->
+                      <div class="app-element app-element-sidebar-content app-column app-col-100" data-element_type="column">
+                        <div class="app-widget-wrap app-element-populated">
+                          <!-- Image -->
+                          <div class="app-element app-element-sidebar-image app-widget app-widget-image">
+                            <div class="app-widget-container">
+                              <a href="">
+                                <img [src]="logoMobileSrc" alt="Vintina logo" decoding="async">
+                              </a>
+                            </div>
+                          </div>
+                          <!-- Text -->
+                          <div class="app-element app-element-text-global app-widget app-widget-text-editor">
+                            <div class="app-widget-container">
+                              <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vel risus imperdiet, gravida justo eu.
+                              </p>
+                            </div>
+                          </div>
+                          <!-- Divider -->
+                          <div class="app-element app-element-default-divider app-widget-divider--view-line app-widget app-widget-divider">
+                            <div class="app-widget-container">
+                              <div class="app-divider">
+                                <span class="app-divider-separator"></span>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Heading -->
+                          <div class="app-element app-element-sidebar-heading app-widget app-widget-heading">
+                            <div class="app-widget-container">
+                              <h3 class="app-heading-title">Shop Denpasar, Bali</h3>
+                            </div>
+                          </div>
+                          <!-- Icon list -->
+                          <div class="app-element app-element-default-icon-list app-list-item-link-full_width app-widget app-widget-icon-list">
+                            <div class="app-widget-container">
+                              <ul class="app-icon-list-items">
+                                  <!-- Item -->
+                                  <li class="app-icon-list-item">
+                                    <span class="app-icon-list-icon"><i aria-hidden="true" class="fas fa-map-marker-alt"></i></span>
+                                    <span class="app-icon-list-text">Jl. Teuku Umar No.1, Renon, Bali, Indonesia</span>
+                                  </li>
+                                  <!-- Item -->
+                                  <li class="app-icon-list-item">
+                                    <span class="app-icon-list-icon"><i aria-hidden="true" class="fas fa-phone-alt"></i></span>
+                                    <span class="app-icon-list-text">+62 361 234 4567</span>
+                                  </li>
+                                  <!-- Item -->
+                                  <li class="app-icon-list-item">
+                                    <span class="app-icon-list-icon"><i aria-hidden="true" class="fas fa-envelope"></i></span>
+                                    <span class="app-icon-list-text">vintina&#64;domain.com</span>
+                                  </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <!-- Divider -->
+                          <div class="app-element app-element-default-divider app-widget-divider--view-line app-widget app-widget-divider">
+                            <div class="app-widget-container">
+                              <div class="app-divider">
+                                <span class="app-divider-separator"></span>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Heading -->
+                          <div class="app-element app-element-sidebar-heading app-widget app-widget-heading">
+                            <div class="app-widget-container">
+                              <h3 class="app-heading-title">Shop Seminyak, Bali</h3>
+                            </div>
+                          </div>
+                          <!-- Icon list -->
+                          <div class="app-element app-element-default-icon-list app-list-item-link-full_width app-widget app-widget-icon-list">
+                            <div class="app-widget-container">
+                              <ul class="app-icon-list-items">
+                                <!-- Item -->
+                                <li class="app-icon-list-item">
+                                  <span class="app-icon-list-icon"><i aria-hidden="true" class="fas fa-map-marker-alt"></i></span>
+                                  <span class="app-icon-list-text">Jl. Petitenget No.3, Seminyak, Bali, Indonesia</span>
+                                </li>
+                                <!-- Item -->
+                                <li class="app-icon-list-item">
+                                  <span class="app-icon-list-icon"><i aria-hidden="true" class="fas fa-phone-alt"></i></span>
+                                  <span class="app-icon-list-text">+62 361 234 4567</span>
+                                </li>
+                                <!-- Item -->
+                                <li class="app-icon-list-item">
+                                  <span class="app-icon-list-icon"><i aria-hidden="true" class="fas fa-envelope"></i></span>
+                                  <span class="app-icon-list-text">vintina&#64;domain.com</span>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <!-- Divider -->
+                          <div class="app-element app-element-default-divider app-widget-divider--view-line app-widget app-widget-divider">
+                            <div class="app-widget-container">
+                              <div class="app-divider">
+                                <span class="app-divider-separator"></span>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Social Icons -->
+                          <section class="app-element app-section app-inner-section app-section-boxed">
+                            <div class="app-container app-column-gap-no">
+                              <div class="app-element app-element-section-social-icons app-column app-col-100" data-element_type="column">
+                                <div class="app-widget-wrap app-element-populated">
+                                  <div class="app-element jkit-social-shape shape-none app-widget app-widget-jkit_social_share">
+                                    <div class="app-widget-container">
+                                      <div class="jeg-app-kit jkit-social-share">
+                                        <ul class="social-share-list">
+                                          <!-- Icon -->
+                                          <li>
+                                            <a class="facebook social-icon">
+                                              <i aria-hidden="true" class="fab fa-facebook-f"></i>
+                                            </a>
+                                          </li>
+                                          <!-- Icon -->
+                                          <li>
+                                            <a class="twitter social-icon">
+                                              <i aria-hidden="true" class="fab fa-twitter"></i>
+                                            </a>
+                                          </li>
+                                          <!-- Icon -->
+                                          <li>
+                                            <a class="instapaper social-icon">
+                                              <i aria-hidden="true" class="jki jki-instagram-1-light"></i>
+                                            </a>
+                                          </li>
+                                          <!-- Icon -->
+                                          <li>
+                                            <a class="linkedin social-icon">
+                                              <i aria-hidden="true" class="jki jki-pinterest-light"></i>
+                                            </a>
+                                          </li>
+                                        </ul>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </section>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
