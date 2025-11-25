@@ -297,7 +297,9 @@
               <ul class="products columns-4">
 
                 @for (relProduct of relatedProducts; track $index) {
-                  <li class="product has-post-thumbnail">
+                  <li
+                    [class.last]="$index === relatedProducts.length - 1"
+                    class="product has-post-thumbnail">
                     <a class="ap-element-button"
                       (click)="goToNextProduct(relProduct.type)">
 

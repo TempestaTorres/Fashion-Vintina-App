@@ -167,6 +167,7 @@ export class Product {
     this.addedToCartButtons[index].set(true);
 
     if (product) {
+      product.quantity = 1;
       this.cartService.addToCart(product);
     }
 

@@ -17,7 +17,7 @@ export class ObserveElementDirective implements OnInit, OnDestroy {
   @Input() root: HTMLElement | null = null
   @Input() rootMargin = '0px 0px 0px 0px';
   @Input() threshold = 0.1;
-  @Input() debounceTime = 500;
+  @Input() debounceTime = 200;
   @Input() isContinuous = false;
 
   @Output() isIntersecting = new EventEmitter<boolean>();

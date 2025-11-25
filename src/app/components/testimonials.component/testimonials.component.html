@@ -1,0 +1,181 @@
+<div class="app app-home">
+  <section class="app-section app-element app-element-testimonials app-section-boxed">
+    <div class="app-container">
+      <div class="app-column app-col-100 app-element app-element-testimonials-wrapper">
+        <div class="app-widget-wrap app-element-populated">
+          <!-- Heading -->
+          <div
+            #heading
+            appObserveElement
+            #intersection="intersection"
+            [isContinuous]="false"
+            (isIntersecting)="isIntersecting($event, heading)"
+            [ngClass]="{animated: intersection._isIntersecting, fadeInDown: intersection._isIntersecting}"
+            class="app-element app-element-heading-secondary app-align-center animated-slow app-widget app-widget-heading app-invisible">
+            <div class="app-widget-container">
+              <h2 class="app-heading-title">Our Customer say</h2>
+            </div>
+          </div>
+          <!-- Overlay Icon -->
+          <div class="app-element app-element-overlay-quotation-icon app-absolute app-view-default app-widget app-widget-icon">
+            <div class="app-widget-container">
+              <div class="app-icon-wrapper">
+                <div class="app-icon">
+                  <i aria-hidden="true" class="jki jki-testimonial-quote-light"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Testimonials -->
+          <div
+            class="app-element app-widget-jkit_testimonials app-widget__width-initial app-widget-tablet__width-initial app-widget-mobile__width-initial app-widget">
+            <div class="app-widget-container">
+              <div class="jeg-app-kit jkit-testimonials arrow-middle-edge style-4">
+                <div class="testimonials-list">
+                  <div class="testimonials-track">
+                    <!-- Item  -->
+                    <div class="testimonial-item">
+                      <div class="testimonial-box hover-from-left">
+                        <div class="icon-content"></div>
+                        <!-- Text -->
+                        <div class="comment-content">
+                          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                            laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto
+                            beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
+                            odit
+                          </p>
+                        </div>
+                        <!-- Bio -->
+                        <div class="comment-bio">
+                          <div class="bio-details">
+                            <!-- Image -->
+                            <div class="profile-image"></div>
+                            <!-- Stars -->
+                            <ul class="rating-stars">
+                              <li><i aria-hidden="true" class="jki jki-star-solid"></i></li>
+                              <li><i aria-hidden="true" class="jki jki-star-solid"></i></li>
+                              <li><i aria-hidden="true" class="jki jki-star-solid"></i></li>
+                              <li><i aria-hidden="true" class="jki jki-star-solid"></i></li>
+                              <li><i aria-hidden="true" class="jki jki-star-solid"></i></li>
+                            </ul>
+                            <!-- Info -->
+                            <span class="profile-info">
+                              <strong class="profile-name">Mathilde Laporte</strong>
+                              <p class="profile-des">Model</p>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Item  -->
+                    <div class="testimonial-item">
+                      <div class="testimonial-box hover-from-left">
+                        <div class="icon-content"></div>
+                        <!-- Text -->
+                        <div class="comment-content">
+                          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                            laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto
+                            beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
+                            odit
+                          </p>
+                        </div>
+                        <!-- Bio -->
+                        <div class="comment-bio">
+                          <div class="bio-details">
+                            <!-- Image -->
+                            <div class="profile-image"></div>
+                            <!-- Stars -->
+                            <ul class="rating-stars">
+                              <li><i aria-hidden="true" class="jki jki-star-solid"></i></li>
+                              <li><i aria-hidden="true" class="jki jki-star-solid"></i></li>
+                              <li><i aria-hidden="true" class="jki jki-star-solid"></i></li>
+                              <li><i aria-hidden="true" class="jki jki-star-solid"></i></li>
+                              <li><i aria-hidden="true" class="jki jki-star-solid"></i></li>
+                            </ul>
+                            <!-- Info -->
+                            <span class="profile-info">
+                              <strong class="profile-name">Brooke Brown</strong>
+                              <p class="profile-des">Designer</p>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Item  -->
+                    <div class="testimonial-item">
+                      <div class="testimonial-box hover-from-left">
+                        <div class="icon-content"></div>
+                        <!-- Text -->
+                        <div class="comment-content">
+                          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                            laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto
+                            beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
+                            odit
+                          </p>
+                        </div>
+                        <!-- Bio -->
+                        <div class="comment-bio">
+                          <div class="bio-details">
+                            <!-- Image -->
+                            <div class="profile-image"></div>
+                            <!-- Stars -->
+                            <ul class="rating-stars">
+                              <li><i aria-hidden="true" class="jki jki-star-solid"></i></li>
+                              <li><i aria-hidden="true" class="jki jki-star-solid"></i></li>
+                              <li><i aria-hidden="true" class="jki jki-star-solid"></i></li>
+                              <li><i aria-hidden="true" class="jki jki-star-solid"></i></li>
+                              <li><i aria-hidden="true" class="jki jki-star-solid"></i></li>
+                            </ul>
+                            <!-- Info -->
+                            <span class="profile-info">
+                              <strong class="profile-name">Layla Butler</strong>
+                              <p class="profile-des">Managers</p>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Item  -->
+                    <div class="testimonial-item">
+                      <div class="testimonial-box hover-from-left">
+                        <div class="icon-content"></div>
+                        <!-- Text -->
+                        <div class="comment-content">
+                          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                            laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto
+                            beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
+                            odit
+                          </p>
+                        </div>
+                        <!-- Bio -->
+                        <div class="comment-bio">
+                          <div class="bio-details">
+                            <!-- Image -->
+                            <div class="profile-image"></div>
+                            <!-- Stars -->
+                            <ul class="rating-stars">
+                              <li><i aria-hidden="true" class="jki jki-star-solid"></i></li>
+                              <li><i aria-hidden="true" class="jki jki-star-solid"></i></li>
+                              <li><i aria-hidden="true" class="jki jki-star-solid"></i></li>
+                              <li><i aria-hidden="true" class="jki jki-star-solid"></i></li>
+                              <li><i aria-hidden="true" class="jki jki-star-solid"></i></li>
+                            </ul>
+                            <!-- Info -->
+                            <span class="profile-info">
+                              <strong class="profile-name">Joyce Sanchez</strong>
+                              <p class="profile-des">Housewife</p>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

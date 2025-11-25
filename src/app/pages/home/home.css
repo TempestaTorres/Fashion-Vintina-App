@@ -147,7 +147,86 @@
 .app-home .app-element.app-element-service-card-payment > .app-element-populated {
   padding: 0 0 0 40px;
 }
-
+.app-home .app-element.app-element-section-news > .app-container {
+  max-width: 1280px;
+}
+.app-home .app-element.app-element-section-news {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 80px 0 40px 0;
+}
+/* New brands */
+.app-bc-flex-widget .app-home .app-element.app-element-new-brand.app-column .app-widget-wrap {
+  align-items: center;
+}
+.app-home .app-element.app-element-new-brand.app-column.app-element[data-element_type="column"] > .app-widget-wrap.app-element-populated {
+  align-content: center;
+  align-items: center;
+}
+.app-home .app-element.app-element-new-brand:not(.app-motion-effects-element-type-background) > .app-widget-wrap,
+.app-home .app-element.app-element-new-brand > .app-widget-wrap > .app-motion-effects-container > .app-motion-effects-layer {
+  background-position: center center;
+  background-size: cover;
+}
+.app-home .app-element.app-element-new-brand.first:not(.app-motion-effects-element-type-background) > .app-widget-wrap,
+.app-home .app-element.app-element-new-brand.first > .app-widget-wrap > .app-motion-effects-container > .app-motion-effects-layer {
+  background-image: url("/assets/images/partial-view-of-seductive-female-model-wearing-sexy-beige-lingerie-and-posing-in-bed.jpg");
+}
+.app-home .app-element.app-element-new-brand.last:not(.app-motion-effects-element-type-background) > .app-widget-wrap,
+.app-home .app-element.app-element-new-brand.last > .app-widget-wrap > .app-motion-effects-container > .app-motion-effects-layer {
+  background-image: url("/assets/images/slim-female-body-in-sexy-lingerie-side-view-2.jpg");
+}
+.app-home .app-element.app-element-new-brand > .app-element-populated >  .app-background-overlay {
+  background-color: var( --global-color-primary );
+  opacity: 0.15;
+}
+.app-home .app-element.app-element-new-brand > .app-element-populated {
+  transition: background 0.3s,  border 0.3s,  border-radius 0.3s,  box-shadow 0.3s;
+}
+.app-home .app-element.app-element-new-brand > .app-element-populated {
+  padding: 180px 40px 120px 40px;
+}
+.app-home .app-element.app-element-new-brand.first > .app-element-populated {
+  --column-margin-right: 10px;
+  --column-margin-left: 0;
+  margin: 0 10px 0 0;
+}
+.app-home .app-element.app-element-new-brand.last > .app-element-populated {
+  margin: 0 0 0 10px;
+  --column-margin-right: 0px;
+  --column-margin-left: 10px;
+}
+.app-home .app-element.app-element-new-brand > .app-element-populated > .app-background-overlay {
+  transition: background 0.3s,  border-radius 0.3s,  opacity 0.3s;
+}
+.app-home .app-element.app-element-new-brand-heading .jeg-app-kit.jkit-heading {
+  text-align: left;
+}
+.app-home .app-element.app-element-new-brand-heading .jeg-app-kit.jkit-heading .heading-title {
+  font-family: var( --global-typography-238dbd0-font-family ),  sans-serif;
+  font-size: var( --global-typography-238dbd0-font-size );
+  font-weight: var( --global-typography-238dbd0-font-weight );
+  text-transform: var( --global-typography-238dbd0-text-transform );
+  color: var( --global-color-bbd710c );
+}
+.app-home .app-element.app-element-new-brand-heading .jeg-app-kit.jkit-heading .heading-section-title {
+  margin: -15px 0 -10px 0;
+}
+.app-home .app-element.app-element-new-brand-heading .jeg-app-kit.jkit-heading .heading-title > span {
+  font-family: "Cormorant",  sans-serif;
+  font-size: 50px;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 0;
+}
+.app-home .app-element.app-element-new-brand-heading .jeg-app-kit.jkit-heading .heading-section-description {
+  color: var( --global-color-bbd710c );
+  font-family: var( --global-typography-text-font-family ),  sans-serif;
+  font-size: var( --global-typography-text-font-size );
+  font-weight: var( --global-typography-text-font-weight );
+  text-transform: var( --global-typography-text-text-transform );
+  margin: 0 0 -10px 0;
+}
 /*============================================= max min ==============================================*/
 @media(max-width:1024px) and (min-width:768px) {
   .app-home .app-element.app-element-ventina-hero-card {
@@ -209,6 +288,15 @@
     --column-margin-left: 0;
     padding: 0 0 0 80px;
   }
+  .app-home .app-element.app-element-section-news {
+    padding: 80px 15px 80px 15px;
+  }
+  .app-home .app-element.app-element-new-brand-heading .jeg-app-kit.jkit-heading .heading-title {
+    font-size: var( --global-typography-238dbd0-font-size );
+  }
+  .app-home .app-element.app-element-new-brand-heading .jeg-app-kit.jkit-heading .heading-section-description {
+    font-size: var( --global-typography-text-font-size );
+  }
 }
 /*============================================= 767 ===================================================*/
 @media(max-width:767px) {
@@ -268,5 +356,29 @@
     --column-margin-right: 0;
     --column-margin-left: 0;
     padding: 40px 0 0 25px;
+  }
+  .app-home .app-element.app-element-section-news {
+    padding: 80px 10px 80px 10px;
+  }
+  /* News */
+  .app-home .app-element.app-element-new-brand.first:not(.app-motion-effects-element-type-background) > .app-widget-wrap,
+  .app-home .app-element.app-element-new-brand.first > .app-widget-wrap > .app-motion-effects-container > .app-motion-effects-layer {
+    background-position: center left;
+  }
+  .app-home .app-element.app-element-new-brand.first > .app-element-populated {
+    margin: 0 0 10px 0;
+    --column-margin-right: 0;
+    --column-margin-left: 0;
+  }
+  .app-home .app-element.app-element-new-brand.last > .app-element-populated {
+    margin: 10px 0 0 0;
+    --column-margin-right: 0;
+    --column-margin-left: 0;
+  }
+  .app-home .app-element.app-element-new-brand-heading .jeg-app-kit.jkit-heading .heading-title {
+    font-size: var( --global-typography-238dbd0-font-size );
+  }
+  .app-home .app-element.app-element-new-brand-heading .jeg-app-kit.jkit-heading .heading-section-description {
+    font-size: var( --global-typography-text-font-size );
   }
 }

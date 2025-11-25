@@ -294,4 +294,101 @@
   </section>
   <!-- Favorites-->
   <ng-app-favorites></ng-app-favorites>
+  <!--  News -->
+  <section class="app-section app-element app-element-section-news elementor-section-boxed">
+    <div class="app-container">
+      <!-- Card -->
+      <div
+        #card1
+        appObserveElement
+        #intersection6="intersection"
+        [isContinuous]="false"
+        (isIntersecting)="isIntersecting($event, card1)"
+        [ngClass]="{animated: intersection6._isIntersecting, fadeInLeft: intersection6._isIntersecting}"
+        class="app-column app-col-50 app-element app-element-new-brand first animated-slow app-invisible"
+        data-element_type="column">
+
+          <div class="app-widget-wrap app-element-populated">
+            <!-- Overlay -->
+            <div class="app-background-overlay"></div>
+              <!-- Heading -->
+            <div class="app-element app-element-new-brand-heading app-widget app-widget-jkit_heading">
+              <div class="app-widget-container">
+                <div class="jeg-app-kit jkit-heading">
+                  <!-- Title -->
+                  <div class="heading-section-title  display-inline-block">
+                    <h2 class="heading-title">New Arrivals</h2>
+                  </div>
+                  <!-- Description -->
+                  <div class="heading-section-description">
+                    <p>Ut enim ad minima veniam, quis nostrum exercitationem</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Button -->
+            <div class="app-element app-element-button-traditional-outline app-align-left app-widget app-widget-button">
+              <div class="app-widget-container">
+                <div class="app-button-wrapper">
+                  <a
+                    [routerLink]="['/shop']"
+                    class="app-button ap-element-button">
+                      <span class="app-button-content-wrapper">
+                        <span class="app-button-text">Shop Now</span>
+                      </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+      <!-- Card -->
+      <div
+        #card2
+        appObserveElement
+        #intersection7="intersection"
+        [isContinuous]="false"
+        (isIntersecting)="isIntersecting($event, card2)"
+        [ngClass]="{animated: intersection7._isIntersecting, fadeInRight: intersection7._isIntersecting}"
+        class="app-column app-col-50 app-element app-element-new-brand last animated-slow app-invisible"
+        data-element_type="column">
+
+          <div class="app-widget-wrap app-element-populated">
+            <!-- Overlay -->
+            <div class="app-background-overlay"></div>
+              <!-- Heading -->
+            <div class="app-element app-element-new-brand-heading app-widget app-widget-jkit_heading">
+              <div class="app-widget-container">
+                <div class="jeg-app-kit jkit-heading">
+                  <!-- Title -->
+                  <div class="heading-section-title  display-inline-block">
+                    <h2 class="heading-title">Get Perfect Fit</h2>
+                  </div>
+                  <!-- Description -->
+                  <div class="heading-section-description">
+                    <p>Ut enim ad minima veniam, quis nostrum exercitationem</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Button -->
+            <div class="app-element app-element-button-traditional-outline app-align-left app-widget app-widget-button">
+              <div class="app-widget-container">
+                <div class="app-button-wrapper">
+                  <a
+                    [routerLink]="['/shop']"
+                    class="app-button ap-element-button">
+                      <span class="app-button-content-wrapper">
+                        <span class="app-button-text">Shop Now</span>
+                      </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </section>
+  <!--  Testimonials -->
+  <app-testimonials></app-testimonials>
 </div>

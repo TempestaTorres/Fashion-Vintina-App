@@ -30,13 +30,15 @@
               }
             ],
             "styles": [
+              "src/plugins/css/tiny-slider.scss",
               "src/plugins/jkiticon/jkiticons.css",
               "src/plugins/css/all.min.css",
               "src/styles.css"
             ],
             "scripts": [
               "src/plugins/js/jquery.js",
-              "src/plugins/js/jquery.zoom.js"
+              "src/plugins/js/jquery.zoom.js",
+              "src/plugins/js/tiny-slider.js"
             ]
           },
           "configurations": {

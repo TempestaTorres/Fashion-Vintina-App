@@ -1,1 +1,88 @@
-<h1>category works!</h1>
+<div id="primary" class="app app-home content-area commerce commerce-page">
+  <main class="site-main">
+    <div class="app-element app-element-page-section app-con app-con-boxed a-flex">
+      <div class="app-con-inner">
+        <!-- Breadcrumb-->
+        <nav class="commerce-breadcrumb">
+          <a class="ap-element-button" [routerLink]="'/'">Home</a>
+          / {{ categoryName }}
+        </nav>
+        <!-- Heading -->
+        <div class="commerce-products-header">
+          <h1>{{ categoryName | titlecase }}</h1>
+        </div>
+        <!-- Notices -->
+        <div class="commerce-notices-wrapper"></div>
+
+        @if (products.length > 0) {
+          <!-- Summary -->
+          <section class="section-summary">
+            <!--  Text -->
+            <p class="commerce-result-count">Showing all {{ products.length }} results</p>
+            <!-- Sorting form -->
+            <form
+              class="commerce-ordering"
+              novalidate>
+
+              <select name="orderby" class="orderby" aria-label="Shop order">
+                <option value="menu_order" selected="selected">Default sorting</option>
+                <option value="popularity">Sort by popularity</option>
+                <option value="rating">Sort by average rating</option>
+                <option value="date">Sort by latest</option>
+                <option value="price">Sort by price: low to high</option>
+                <option value="price-desc">Sort by price: high to low</option>
+              </select>
+            </form>
+        </section>
+        <!-- Products  -->
+          <ul class="products columns-4">
+
+          @for (product of products; track $index) {
+
+            <li
+              [class.last]="$index === products.length - 1"
+              class="product has-post-thumbnail">
+              <a
+                [routerLink]="['/product', product.type]"
+                class="ap-element-button">
+
+                @if (product.onSale) {
+                  <span class="onsale">Sale!</span>
+                }
+                @if (product.image) {
+                  <img [src]="product.image" alt="Sensual woman.">
+                }
+                <h2 class="commerce-loop-product__title">{{ product.name }}</h2>
+                <!-- Price -->
+                <span class="price">
+                        @if (product.originalPrice) {
+                          <del aria-hidden="true">
+                            <span class="price-amount">
+                              <bdi>{{ product.originalPrice | currency: 'USD' : 'symbol' : '.2-2' : 'en-US' }}</bdi>
+                            </span>
+                          </del>
+                        }
+                      <span class="price-amount">
+                        <bdi>{{ product.price | currency: 'USD' : 'symbol' : '.2-2' : 'en-US' }}</bdi>
+                      </span>
+                </span>
+              </a>
+              <!-- Button add-to-cart -->
+              <a (click)="onAddToCart(product, $index)"
+                 [class.added]="addedToCartButtons[$index]()"
+                 class="button ajax_add_to_cart"
+              >Add to cart</a>
+              <!-- Button View cart -->
+              <a
+                [class.active]="addedToCartButtons[$index]()"
+                [routerLink]="'/cart'"
+                class="button view-cart-button">View cart</a>
+            </li>
+          }
+        </ul>
+        }
+
+      </div>
+    </div>
+  </main>
+</div>

@@ -1,0 +1,51 @@
+
+.app-home .app-element.app-element-testimonials > .app-container {
+  max-width: 1280px;
+}
+.app-home .app-element.app-element-testimonials {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 80px 0 80px 0;
+}
+.app-home .app-element.app-element-testimonials-wrapper.app-column > .app-widget-wrap {
+  justify-content: center;
+}
+.app-home .app-element.app-element-testimonials-wrapper > .app-element-populated {
+  padding: 0;
+}
+.app-home .app-element.app-element-overlay-quotation-icon .app-icon-wrapper {
+  text-align: center;
+}
+.app-home .app-element.app-element-overlay-quotation-icon.app-view-stacked .app-icon {
+  background-color: #0000001C;
+}
+.app-home .app-element.app-element-overlay-quotation-icon.app-view-framed .app-icon,
+.app-home .app-element.app-element-overlay-quotation-icon.app-view-default .app-icon {
+  color: #0000001C;
+  border-color: #0000001C;
+}
+.app-home .app-element.app-element-overlay-quotation-icon.app-view-framed .app-icon,
+.app-home .app-element.app-element-overlay-quotation-icon.app-view-default .app-icon svg {
+  fill: #0000001C;
+}
+.app-home .app-element.app-element-overlay-quotation-icon .app-icon {
+  font-size: 100px;
+}
+.app-home .app-element.app-element-overlay-quotation-icon .app-icon svg {
+  height: 100px;
+}
+body:not(.rtl) .app-home .app-element.app-element-overlay-quotation-icon {
+  left: 0;
+}
+body.rtl .app-home .app-element.app-element-overlay-quotation-icon {
+  right: 0;
+}
+.app-home .app-element.app-element-overlay-quotation-icon {
+  top: 104px;
+}
+/*==================================================== Media ======================================*/
+@media (max-width: 767px) {
+  .app-home .app-element.app-element-overlay-quotation-icon {
+    top: 90px;
+  }
+}

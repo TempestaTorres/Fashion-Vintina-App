@@ -2429,3 +2429,10 @@ body:not(.search-results) .twentysixteen .entry-summary {
   background:inherit;
   color:inherit
 }
+.commerce ul.products li.product .button.view-cart-button {
+  display: none;
+  margin-left: 4px;
+}
+.commerce ul.products li.product .button.view-cart-button.active {
+  display: inline-block;
+}

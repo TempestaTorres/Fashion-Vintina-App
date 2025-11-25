@@ -266,6 +266,28 @@ body:not(.rtl) .app .app-element.app-element-default-icon-list .app-icon-list-it
   width: auto;
   max-width: 100%;
 }
+/* Button traditional outline */
+.app .app-element.app-element-button-traditional-outline .app-button {
+  fill: var( --global-color-bbd710c );
+  color: var( --global-color-bbd710c );
+  background-color: #FFFFFF00;
+  border-style: solid;
+  border-width: 1px;
+  border-color: var( --global-color-bbd710c );
+  border-radius: 0;
+  padding: 18px 38px 18px 38px;
+}
+.app .app-element.app-element-button-traditional-outline .app-button:hover,
+.app .app-element.app-element-button-traditional-outline .app-button:focus {
+  color: var( --global-color-bbd710c );
+  background-color: var( --global-color-accent );
+  border-color: var( --global-color-accent );
+}
+.app .app-element.app-element-button-traditional-outline .app-button:hover svg,
+.app .app-element.app-element-button-traditional-outline .app-button:focus svg {
+  fill: var( --global-color-bbd710c );
+}
+/* Ends */
 .app .app-element.app-element-padding-traditional > .app-element-populated {
   padding: 0;
 }

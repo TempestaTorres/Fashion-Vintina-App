@@ -36,8 +36,7 @@ export class CartComponent {
   ngOnInit() {
     this.cartItems = this.cartService.getCart();
 
-
-    console.log(this.cartItems);
+    this.toTop();
   }
 
   public setTotalAmount(cartItem: ProductType): number {
@@ -96,5 +95,15 @@ export class CartComponent {
       this.loading = true;
       this.processing = false;
     }, 700);
+  }
+
+  public toTop(): void {
+
+    let target: HTMLElement | null = document.getElementById('app-template-site');
+
+    target?.scrollIntoView({
+      block: "start",
+      inline: "nearest"
+    });
   }
 }

@@ -4090,3 +4090,157 @@
     font-size: var( --global-typography-accent-font-size );
   }
 }
+.app .app-element.app-widget-jkit_testimonials .jeg-app-kit.jkit-testimonials {
+  padding: 0 40px 0 40px;
+}
+.app .app-element.app-widget-jkit_testimonials .jeg-app-kit.jkit-testimonials .testimonials-track .testimonial-item .testimonial-box {
+  text-align: center;
+  margin: 40px 0 40px 0;
+  padding: 0 40px 0 40px;
+  box-shadow: 0 0 10px 0 rgba(255,  255,  255,  0.5);
+}
+.app .app-element.app-widget-jkit_testimonials .jeg-app-kit.jkit-testimonials .testimonials-track .testimonial-item .testimonial-box .comment-content p {
+  font-family: var( --global-typography-text-font-family ),  sans-serif;
+  font-size: var( --global-typography-text-font-size );
+  font-weight: var( --global-typography-text-font-weight );
+  text-transform: var( --global-typography-text-text-transform );
+  color: var( --global-color-text );
+}
+.app .app-element.app-widget-jkit_testimonials .jeg-app-kit.jkit-testimonials .testimonials-track .testimonial-item .testimonial-box .rating-stars li i {
+  font-size: 14px;
+}
+.app .app-element.app-widget-jkit_testimonials .jeg-app-kit.jkit-testimonials .testimonials-track .testimonial-item .testimonial-box .rating-stars li svg {
+  width: 14px;
+}
+.app .app-element.app-widget-jkit_testimonials .jeg-app-kit.jkit-testimonials .testimonials-track .testimonial-item .testimonial-box .rating-stars {
+  margin: -6% 0% 0% 0%;
+}
+.app .app-element.app-widget-jkit_testimonials .jeg-app-kit.jkit-testimonials .testimonials-track .testimonial-item .testimonial-box .profile-info .profile-name {
+  font-family: var( --global-typography-84e42eb-font-family ),  sans-serif;
+  font-size: var( --global-typography-84e42eb-font-size );
+  font-weight: var( --global-typography-84e42eb-font-weight );
+  text-transform: var( --global-typography-84e42eb-text-transform );
+}
+.app .app-element.app-widget-jkit_testimonials .jeg-app-kit.jkit-testimonials .testimonials-track .testimonial-item .testimonial-box .profile-info .profile-des {
+  font-family: var( --global-typography-2eafb3e-font-family ),  sans-serif;
+  font-size: var( --global-typography-2eafb3e-font-size );
+  font-weight: var( --global-typography-2eafb3e-font-weight );
+  margin-bottom: 0;
+}
+.app .app-element.app-widget-jkit_testimonials .jeg-app-kit.jkit-testimonials .testimonials-track .testimonial-item .testimonial-box .profile-image img {
+  margin: 0;
+  padding: 0;
+  width: 0;
+}
+.app .app-element.app-widget-jkit_testimonials .jeg-app-kit.jkit-testimonials .tns-controls button i {
+  font-size: 22px;
+}
+.app .app-element.app-widget-jkit_testimonials .jeg-app-kit.jkit-testimonials .tns-controls button svg {
+  width: 22px;
+}
+.app .app-element.app-widget-jkit_testimonials .jeg-app-kit.jkit-testimonials .tns-controls button i,
+.app .app-element.app-widget-jkit_testimonials .jeg-app-kit.jkit-testimonials .tns-controls button svg {
+  opacity: 100%;
+}
+.app .app-element.app-widget-jkit_testimonials .jeg-app-kit.jkit-testimonials:hover .tns-controls button i,
+.app .app-element.app-widget-jkit_testimonials .jeg-app-kit.jkit-testimonials:hover .tns-controls button svg {
+  opacity: 100%;
+}
+.app .app-element.app-widget-jkit_testimonials .jeg-app-kit.jkit-testimonials .tns-nav {
+  text-align: center;
+}
+.app .app-element.app-widget-jkit_testimonials {
+  width: var( --container-widget-width,  72% );
+  max-width: 72%;
+  --container-widget-width: 72%;
+  --container-widget-flex-grow: 0;
+}
+@media (max-width: 1024px) {
+  .app .app-element.app-widget-jkit_testimonials .jeg-app-kit.jkit-testimonials .testimonials-track .testimonial-item .testimonial-box .comment-content p {
+    font-size: var( --global-typography-text-font-size );
+  }
+  .app .app-element.app-widget-jkit_testimonials .jeg-app-kit.jkit-testimonials .testimonials-track .testimonial-item .testimonial-box .profile-info .profile-name {
+    font-size: var( --global-typography-84e42eb-font-size );
+  }
+  .app .app-element.app-widget-jkit_testimonials .jeg-app-kit.jkit-testimonials .testimonials-track .testimonial-item .testimonial-box .profile-info .profile-des {
+    font-size: var( --global-typography-2eafb3e-font-size );
+  }
+  .app .app-element.app-widget-jkit_testimonials .jeg-app-kit.jkit-testimonials .testimonials-track .testimonial-item .testimonial-box .profile-image img {
+    width: 0;
+  }
+  .app .app-element.app-widget-jkit_testimonials {
+    width: var( --container-widget-width,  86% );
+    max-width: 86%;
+    --container-widget-width: 86%;
+    --container-widget-flex-grow: 0;
+  }
+}
+@media (max-width: 767px) {
+  .app .app-element.app-widget-jkit_testimonials .jeg-app-kit.jkit-testimonials {
+    padding: 0 40px 0 40px;
+  }
+  .app .app-element.app-widget-jkit_testimonials .jeg-app-kit.jkit-testimonials .testimonials-track .testimonial-item .testimonial-box {
+    margin: 0;
+    padding: 0 20px 0 20px;
+  }
+  .app .app-element.app-widget-jkit_testimonials .jeg-app-kit.jkit-testimonials .testimonials-track .testimonial-item .testimonial-box .comment-content p {
+    font-size: var( --global-typography-text-font-size );
+  }
+  .app .app-element.app-widget-jkit_testimonials .jeg-app-kit.jkit-testimonials .testimonials-track .testimonial-item .testimonial-box .rating-stars {
+    margin: -15% 0 0 0;
+  }
+  .app .app-element.app-widget-jkit_testimonials .jeg-app-kit.jkit-testimonials .testimonials-track .testimonial-item .testimonial-box .profile-info .profile-name {
+    font-size: var( --global-typography-84e42eb-font-size );
+  }
+  .app .app-element.app-widget-jkit_testimonials .jeg-app-kit.jkit-testimonials .testimonials-track .testimonial-item .testimonial-box .profile-info .profile-des {
+    font-size: var( --global-typography-2eafb3e-font-size );
+  }
+  .app .app-element.app-widget-jkit_testimonials .jeg-app-kit.jkit-testimonials .testimonials-track .testimonial-item .testimonial-box .profile-image img {
+    width: 0;
+  }
+  .app .app-element.app-widget-jkit_testimonials .jeg-app-kit.jkit-testimonials .tns-controls button i,  .app .app-element.app-widget-jkit_testimonials .jeg-app-kit.jkit-testimonials .tns-controls button svg {
+    margin: 0 -10px 0 -10px;
+  }
+  .app .app-element.app-widget-jkit_testimonials {
+    width: var( --container-widget-width,  100% );
+    max-width: 100%;
+    --container-widget-width: 100%;
+    --container-widget-flex-grow: 0;
+  }
+}
+@media (min-width: 1025px) {
+  .app-element.app-widget-jkit_testimonials .jeg-app-kit.jkit-testimonials .testimonials-track:not(.tns-slider) {
+    display: flex;
+    flex-direction: row;
+  }
+  .app-element.app-widget-jkit_testimonials .jeg-app-kit.jkit-testimonials .testimonials-track:not(.tns-slider) .testimonial-item:nth-child(n+2) {
+    display: none;
+  }
+  .app-element.app-widget-jkit_testimonials .jeg-app-kit.jkit-testimonials .testimonials-track:not(.tns-slider):not(:nth-child(1))  {
+    margin-right:  10px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px)  {
+  .app-element.app-widget-jkit_testimonials .jeg-app-kit.jkit-testimonials .testimonials-track:not(.tns-slider)  {
+    display:  flex;
+    flex-direction:  row;
+  }
+  .app-element.app-widget-jkit_testimonials .jeg-app-kit.jkit-testimonials .testimonials-track:not(.tns-slider) .testimonial-item:nth-child(n+2)  {
+    display:  none;
+  }
+  .app-element.app-widget-jkit_testimonials .jeg-app-kit.jkit-testimonials .testimonials-track:not(.tns-slider):not(:nth-child(1))  {
+    margin-right:  10px;
+  }
+}
+@media (max-width: 767px)  {
+  .app-element.app-widget-jkit_testimonials .jeg-app-kit.jkit-testimonials .testimonials-track:not(.tns-slider)  {
+    display:  flex;
+    flex-direction:  row;
+  }
+  .app-element.app-widget-jkit_testimonials .jeg-app-kit.jkit-testimonials .testimonials-track:not(.tns-slider) .testimonial-item:nth-child(n+2)  {
+    display:  none;
+  }
+  .app-element.app-widget-jkit_testimonials .jeg-app-kit.jkit-testimonials .testimonials-track:not(.tns-slider):not(:nth-child(1))  {
+    margin-right:  10px;
+  }
+}

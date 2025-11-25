@@ -8,13 +8,7 @@ a[role="button"] {
 #rating {
   display: none;
 }
-.commerce ul.products li.product .button.view-cart-button {
-  display: none;
-  margin-left: 4px;
-}
-.commerce ul.products li.product .button.view-cart-button.active {
-  display: inline-block;
-}
+
 /* ================================================ Mobile 1024 ========================================= */
 @media(max-width:1024px) {
 

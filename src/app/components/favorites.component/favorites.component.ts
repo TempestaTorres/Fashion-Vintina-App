@@ -45,6 +45,7 @@ export class FavoritesComponent {
 
     // Add product to cart
     if (product) {
+      product.quantity = 1;
       this.cartService.addToCart(product);
 
     }

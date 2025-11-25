@@ -4,6 +4,7 @@ import {NgClass} from '@angular/common';
 import {Collection} from '../../components/collection/collection';
 import {Router, RouterLink} from '@angular/router';
 import {FavoritesComponent} from '../../components/favorites.component/favorites.component';
+import {TestimonialsComponent} from '../../components/testimonials.component/testimonials.component';
 
 @Component({
   selector: 'ng-app-home',
@@ -12,7 +13,8 @@ import {FavoritesComponent} from '../../components/favorites.component/favorites
     NgClass,
     Collection,
     RouterLink,
-    FavoritesComponent
+    FavoritesComponent,
+    TestimonialsComponent
   ],
   templateUrl: './home.html',
   styleUrl: './home.css',
