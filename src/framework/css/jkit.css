@@ -3419,7 +3419,10 @@ to {
 }
 .jeg-app-kit .hover-from-arise:hover:before, .jeg-app-kit.hover-from-arise:hover:before {
     opacity: 100%}
-.jeg-app-kit.jkit-pagination-disable.loaded .jkit-ajax-loaded, .jeg-app-kit.jkit-pagination-loadmore.loaded .jkit-ajax-loaded, .jeg-app-kit.jkit-pagination-nextprev.loaded .jkit-ajax-loaded, .jeg-app-kit.jkit-pagination-scrollload.loaded .jkit-ajax-loaded {
+.jeg-app-kit.jkit-pagination-disable.loaded .jkit-ajax-loaded,
+.jeg-app-kit.jkit-pagination-loadmore.loaded .jkit-ajax-loaded,
+.jeg-app-kit.jkit-pagination-nextprev.loaded .jkit-ajax-loaded,
+.jeg-app-kit.jkit-pagination-scrollload.loaded .jkit-ajax-loaded {
     -webkit-animation-duration: .4s;
     animation-duration: .4s;
     -webkit-animation-fill-mode: both;
@@ -3427,7 +3430,10 @@ to {
     -webkit-animation-name: jkit-fadeinup;
     animation-name: jkit-fadeinup;
 }
-.jeg-app-kit.jkit-pagination-disable.loaded .anim-1, .jeg-app-kit.jkit-pagination-loadmore.loaded .anim-1, .jeg-app-kit.jkit-pagination-nextprev.loaded .anim-1, .jeg-app-kit.jkit-pagination-scrollload.loaded .anim-1 {
+.jeg-app-kit.jkit-pagination-disable.loaded .anim-1,
+.jeg-app-kit.jkit-pagination-loadmore.loaded .anim-1,
+.jeg-app-kit.jkit-pagination-nextprev.loaded .anim-1,
+.jeg-app-kit.jkit-pagination-scrollload.loaded .anim-1 {
     -webkit-animation-delay: 50ms;
     animation-delay: 50ms;
 }

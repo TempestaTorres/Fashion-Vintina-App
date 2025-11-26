@@ -137,7 +137,8 @@
             </div>
           </div>
           <!-- Signature -->
-          <div class="app-element app-element-founder-image-card-signature app-widget__width-initial app-widget app-widget-image">
+          <div
+            class="app-element app-element-founder-image-card-signature app-widget__width-initial app-widget app-widget-image">
             <div class="app-widget-container">
               <img src="/assets/images/Signature-2.png" alt="Signature" decoding="async">
             </div>
@@ -198,7 +199,8 @@
               <div class="app-column app-col-25 app-element app-element-service-card app-element-service-card-shipping">
                 <div class="app-widget-wrap app-element-populated">
                   <!-- Icon box -->
-                  <div class="app-element app-element-icon-box-global app-view-default app-position-left app-vertical-align-middle app-mobile-position-top app-widget app-widget-icon-box">
+                  <div
+                    class="app-element app-element-icon-box-global app-view-default app-position-left app-vertical-align-middle app-mobile-position-top app-widget app-widget-icon-box">
                     <div class="app-widget-container">
                       <div class="app-icon-box-wrapper">
                         <!-- Icon -->
@@ -221,7 +223,8 @@
               <div class="app-column app-col-25 app-element app-element-service-card app-element-service-card-support">
                 <div class="app-widget-wrap app-element-populated">
                   <!-- Icon box -->
-                  <div class="app-element app-element-icon-box-global app-view-default app-position-left app-vertical-align-middle app-mobile-position-top app-widget app-widget-icon-box">
+                  <div
+                    class="app-element app-element-icon-box-global app-view-default app-position-left app-vertical-align-middle app-mobile-position-top app-widget app-widget-icon-box">
                     <div class="app-widget-container">
                       <div class="app-icon-box-wrapper">
                         <!-- Icon -->
@@ -244,7 +247,8 @@
               <div class="app-column app-col-25 app-element app-element-service-card app-element-service-card-return">
                 <div class="app-widget-wrap app-element-populated">
                   <!-- Icon box -->
-                  <div class="app-element app-element-icon-box-global app-view-default app-position-left app-vertical-align-middle app-mobile-position-top app-widget app-widget-icon-box">
+                  <div
+                    class="app-element app-element-icon-box-global app-view-default app-position-left app-vertical-align-middle app-mobile-position-top app-widget app-widget-icon-box">
                     <div class="app-widget-container">
                       <div class="app-icon-box-wrapper">
                         <!-- Icon -->
@@ -267,7 +271,8 @@
               <div class="app-column app-col-25 app-element app-element-service-card-payment">
                 <div class="app-widget-wrap app-element-populated">
                   <!-- Icon box -->
-                  <div class="app-element app-element-icon-box-global app-view-default app-position-left app-vertical-align-middle app-mobile-position-top app-widget app-widget-icon-box">
+                  <div
+                    class="app-element app-element-icon-box-global app-view-default app-position-left app-vertical-align-middle app-mobile-position-top app-widget app-widget-icon-box">
                     <div class="app-widget-container">
                       <div class="app-icon-box-wrapper">
                         <!-- Icon -->
@@ -296,7 +301,7 @@
   <ng-app-favorites></ng-app-favorites>
   <!--  News -->
   <section class="app-section app-element app-element-section-news elementor-section-boxed">
-    <div class="app-container">
+    <div class="app-container app-column-gap-default">
       <!-- Card -->
       <div
         #card1
@@ -308,39 +313,39 @@
         class="app-column app-col-50 app-element app-element-new-brand first animated-slow app-invisible"
         data-element_type="column">
 
-          <div class="app-widget-wrap app-element-populated">
-            <!-- Overlay -->
-            <div class="app-background-overlay"></div>
-              <!-- Heading -->
-            <div class="app-element app-element-new-brand-heading app-widget app-widget-jkit_heading">
-              <div class="app-widget-container">
-                <div class="jeg-app-kit jkit-heading">
-                  <!-- Title -->
-                  <div class="heading-section-title  display-inline-block">
-                    <h2 class="heading-title">New Arrivals</h2>
-                  </div>
-                  <!-- Description -->
-                  <div class="heading-section-description">
-                    <p>Ut enim ad minima veniam, quis nostrum exercitationem</p>
-                  </div>
+        <div class="app-widget-wrap app-element-populated">
+          <!-- Overlay -->
+          <div class="app-background-overlay"></div>
+          <!-- Heading -->
+          <div class="app-element app-element-new-brand-heading app-widget app-widget-jkit_heading">
+            <div class="app-widget-container">
+              <div class="jeg-app-kit jkit-heading">
+                <!-- Title -->
+                <div class="heading-section-title  display-inline-block">
+                  <h2 class="heading-title">New Arrivals</h2>
                 </div>
-              </div>
-            </div>
-            <!-- Button -->
-            <div class="app-element app-element-button-traditional-outline app-align-left app-widget app-widget-button">
-              <div class="app-widget-container">
-                <div class="app-button-wrapper">
-                  <a
-                    [routerLink]="['/shop']"
-                    class="app-button ap-element-button">
-                      <span class="app-button-content-wrapper">
-                        <span class="app-button-text">Shop Now</span>
-                      </span>
-                  </a>
+                <!-- Description -->
+                <div class="heading-section-description">
+                  <p>Ut enim ad minima veniam, quis nostrum exercitationem</p>
                 </div>
               </div>
             </div>
           </div>
+          <!-- Button -->
+          <div class="app-element app-element-button-traditional-outline app-align-left app-widget app-widget-button">
+            <div class="app-widget-container">
+              <div class="app-button-wrapper">
+                <a
+                  [routerLink]="['/shop']"
+                  class="app-button ap-element-button">
+                      <span class="app-button-content-wrapper">
+                        <span class="app-button-text">Shop Now</span>
+                      </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <!-- Card -->
       <div
@@ -353,42 +358,285 @@
         class="app-column app-col-50 app-element app-element-new-brand last animated-slow app-invisible"
         data-element_type="column">
 
-          <div class="app-widget-wrap app-element-populated">
-            <!-- Overlay -->
-            <div class="app-background-overlay"></div>
-              <!-- Heading -->
-            <div class="app-element app-element-new-brand-heading app-widget app-widget-jkit_heading">
-              <div class="app-widget-container">
-                <div class="jeg-app-kit jkit-heading">
-                  <!-- Title -->
-                  <div class="heading-section-title  display-inline-block">
-                    <h2 class="heading-title">Get Perfect Fit</h2>
-                  </div>
-                  <!-- Description -->
-                  <div class="heading-section-description">
-                    <p>Ut enim ad minima veniam, quis nostrum exercitationem</p>
-                  </div>
+        <div class="app-widget-wrap app-element-populated">
+          <!-- Overlay -->
+          <div class="app-background-overlay"></div>
+          <!-- Heading -->
+          <div class="app-element app-element-new-brand-heading app-widget app-widget-jkit_heading">
+            <div class="app-widget-container">
+              <div class="jeg-app-kit jkit-heading">
+                <!-- Title -->
+                <div class="heading-section-title  display-inline-block">
+                  <h2 class="heading-title">Get Perfect Fit</h2>
                 </div>
-              </div>
-            </div>
-            <!-- Button -->
-            <div class="app-element app-element-button-traditional-outline app-align-left app-widget app-widget-button">
-              <div class="app-widget-container">
-                <div class="app-button-wrapper">
-                  <a
-                    [routerLink]="['/shop']"
-                    class="app-button ap-element-button">
-                      <span class="app-button-content-wrapper">
-                        <span class="app-button-text">Shop Now</span>
-                      </span>
-                  </a>
+                <!-- Description -->
+                <div class="heading-section-description">
+                  <p>Ut enim ad minima veniam, quis nostrum exercitationem</p>
                 </div>
               </div>
             </div>
           </div>
+          <!-- Button -->
+          <div class="app-element app-element-button-traditional-outline app-align-left app-widget app-widget-button">
+            <div class="app-widget-container">
+              <div class="app-button-wrapper">
+                <a
+                  [routerLink]="['/shop']"
+                  class="app-button ap-element-button">
+                      <span class="app-button-content-wrapper">
+                        <span class="app-button-text">Shop Now</span>
+                      </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
   <!--  Testimonials -->
   <app-testimonials></app-testimonials>
+  <!--  Sexy -->
+  <section class="app-section app-element app-element-section-sexy app-section-boxed">
+    <div class="app-background-overlay"></div>
+    <div class="app-container app-column-gap-default">
+      <!-- Alignment column -->
+      <div class="app-column app-col-50 app-element app-element-alignment-column">
+        <div class="app-widget-wrap"></div>
+      </div>
+      <!-- Sexy Card -->
+      <div
+        #sexy
+        appObserveElement
+        #intersection8="intersection"
+        [isContinuous]="false"
+        (isIntersecting)="isIntersecting($event, sexy)"
+        [ngClass]="{animated: intersection8._isIntersecting, fadeInRight: intersection8._isIntersecting}"
+        class="app-column app-col-50 app-element app-element-sexy-card animated-slow app-invisible"
+        data-element_type="column">
+
+        <div class="app-widget-wrap app-element-populated">
+          <!-- Heading -->
+          <div class="app-element app-element-sexy-card-heading app-widget app-widget-heading">
+            <div class="app-widget-container">
+              <h2 class="app-heading-title">A perfect blend of sexy and comfort</h2>
+            </div>
+          </div>
+          <!-- Text -->
+          <div class="app-element app-element-text-primary-white app-widget app-widget-text-editor">
+            <div class="app-widget-container">
+              <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam
+                rem aperiam, eaque ipsa quae ab illo inventore
+              </p>
+            </div>
+          </div>
+          <!-- Button Shop -->
+          <div class="app-element app-element-button-traditional-outline app-widget app-widget-button">
+            <div class="app-widget-container">
+              <div class="app-button-wrapper">
+                <a
+                  [routerLink]="['/shop']"
+                  class="app-button ap-element-button">
+                      <span class="app-button-content-wrapper">
+                        <span class="app-button-text">Shop Now</span>
+                      </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--  Latest Blog -->
+  <section class="app-section app-element app-element-section-latest-blog app-section-boxed">
+    <div class="app-container app-column-gap-default">
+      <div class="app-element app-element-latest-blog app-column app-col-100">
+        <div class="app-widget-wrap app-element-populated">
+          <!-- Heading -->
+          <div class="app-element app-element-heading-secondary app-align-center app-widget app-widget-heading">
+            <div class="app-widget-container">
+              <h2 class="app-heading-title">Latest Blog</h2>
+            </div>
+          </div>
+          <!-- Text -->
+          <div class="app-element app-element-latest-blog-text app-widget app-widget-text-editor">
+            <div class="app-widget-container">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis,
+              pulvinar dapibus leo.
+            </div>
+          </div>
+          <!-- Posts -->
+          <div
+            #posts
+            appObserveElement
+            #intersection9="intersection"
+            [isContinuous]="false"
+            (isIntersecting)="isIntersecting($event, posts)"
+            [ngClass]="{animated: intersection9._isIntersecting, fadeInUp: intersection9._isIntersecting}"
+            class="app-element animated-slow app-widget app-widget-jkit_post_block app-invisible">
+
+            <div class="app-widget-container">
+              <div class="jeg-app-kit jkit-postblock postblock-type-2 jkit-pagination-disable post-element">
+                <div class="jkit-block-container">
+                  <div class="jkit-posts">
+                    <!-- Post Item -->
+                    <article class="jkit-post post has-post-thumbnail">
+                      <!-- Thumbnail -->
+                      <div class="jkit-thumb">
+                        <a
+                          [routerLink]="['bridal-shapewear']">
+                          <div class="thumbnail-container">
+                            <img
+                              src="/assets/images/sexy-bride-wearing-in-white-lace-lingerie-at-luxury-bedroom-interior.jpg"
+                              alt="Sexy bride wearing in white lace lingerie at luxury bedroom interior"
+                              class="ap-post-image">
+                          </div>
+                        </a>
+                      </div>
+                      <!-- Content -->
+                      <div class="jkit-postblock-content">
+                        <!-- Category -->
+                        <div class="jkit-post-category ">
+                          <span>
+                            <a
+                              class="category-lingerie"
+                              href="https://templatekit.jegtheme.com/vintina/category/lingerie/"
+                            >Lingerie</a>
+                          </span>
+                        </div>
+                        <!-- Title -->
+                        <h3 class="jkit-post-title">
+                          <a
+                            [routerLink]="['bridal-shapewear']">
+                            Bridal Shapewear For Your Special Day
+                          </a>
+                        </h3>
+                        <!-- Description -->
+                        <div class="jkit-post-excerpt">
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                            ut labore et dolore magna aliqua. Ut...
+                          </p>
+                        </div>
+                        <!-- Read more -->
+                        <div class="jkit-post-meta-bottom">
+                          <div class="jkit-meta-readmore icon-position-after">
+                            <a
+                              class="jkit-readmore"
+                              [routerLink]="['bridal-shapewear']">
+                              Read More
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                    <!-- Post Item -->
+                    <article class="jkit-post post has-post-thumbnail">
+                      <!-- Thumbnail -->
+                      <div class="jkit-thumb">
+                        <a
+                          href="https://templatekit.jegtheme.com/vintina/2022/04/06/5-bras-every-woman-should-own/">
+                          <div class="thumbnail-container">
+                            <img
+                              src="/assets/images/woman-sits-on-an-unmade-bed-and-chooses-underwear-various-bras-in-front-of-female.jpg"
+                              alt="Woman sits on an unmade bed and chooses underwear. Various bras in front of female."
+                              class="ap-post-image">
+                          </div>
+                        </a>
+                      </div>
+                      <!-- Content -->
+                      <div class="jkit-postblock-content">
+                        <!-- Category -->
+                        <div class="jkit-post-category ">
+                          <span>
+                            <a
+                              class="category-guides"
+                              href="https://templatekit.jegtheme.com/vintina/category/guides/"
+                            >Guides</a>
+                          </span>
+                        </div>
+                        <!-- Title -->
+                        <h3 class="jkit-post-title">
+                          <a
+                            href="https://templatekit.jegtheme.com/vintina/2022/04/06/5-bras-every-woman-should-own/">
+                            <span class="number">5</span> Types Of Bras Every Woman Should Own
+                          </a>
+                        </h3>
+                        <!-- Description -->
+                        <div class="jkit-post-excerpt">
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                            ut labore et dolore magna aliqua. Ut...
+                          </p>
+                        </div>
+                        <!-- Read more -->
+                        <div class="jkit-post-meta-bottom">
+                          <div class="jkit-meta-readmore icon-position-after">
+                            <a
+                              class="jkit-readmore"
+                              href="https://templatekit.jegtheme.com/vintina/2022/04/06/5-bras-every-woman-should-own/">
+                              Read More
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                    <!-- Post Item -->
+                    <article class="jkit-post post has-post-thumbnail">
+                      <!-- Thumbnail -->
+                      <div class="jkit-thumb">
+                        <a
+                          href="https://templatekit.jegtheme.com/vintina/2022/04/06/how-does-your-bra-make-you-feel/">
+                          <div class="thumbnail-container">
+                            <img
+                              src="/assets/images/endjoy-red-bra.jpg"
+                              alt="Beauty image of a group of women with different age, skin and body"
+                              class="ap-post-image">
+                          </div>
+                        </a>
+                      </div>
+                      <!-- Content -->
+                      <div class="jkit-postblock-content">
+                        <!-- Category -->
+                        <div class="jkit-post-category ">
+                          <span>
+                            <a
+                              class="category-essentials"
+                              href="https://templatekit.jegtheme.com/vintina/category/essentials/"
+                            >Essentials</a>
+                          </span>
+                        </div>
+                        <!-- Title -->
+                        <h3 class="jkit-post-title">
+                          <a
+                            href="https://templatekit.jegtheme.com/vintina/2022/04/06/how-does-your-bra-make-you-feel/">
+                            How Does your Bra Make you Feel?
+                          </a>
+                        </h3>
+                        <!-- Description -->
+                        <div class="jkit-post-excerpt">
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                            ut labore et dolore magna aliqua. Ut...
+                          </p>
+                        </div>
+                        <!-- Read more -->
+                        <div class="jkit-post-meta-bottom">
+                          <div class="jkit-meta-readmore icon-position-after">
+                            <a
+                              class="jkit-readmore"
+                              href="https://templatekit.jegtheme.com/vintina/2022/04/06/how-does-your-bra-make-you-feel/">
+                              Read More
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </div>

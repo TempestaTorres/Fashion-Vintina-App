@@ -47,7 +47,15 @@
   font-weight:var( --global-typography-text-font-weight );
   text-transform:var( --global-typography-text-text-transform );
 }
-
+/* primary white */
+.app .app-element.app-element-text-primary-white {
+  color: #FFFFFF;
+  font-family: var( --global-typography-text-font-family ),  sans-serif;
+  font-size: var( --global-typography-text-font-size );
+  font-weight: var( --global-typography-text-font-weight );
+  text-transform: var( --global-typography-text-text-transform );
+}
+/*Text white */
 .app .app-element.app-element-text-white {
   color: #FFFFFF;
   font-family: var( --global-typography-33b7874-font-family ),  sans-serif;
@@ -371,6 +379,9 @@ body:not(.rtl) .app .app-element.app-element-default-icon-list .app-icon-list-it
   .app .app-element.app-element-text-primary {
     font-size:var( --global-typography-text-font-size );
   }
+  .app .app-element.app-element-text-primary-white {
+    font-size: var( --global-typography-text-font-size );
+  }
   .app .app-element.app-element-default-divider .app-divider-separator {
     width:100%;
   }
@@ -433,6 +444,9 @@ body:not(.rtl) .app .app-element.app-element-default-icon-list .app-icon-list-it
   }
   .app .app-element.app-element-text-primary {
     font-size:var( --global-typography-text-font-size );
+  }
+  .app .app-element.app-element-text-primary-white {
+    font-size: var( --global-typography-text-font-size );
   }
   .app .app-element.app-element-default-icon-list .app-icon-list-item > .app-icon-list-text,
   .app .app-element.app-element-default-icon-list .app-icon-list-item > a {

@@ -4244,3 +4244,143 @@
     margin-right:  10px;
   }
 }
+/* Post blog widget */
+.app .app-element.app-widget-jkit_post_block .jeg-app-kit.jkit-postblock .jkit-posts {
+  grid-template-columns: repeat(3,  minmax(0,  1fr));
+  grid-column-gap: 40px;
+}
+.app .app-element.app-widget-jkit_post_block .jeg-app-kit.jkit-postblock .jkit-thumb .thumbnail-container {
+  height: 300px;
+}
+.app .app-element.app-widget-jkit_post_block .jeg-app-kit.jkit-postblock .jkit-postblock-content {
+  text-align: left;
+}
+.app .app-element.app-widget-jkit_post_block .jeg-app-kit.jkit-postblock .jkit-post-category span a,  .app .app-element.app-widget-jkit_post_block .jeg-app-kit.jkit-postblock.postblock-type-3 .jkit-post-category span a {
+  font-family: var( --global-typography-63e6229-font-family ),  sans-serif;
+  font-size: var( --global-typography-63e6229-font-size );
+  font-weight: var( --global-typography-63e6229-font-weight );
+  line-height: var( --global-typography-63e6229-line-height );
+  letter-spacing: var( --global-typography-63e6229-letter-spacing );
+  word-spacing: var( --global-typography-63e6229-word-spacing );
+}
+.app .app-element.app-widget-jkit_post_block .jeg-app-kit.jkit-postblock .jkit-post-category a {
+  color: #720917;
+}
+.app .app-element.app-widget-jkit_post_block .jeg-app-kit.jkit-postblock.postblock-type-2 .jkit-post-category a {
+  color: #720917;
+}
+.app .app-element.app-widget-jkit_post_block .jeg-app-kit.jkit-postblock.postblock-type-5 .jkit-post-category a {
+  color: #720917;
+}
+.app .app-element.app-widget-jkit_post_block .jeg-app-kit.jkit-postblock .jkit-post-title {
+  margin: 0;
+}
+.app .app-element.app-widget-jkit_post_block .jeg-app-kit.jkit-postblock.postblock-type-4 .jkit-post-title {
+  margin: 0;
+}
+.app .app-element.app-widget-jkit_post_block .jeg-app-kit.jkit-postblock .jkit-post-title a,
+.app .app-element.app-widget-jkit_post_block .jeg-app-kit.jkit-postblock.postblock-type-4 .jkit-post-title a {
+  font-family: var( --global-typography-72feb28-font-family ),  sans-serif;
+  font-size: var( --global-typography-72feb28-font-size );
+  font-weight: var( --global-typography-72feb28-font-weight );
+  text-transform: var( --global-typography-72feb28-text-transform );
+  line-height: var( --global-typography-72feb28-line-height );
+  letter-spacing: var( --global-typography-72feb28-letter-spacing );
+  word-spacing: var( --global-typography-72feb28-word-spacing );
+}
+.app .app-element.app-widget-jkit_post_block .jeg-app-kit.jkit-postblock .jkit-post-excerpt {
+  font-family: var( --global-typography-text-font-family ),  sans-serif;
+  font-size: var( --global-typography-text-font-size );
+  font-weight: var( --global-typography-text-font-weight );
+  text-transform: var( --global-typography-text-text-transform );
+}
+.app .app-element.app-widget-jkit_post_block .jeg-app-kit.jkit-postblock .jkit-post-excerpt p {
+  color: var( --global-color-text );
+}
+.app .app-element.app-widget-jkit_post_block .jeg-app-kit.jkit-postblock .jkit-readmore {
+  font-family: var( --global-typography-accent-font-family ),  sans-serif;
+  font-size: var( --global-typography-accent-font-size );
+  font-weight: var( --global-typography-accent-font-weight );
+  padding: 10px 25px 10px 25px;
+  margin: 0;
+  background-color: #72091700;
+  color: #000000;
+  border-radius: 0;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #000000;
+}
+.app .app-element.app-widget-jkit_post_block .jeg-app-kit.jkit-postblock .jkit-meta-readmore.icon-position-before i,
+.app .app-element.app-widget-jkit_post_block .jeg-app-kit.jkit-postblock .jkit-meta-readmore.icon-position-before svg {
+  margin-right: 5px;
+}
+.app .app-element.app-widget-jkit_post_block .jeg-app-kit.jkit-postblock .jkit-meta-readmore.icon-position-after i,
+.app .app-element.app-widget-jkit_post_block .jeg-app-kit.jkit-postblock .jkit-meta-readmore.icon-position-after svg {
+  margin-left: 5px;
+}
+.app .app-element.app-widget-jkit_post_block .jeg-app-kit.jkit-postblock .jkit-readmore svg {
+  fill: #000000;
+}
+.app .app-element.app-widget-jkit_post_block .jeg-app-kit.jkit-postblock .jkit-readmore:hover {
+  background-color: var( --global-color-accent );
+  color: #FFFFFF;
+  border-style: solid;
+  border-width: 1px;
+  border-color: var( --global-color-accent );
+}
+.app .app-element.app-widget-jkit_post_block .jeg-app-kit.jkit-postblock .jkit-readmore:hover svg {
+  fill: #FFFFFF;
+}
+.app .app-element.app-widget-jkit_post_block .jeg-app-kit.jkit-postblock .jkit-post-meta-bottom {
+  justify-content: space-between;
+}
+.app .app-element.app-widget-jkit_post_block .jeg-app-kit.jkit-postblock .jeg_empty_module {
+  text-align: left;
+}
+@media (max-width: 1024px) {
+  .app .app-element.app-widget-jkit_post_block .jeg-app-kit.jkit-postblock .jkit-posts {
+    grid-template-columns: repeat(1,  minmax(0,  1fr));
+  }
+  .app .app-element.app-widget-jkit_post_block .jeg-app-kit.jkit-postblock .jkit-post-category span a,
+  .app .app-element.app-widget-jkit_post_block .jeg-app-kit.jkit-postblock.postblock-type-3 .jkit-post-category span a {
+    font-size: var( --global-typography-63e6229-font-size );
+    line-height: var( --global-typography-63e6229-line-height );
+    letter-spacing: var( --global-typography-63e6229-letter-spacing );
+    word-spacing: var( --global-typography-63e6229-word-spacing );
+  }
+  .app .app-element.app-widget-jkit_post_block .jeg-app-kit.jkit-postblock .jkit-post-title a,
+  .app .app-element.app-widget-jkit_post_block .jeg-app-kit.jkit-postblock.postblock-type-4 .jkit-post-title a {
+    font-size: var( --global-typography-72feb28-font-size );
+    line-height: var( --global-typography-72feb28-line-height );
+    letter-spacing: var( --global-typography-72feb28-letter-spacing );
+    word-spacing: var( --global-typography-72feb28-word-spacing );
+  }
+  .app .app-element.app-widget-jkit_post_block .jeg-app-kit.jkit-postblock .jkit-post-excerpt {
+    font-size: var( --global-typography-text-font-size );
+  }
+  .app .app-element.app-widget-jkit_post_block .jeg-app-kit.jkit-postblock .jkit-readmore {
+    font-size: var( --global-typography-accent-font-size );
+  }
+}
+@media (max-width: 767px) {
+  .app .app-element.app-widget-jkit_post_block .jeg-app-kit.jkit-postblock .jkit-post-category span a,
+  .app .app-element.app-widget-jkit_post_block .jeg-app-kit.jkit-postblock.postblock-type-3 .jkit-post-category span a {
+    font-size: var( --global-typography-63e6229-font-size );
+    line-height: var( --global-typography-63e6229-line-height );
+    letter-spacing: var( --global-typography-63e6229-letter-spacing );
+    word-spacing: var( --global-typography-63e6229-word-spacing );
+  }
+  .app .app-element.app-widget-jkit_post_block .jeg-app-kit.jkit-postblock .jkit-post-title a,
+  .app .app-element.app-widget-jkit_post_block .jeg-app-kit.jkit-postblock.postblock-type-4 .jkit-post-title a {
+    font-size: var( --global-typography-72feb28-font-size );
+    line-height: var( --global-typography-72feb28-line-height );
+    letter-spacing: var( --global-typography-72feb28-letter-spacing );
+    word-spacing: var( --global-typography-72feb28-word-spacing );
+  }
+  .app .app-element.app-widget-jkit_post_block .jeg-app-kit.jkit-postblock .jkit-post-excerpt {
+    font-size: var( --global-typography-text-font-size );
+  }
+  .app .app-element.app-widget-jkit_post_block .jeg-app-kit.jkit-postblock .jkit-readmore {
+    font-size: var( --global-typography-accent-font-size );
+  }
+}

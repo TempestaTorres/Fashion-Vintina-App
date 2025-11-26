@@ -5,6 +5,7 @@ import {Product} from './components/product/product';
 import {Category} from './components/category/category';
 import {ShopComponent} from './components/shop.component/shop.component';
 import {CartComponent} from './components/cart.component/cart.component';
+import {BridalShapewear} from './posts/bridal-shapewear/bridal-shapewear';
 
 export const routes: Routes = [
   {path: '', component: Home},
@@ -14,4 +15,5 @@ export const routes: Routes = [
   {path: 'product-category/:name', component: Category},
   {path: 'product-tag/:tag', component: Category},
   {path: 'cart', component: CartComponent},
+  {path: 'bridal-shapewear', component: BridalShapewear},
 ];

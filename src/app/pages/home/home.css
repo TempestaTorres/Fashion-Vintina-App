@@ -207,6 +207,7 @@
   font-size: var( --global-typography-238dbd0-font-size );
   font-weight: var( --global-typography-238dbd0-font-weight );
   text-transform: var( --global-typography-238dbd0-text-transform );
+  letter-spacing: var( --global-typography-238dbd0-letter-spacing );
   color: var( --global-color-bbd710c );
 }
 .app-home .app-element.app-element-new-brand-heading .jeg-app-kit.jkit-heading .heading-section-title {
@@ -227,6 +228,69 @@
   text-transform: var( --global-typography-text-text-transform );
   margin: 0 0 -10px 0;
 }
+/* Sexy */
+.app-home .app-element.app-element-section-sexy > .app-container {
+  max-width: 1280px;
+}
+.app-home .app-element.app-element-section-sexy:not(.app-motion-effects-element-type-background),
+.app-home .app-element.app-element-section-sexy > .app-motion-effects-container > .app-motion-effects-layer {
+  background-image: url("/assets/images/portrait-of-a-sexy-redhead-girl-on-the-floor-posing-in-the-white-room.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.app-home .app-element.app-element-section-sexy > .app-background-overlay {
+  background-color: #000000;
+  opacity: 0.4;
+  transition: background 0.3s,  border-radius 0.3s,  opacity 0.3s;
+}
+.app-home .app-element.app-element-section-sexy {
+  transition: background 0.3s,  border 0.3s,  border-radius 0.3s,  box-shadow 0.3s;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 180px 0 180px 0;
+}
+.app-bc-flex-widget .app-home .app-element.app-element-sexy-card.app-column .app-widget-wrap {
+  align-items: center;
+}
+.app-home .app-element.app-element-sexy-card.app-column.app-element[data-element_type="column"] > .app-widget-wrap.app-element-populated {
+  align-content: center;
+  align-items: center;
+}
+.app-home .app-element.app-element-sexy-card-heading .app-heading-title {
+  color: #FFFFFF;
+  font-family: var( --global-typography-secondary-font-family ),  sans-serif;
+  font-size: var( --global-typography-secondary-font-size );
+  font-weight: var( --global-typography-secondary-font-weight );
+  text-transform: var( --global-typography-secondary-text-transform );
+}
+.app-home .app-element.app-element-section-latest-blog > .app-container {
+  max-width: 1280px;
+}
+.app-home .app-element.app-element-section-latest-blog {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 100px 0 100px 0;
+}
+.app-home .app-element.app-element-latest-blog > .app-element-populated {
+  padding: 0;
+}
+.app-home .app-element.app-element-latest-blog-text {
+  text-align: center;
+  color: var( --global-color-text );
+  font-family: var( --global-typography-text-font-family ),  sans-serif;
+  font-size: var( --global-typography-text-font-size );
+  font-weight: var( --global-typography-text-font-weight );
+  text-transform: var( --global-typography-text-text-transform );
+}
+.app-home .app-element.app-element-latest-blog-text > .app-widget-container {
+  margin: 0;
+  padding: 0 25% 0 25%;
+}
+.jkit-post-title span.number {
+  position: relative;
+  top: -5px;
+}
 /*============================================= max min ==============================================*/
 @media(max-width:1024px) and (min-width:768px) {
   .app-home .app-element.app-element-ventina-hero-card {
@@ -238,6 +302,12 @@
   .app-home .app-element.app-element-service-card,
   .app-home .app-element.app-element-service-card-payment {
     width: 50%;
+  }
+  .app-home .app-element.app-element-alignment-column {
+    width: 40%;
+  }
+  .app-home .app-element.app-element-sexy-card {
+    width: 60%;
   }
 }
 /*============================================= 1024 ================================================*/
@@ -293,9 +363,22 @@
   }
   .app-home .app-element.app-element-new-brand-heading .jeg-app-kit.jkit-heading .heading-title {
     font-size: var( --global-typography-238dbd0-font-size );
+    letter-spacing: var( --global-typography-238dbd0-letter-spacing );
   }
   .app-home .app-element.app-element-new-brand-heading .jeg-app-kit.jkit-heading .heading-section-description {
     font-size: var( --global-typography-text-font-size );
+  }
+  .app-home .app-element.app-element-sexy-card-heading .app-heading-title {
+    font-size: var( --global-typography-secondary-font-size );
+  }
+  .app-home .app-element.app-element-section-latest-blog {
+    padding: 80px 15px 100px 15px;
+  }
+  .app-home .app-element.app-element-latest-blog-text {
+    font-size: var( --global-typography-text-font-size );
+  }
+  .app-home .app-element.app-element-latest-blog-text > .app-widget-container {
+    padding: 0 15% 0 15%;
   }
 }
 /*============================================= 767 ===================================================*/
@@ -377,8 +460,32 @@
   }
   .app-home .app-element.app-element-new-brand-heading .jeg-app-kit.jkit-heading .heading-title {
     font-size: var( --global-typography-238dbd0-font-size );
+    line-height: var( --global-typography-238dbd0-line-height );
   }
   .app-home .app-element.app-element-new-brand-heading .jeg-app-kit.jkit-heading .heading-section-description {
     font-size: var( --global-typography-text-font-size );
+  }
+  /* Sexy */
+  .app-home .app-element.app-element-section-sexy:not(.app-motion-effects-element-type-background),
+  .app-home .app-element.app-element-section-sexy > .app-motion-effects-container > .app-motion-effects-layer {
+    background-position: center left;
+  }
+  .app-home .app-element.app-element-section-sexy {
+    padding: 180px 10px 180px 10px;
+  }
+  .app-home .app-element.app-element-sexy-card > .app-element-populated {
+    padding: 0;
+  }
+  .app-home .app-element.app-element-sexy-card-heading .app-heading-title {
+    font-size: var( --global-typography-secondary-font-size );
+  }
+  .app-home .app-element.app-element-section-latest-blog {
+    padding: 80px 10px 100px 10px;
+  }
+  .app-home .app-element.app-element-latest-blog-text {
+    font-size: var( --global-typography-text-font-size );
+  }
+  .app-home .app-element.app-element-latest-blog-text > .app-widget-container {
+    padding: 0;
   }
 }
