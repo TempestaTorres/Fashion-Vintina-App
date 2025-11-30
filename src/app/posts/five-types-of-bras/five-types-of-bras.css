@@ -1,0 +1,14 @@
+.app-home .app-element.app-element-page-hero.five-bras:not(.app-motion-effects-element-type-background),
+.app-home .app-element.app-element-page-hero.five-bras > .app-motion-effects-container > .app-motion-effects-layer {
+  background-image:url("/assets/images/ultimo-lingerie-set-underwear-bikini-lorna-burford.jpg");
+}
+span.number {
+  top: -10px;
+  position: relative;
+}
+.ap-post-image.feature-scaled {
+  max-height: 500px;
+}
+.img-aspect {
+  aspect-ratio: 4/5;
+}

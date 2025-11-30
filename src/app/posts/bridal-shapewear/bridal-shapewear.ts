@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {PostCommentComponent} from '../../components/post-comment.component/post-comment.component';
 import {RouterLink} from '@angular/router';
+import {ScrollTotopService} from '../../services/scrolltotop-service';
 declare var Swiper: any;
 
 @Component({
@@ -16,12 +17,12 @@ export class BridalShapewear {
 
   private swiper: any;
 
-  constructor() {
+  constructor(private scrollTotopService: ScrollTotopService) {
   }
 
   ngOnInit() {
 
-    this.toTop();
+    this.scrollTotopService.toTop();
     this.swiper = new Swiper('.swiper-container', {
 
       speed: 500,
@@ -58,23 +59,9 @@ export class BridalShapewear {
     this.swiper.destroy();
   }
 
-  public toTop(): void {
-
-    let target: HTMLElement | null = document.getElementById('app-template-site');
-
-    target?.scrollIntoView({
-      block: "start",
-      inline: "nearest"
-    });
-  }
   public toTopSmooth(): void {
 
-    let target: HTMLElement | null = document.getElementById('app-template-site');
+    this.scrollTotopService.toTopSmooth();
 
-    target?.scrollIntoView({
-      block: "start",
-      inline: "nearest",
-      behavior: "smooth"
-    });
   }
 }

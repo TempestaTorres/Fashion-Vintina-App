@@ -20,6 +20,7 @@ export class ModalComponent {
   public shutdown: boolean = false;
   public confirmed: boolean = false;
   public bFriday: boolean = false;
+  public bSunday: boolean = false;
 
   // Form group
   public offerFormGroup: FormGroup = new FormGroup({
@@ -34,6 +35,8 @@ export class ModalComponent {
   ngOnInit() {
 
     this.isFriday();
+    this.isSunday();
+
 
     window.addEventListener('mousemove', (evt: MouseEvent) => {
 
@@ -78,5 +81,9 @@ export class ModalComponent {
   public isFriday(): void {
     let dayOfWeek: string = this.dateService.getDayOfWeekName();
     this.bFriday = dayOfWeek === 'Friday';
+  }
+  public isSunday(): void {
+    let dayOfWeek: string = this.dateService.getDayOfWeekName();
+    this.bSunday = dayOfWeek === 'Sunday';
   }
 }

@@ -10,6 +10,7 @@ import {TermsConditions} from './pages/terms-conditions/terms-conditions';
 import {PrivacyPolicy} from './pages/privacy-policy/privacy-policy';
 import {ReturnsExchanges} from './pages/returns-exchanges/returns-exchanges';
 import {Contact} from './pages/contact/contact';
+import {FiveTypesOfBras} from './posts/five-types-of-bras/five-types-of-bras';
 
 export const routes: Routes = [
   {path: '', component: Home},
@@ -20,6 +21,7 @@ export const routes: Routes = [
   {path: 'product-tag/:tag', component: Category},
   {path: 'cart', component: CartComponent},
   {path: 'bridal-shapewear', component: BridalShapewear},
+  {path: 'bra-types', component: FiveTypesOfBras},
   {path: 'terms-conditions', component: TermsConditions},
   {path: 'privacy-policy', component: PrivacyPolicy},
   {path: 'returns-exchanges', component: ReturnsExchanges},
