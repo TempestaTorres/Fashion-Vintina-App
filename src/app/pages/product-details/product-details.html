@@ -149,7 +149,50 @@
                 class="ap-element-button prompt-button" tabindex="-1"><strong>See options</strong></a>
             </div>
           </div>
-          <!-- Category -->
+          <!-- Category Icon List -->
+          <div class="app-element app-icon-list--layout-traditional app-list-item-link-full_width app-widget app-widget-icon-list">
+            <div class="app-widget-container">
+              <ul class="app-icon-list-items">
+                <li class="app-icon-list-item"><span class="app-icon-list-text">Categories : {{ product?.category?.name }}</span></li>
+              </ul>
+            </div>
+          </div>
+          <!-- Share Label -->
+          <div class="app-element app-element-label-traditional app-widget__width-auto app-widget-mobile__width-auto app-widget-tablet__width-auto app-widget app-widget-text-editor">
+            <div class="app-widget-container">Share :</div>
+          </div>
+          <!-- Share Icon List -->
+          <div class="app-element app-widget-jkit_social_share_traditional app-widget__width-auto app-widget-mobile__width-auto jkit-social-shape shape-none app-widget">
+            <div class="app-widget-container">
+              <div class="jeg-app-kit jkit-social-share">
+                <ul class="social-share-list">
+                  <li class="appr-repeater-item">
+                    <a class="facebook social-icon"><i aria-hidden="true" class="jki jki-facebook-light"></i></a>
+                  </li>
+                  <li class="appr-repeater-item">
+                    <a class="twitter social-icon"><i aria-hidden="true" class="jki jki-twitter-light"></i></a>
+                  </li>
+                  <li class="appr-repeater-item">
+                    <a class="whatsapp social-icon"><i aria-hidden="true" class="jki jki-whatsapp-1-light"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!--  Find in store Button -->
+          <div class="app-element app-element-button-icon-beige app-widget app-widget-button">
+            <div class="app-widget-container">
+              <div class="app-button-wrapper">
+                <a class="app-button">
+                  <span class="app-button-content-wrapper">
+                    <span class="i-icon"><i aria-hidden="true" class="fas fa-map-marker-alt"></i></span>
+                    <span class="app-button-text">Find in store</span>
+                  </span>
+                  <span><i aria-hidden="true" class=" icon icon-chevron-right"></i></span>
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

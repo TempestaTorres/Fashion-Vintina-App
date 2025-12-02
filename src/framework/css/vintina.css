@@ -95,15 +95,15 @@
   padding-top:2px;
   padding-bottom:2px;
 }
-.app-home .app-element.app-element-section-divider {
+.app .app-element.app-element-section-divider {
   --divider-border-style:solid;
   --divider-color:#E9E9E9;
   --divider-border-width:1px;
 }
-.app-home .app-element.app-element-section-divider .app-divider-separator {
+.app .app-element.app-element-section-divider .app-divider-separator {
   width:100%;
 }
-.app-home .app-element.app-element-section-divider .app-divider {
+.app .app-element.app-element-section-divider .app-divider {
   padding-top:25px;
   padding-bottom:25px;
 }
@@ -552,6 +552,18 @@ body:not(.rtl) .app .app-element.app-element-default-icon-list .app-icon-list-it
 .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
   background-color: var(--jkit-border-color);
 }
+.app .app-element.app-element-label-traditional {
+  text-align: right;
+  color: var( --global-color-primary );
+  font-family: var( --global-typography-text-font-family ),  sans-serif;
+  font-size: var( --global-typography-text-font-size );
+  font-weight: var( --global-typography-text-font-weight );
+  text-transform: var( --global-typography-text-text-transform );
+  width: auto;
+}
+.app .app-element.app-element-label-traditional > .app-widget-container {
+  margin: 0 5px 0 0;
+}
 /*==================================================== Mobile =============================================*/
 @media(max-width:1024px) and (min-width:768px) {
   .app .app-element.app-element-teaser-image {
@@ -653,6 +665,10 @@ body:not(.rtl) .app .app-element.app-element-default-icon-list .app-icon-list-it
   }
   .app .app-element.app-element-post-share-links-column.app-column > .app-widget-wrap {
     justify-content:flex-end;
+  }
+  .app .app-element.app-element-label-traditional {
+    font-size: var( --global-typography-text-font-size );
+    width: auto;
   }
 }
 /*==================================================== 767 =================================================*/
@@ -789,8 +805,16 @@ body:not(.rtl) .app .app-element.app-element-default-icon-list .app-icon-list-it
     --column-margin-right:0;
     --column-margin-left:0;
   }
-  .app-home .app-element.app-element-slick-card:not(:last-of-type) {
+  .app .app-element.app-element-slick-card:not(:last-of-type) {
     margin-bottom: 10px;
+  }
+  .app .app-element.app-element-label-traditional {
+    text-align: center;
+    font-size: var( --global-typography-text-font-size );
+    width: auto;
+  }
+  .app .app-element.app-element-label-traditional > .app-widget-container {
+    margin: 0 0 0 0;
   }
 }
 @media(min-width:768px) {

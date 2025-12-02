@@ -4901,3 +4901,105 @@ body.rtl .app .app-element.app-widget-star-rating-traditional .app-star-rating i
     height: 1.5rem;
   }
 }
+.app-element.app-widget-jkit_social_share_traditional .jeg-app-kit.jkit-social-share {
+  text-align: right;
+  --icon-padding-left: 0;
+  --icon-padding-right: 15px;
+  --icon-padding-top: 0;
+  --icon-padding-bottom: 0;
+  --icon-size: 16px;
+}
+.app-element.app-widget-jkit_social_share_traditional .jeg-app-kit.jkit-social-share .social-share-list > li.app-repeater-item a svg {
+  fill: #720917;
+}
+.app-element.app-widget-jkit_social_share_traditional .jeg-app-kit.jkit-social-share .social-share-list > li.app-repeater-item:hover a {
+  color: var( --global-color-accent );
+  background-color: #02010100;
+  border-style: solid;
+  border-width: 0;
+  border-color: var( --global-color-primary );
+}
+.app-element.app-widget-jkit_social_share_traditional .jeg-app-kit.jkit-social-share .social-share-list > li.app-repeater-item a {
+  color: var( --global-color-accent );
+  background-color: #00000000;
+  border-style: solid;
+  border-width: 0;
+  border-color: var( --global-color-primary );
+}
+.app-element.app-widget-jkit_social_share_traditional .jeg-app-kit.jkit-social-share .social-share-list > li a {
+  text-align: center;
+  padding: 0 15px 0 0;
+  border-radius: 0;
+}
+.app-element.app-widget-jkit_social_share_traditional .jeg-app-kit.jkit-social-share .social-share-list > li {
+  display: inline-block;
+  margin: 0 0 0 0;
+}
+.app-element.app-widget-jkit_social_share_traditional > .app-widget-container {
+  margin: 0 0 -5px 0;
+}
+.app-element.app-widget-jkit_social_share_traditional {
+  width: auto;
+}
+.app-element.app-widget-jkit_social_share_traditional:not(.a-transform) > .app-widget-container {
+  transform: rotate(0deg);
+}
+.app-element.app-widget-jkit_social_share_traditional.a-transform > .app-widget-container {
+  --transform-rotateZ: 0deg;
+}
+.app-element.app-widget-jkit_social_share_traditional.app-widget .app-widget-container,  .app-home .app-element.app-widget-jkit_social_share_traditional.app-widget .app-widget-container > * {
+  position: relative;
+  --jkit-option-enabled: 0px;
+}
+.app-element.app-widget-jkit_social_share_traditional.app-widget .app-widget-container::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  backdrop-filter: blur(0px);
+  border-radius: inherit;
+  background-color: inherit;
+}
+@media (max-width: 1024px) {
+  .app-element.app-widget-jkit_social_share_traditional .jeg-app-kit.jkit-social-share .social-share-list > li {
+    margin: 0;
+  }
+  .app-element.app-widget-jkit_social_share_traditional .jeg-app-kit.jkit-social-share {
+    --icon-size: 14px;
+  }
+  .app-element.app-widget-jkit_social_share_traditional .jeg-app-kit.jkit-social-share .social-share-list > li a  {
+    margin-left:  auto;
+    margin-right:  unset;
+  }
+}
+@media (max-width: 767px) {
+  .app-element.app-widget-jkit_social_share_traditional .jeg-app-kit.jkit-social-share .social-share-list > li a {
+    text-align: center;
+    padding: 0 0 0 15px;
+  }
+  .app-element.app-widget-jkit_social_share_traditional .jeg-app-kit.jkit-social-share {
+    --icon-padding-left: 15px;
+    --icon-padding-right: 0px;
+    --icon-padding-top: 0px;
+    --icon-padding-bottom: 0px;
+    --icon-size: 16px;
+  }
+  .app-element.app-widget-jkit_social_share_traditional .jeg-app-kit.jkit-social-share .social-share-list > li {
+    margin: 0;
+  }
+  .app-element.app-widget-jkit_social_share_traditional > .app-widget-container {
+    margin: 5px 0 0 0;
+  }
+  .app-element.app-widget-jkit_social_share_traditional {
+    width: auto;
+  }
+  .app-element.app-widget-jkit_social_share_traditional .jeg-app-kit.jkit-social-share .social-share-list > li a  {
+    margin-left:  auto;
+    margin-right:  unset;
+  }
+}
+.app-element.app-widget-jkit_social_share_traditional .jeg-app-kit.jkit-social-share .social-share-list > li a  {
+  margin-left:  auto;
+}
