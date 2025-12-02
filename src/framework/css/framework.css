@@ -1,4 +1,5 @@
 @import "reset.css";
+@import "star-rating.css";
 @import "apsisac-pro.css";
 @import "swiper.css";
 @import "app-style.css";
@@ -14,4 +15,5 @@
 @import "jkit.css";
 @import "widget-styles.css";
 @import "widget-icon-box.css";
+@import "modals.css";
 @import "app-kit-3.css";

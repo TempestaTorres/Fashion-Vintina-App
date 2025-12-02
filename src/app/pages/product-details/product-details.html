@@ -105,6 +105,53 @@
         }
 
       </div>
+      <!-- Product Details -->
+      <div
+        #details
+        appObserveElement
+        #intersection2="intersection"
+        [isContinuous]="false"
+        (isIntersecting)="isIntersecting($event, details)"
+        [ngClass]="{animated: intersection2._isIntersecting, fadeInRight: intersection2._isIntersecting}"
+        class="app-element app-element-product-details-inner-section app-column app-col-50 animated-slow animated app-invisible"
+        data-element_type="column">
+
+        <div class="app-widget-wrap app-element-populated">
+          <!-- Title -->
+          <div class="app-element app-widget-jkit_post_title_traditional app-widget">
+            <div class="app-widget-container">
+              <div class="jeg-app-kit jkit-post-title">
+                <h2 class="post-title style-color">{{ product?.name }}</h2>
+              </div>
+            </div>
+          </div>
+          <!-- Rating Stars -->
+          <div class="app-element app-widget app-widget-star-rating-traditional app--star-style-star_unicode">
+            <div class="app-widget-container">
+              <div class="app-star-rating__wrapper">
+                <div class="app-star-rating" title="4.5/5">
+                  <i class="app-star-full">★</i>
+                  <i class="app-star-full">★</i>
+                  <i class="app-star-full">★</i>
+                  <i class="app-star-full">★</i>
+                  <i class="app-star-5">★</i>
+                  <span class="app-screen-only">4.5/5</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Payment text -->
+          <div class="app-element app-widget elementor-widget-text-editor">
+            <div class="app-widget-container">
+              Buy now from $18.75 per fortnight.
+              <a
+                (click)="showModalPayLater()"
+                class="ap-element-button prompt-button" tabindex="-1"><strong>See options</strong></a>
+            </div>
+          </div>
+          <!-- Category -->
+        </div>
+      </div>
     </div>
   </section>
 
@@ -122,4 +169,8 @@
       [bioDress]="product.model.dress"
       [opened]="bioOpened"></app-modal-bio>
   }
+  <!-- Modal Pay Later dialog -->
+  <app-modal-pay-later
+    (payLaterClosed)="closeModalPayLater()"
+    [opened]="payLaterOpened"></app-modal-pay-later>
 </div>

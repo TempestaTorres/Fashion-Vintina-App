@@ -1,0 +1,118 @@
+@charset "UTF-8";
+.app-star-rating {
+  color:#ccd6df;
+  font-family:eicons;
+  display:inline-block
+}
+.app-star-rating i {
+  display:inline-block;
+  position:relative;
+  font-style:normal;
+  cursor:default
+}
+.app-star-rating i:before {
+  content:"\e934";
+  display:block;
+  font-size:inherit;
+  font-family:inherit;
+  position:absolute;
+  overflow:hidden;
+  color:#f0ad4e;
+  top:0;
+  left:0
+}
+.app-star-rating .app-star-empty:before {
+  content:none
+}
+.app-star-rating .app-star-1:before {
+  width:10%
+}
+.app-star-rating .app-star-2:before {
+  width:20%
+}
+.app-star-rating .app-star-3:before {
+  width:30%
+}
+.app-star-rating .app-star-4:before {
+  width:40%
+}
+.app-star-rating .app-star-5:before {
+  width:50%
+}
+.app-star-rating .app-star-6:before {
+  width:60%
+}
+.app-star-rating .app-star-7:before {
+  width:70%
+}
+.app-star-rating .app-star-8:before {
+  width:80%
+}
+.app-star-rating .app-star-9:before {
+  width:90%
+}
+.app-star-rating__wrapper {
+  display:flex;
+  align-items:center
+}
+.app-star-rating__title {
+  margin-right:10px
+}
+.app-star-rating--align-right .app-star-rating__wrapper {
+  text-align:right;
+  justify-content:flex-end
+}
+.app-star-rating--align-left .app-star-rating__wrapper {
+  text-align:left;
+  justify-content:flex-start
+}
+.app-star-rating--align-center .app-star-rating__wrapper {
+  text-align:center;
+  justify-content:center
+}
+.app-star-rating--align-justify .app-star-rating__title {
+  margin-right:auto
+}
+@media (max-width:1024px) {
+  .app-star-rating-tablet--align-right .app-star-rating__wrapper {
+    text-align:right;
+    justify-content:flex-end
+  }
+  .app-star-rating-tablet--align-left .app-star-rating__wrapper {
+    text-align:left;
+    justify-content:flex-start
+  }
+  .app-star-rating-tablet--align-center .app-star-rating__wrapper {
+    text-align:center;
+    justify-content:center
+  }
+  .app-star-rating-tablet--align-justify .app-star-rating__title {
+    margin-right:auto
+  }
+}
+@media (max-width:767px) {
+  .app-star-rating-mobile--align-right .app-star-rating__wrapper {
+    text-align:right;
+    justify-content:flex-end
+  }
+  .app-star-rating-mobile--align-left .app-star-rating__wrapper {
+    text-align:left;
+    justify-content:flex-start
+  }
+  .app-star-rating-mobile--align-center .app-star-rating__wrapper {
+    text-align:center;
+    justify-content:center
+  }
+  .app-star-rating-mobile--align-justify .app-star-rating__title {
+    margin-right:auto
+  }
+}
+.last-star {
+  letter-spacing:0
+}
+.app--star-style-star_unicode .app-star-rating {
+  font-family:Arial,Helvetica,sans-serif
+}
+.app--star-style-star_unicode .app-star-rating i:not(.app-star-empty):before {
+  content:"★"
+}

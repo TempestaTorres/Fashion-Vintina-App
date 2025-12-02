@@ -151,6 +151,20 @@
     font-weight: var( --global-typography-text-font-weight );
     text-transform: var( --global-typography-text-text-transform );
 }
+.app .app-element.app-widget-star-rating-traditional .app-star-rating {
+  font-size: 18px;
+}
+body:not(.rtl) .app .app-element.app-widget-star-rating-traditional .app-star-rating i:not(:last-of-type) {
+  margin-right: 5px;
+}
+body.rtl .app .app-element.app-widget-star-rating-traditional .app-star-rating i:not(:last-of-type) {
+  margin-left: 5px;
+}
+@media (max-width: 1024px) {
+  .app .app-element.app-widget-star-rating-traditional .app-star-rating {
+    font-size: 14px;
+  }
+}
 .app-widget-image-gallery .gallery-item .gallery-caption {
     font-family: var( --global-typography-accent-font-family ),  sans-serif;
     font-size: var( --global-typography-accent-font-size );
@@ -4525,6 +4539,31 @@
 }
 .app .app-element.app-widget-jkit_post_featured_image .jeg-app-kit.jkit-post-featured-image .post-featured-image img {
   border-radius:0;
+}
+/*Title traditional*/
+.app .app-element.app-widget-jkit_post_title_traditional .jeg-app-kit.jkit-post-title {
+  text-align: left;
+}
+.app .app-element.app-widget-jkit_post_title_traditional .jeg-app-kit.jkit-post-title .post-title,  .app .app-element.app-widget-jkit_post_title_traditional .jeg-app-kit.jkit-post-title .post-title a {
+  font-family: var( --global-typography-secondary-font-family ),  sans-serif;
+  font-size: var( --global-typography-secondary-font-size );
+  font-weight: var( --global-typography-secondary-font-weight );
+  text-transform: var( --global-typography-secondary-text-transform );
+}
+.app .app-element.app-widget-jkit_post_title_traditional > .app-widget-container {
+  margin: 0 0 -15px 0;
+}
+@media (max-width: 1024px) {
+  .app .app-element.app-widget-jkit_post_title_traditional .jeg-app-kit.jkit-post-title .post-title,
+  .app .app-element.app-widget-jkit_post_title_traditional .jeg-app-kit.jkit-post-title .post-title a {
+    font-size: var( --global-typography-secondary-font-size );
+  }
+}
+@media (max-width: 767px) {
+  .app .app-element.app-widget-jkit_post_title_traditional .jeg-app-kit.jkit-post-title .post-title,
+  .app .app-element.app-widget-jkit_post_title_traditional .jeg-app-kit.jkit-post-title .post-title a {
+    font-size: var( --global-typography-secondary-font-size );
+  }
 }
 /* Swiper widget*/
 .app-widget-image-carousel .swiper,

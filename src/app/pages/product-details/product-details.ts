@@ -6,6 +6,7 @@ import {ProductService} from '../../services/product-service';
 import {ObserveElementDirective} from '../../directives/scroll-observer';
 import {NgClass} from '@angular/common';
 import {ScrollTotopService} from '../../services/scrolltotop-service';
+import {ModalPayLaterComponent} from '../../components/modal-pay-later.component/modal-pay-later.component';
 declare var Swiper: any;
 
 @Component({
@@ -13,7 +14,8 @@ declare var Swiper: any;
   imports: [
     ModalBioComponent,
     ObserveElementDirective,
-    NgClass
+    NgClass,
+    ModalPayLaterComponent
   ],
   templateUrl: './product-details.html',
   styleUrl: './product-details.css',
@@ -22,6 +24,7 @@ export class ProductDetails {
 
   public zoomed: boolean = false;
   public bioOpened: boolean = false;
+  public payLaterOpened: boolean = false;
   private swiper: any;
   private swInitialized: boolean = false;
 
@@ -58,8 +61,16 @@ export class ProductDetails {
     this.bioOpened = true;
   }
 
+  public showModalPayLater(): void {
+    this.payLaterOpened = true;
+  }
+
   public closeModalBio(): void {
     this.bioOpened = false;
+  }
+
+  public closeModalPayLater(): void {
+    this.payLaterOpened = false;
   }
 
   public onZoomedClick(e: MouseEvent): void {
