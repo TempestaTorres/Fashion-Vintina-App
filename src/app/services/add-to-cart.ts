@@ -8,7 +8,17 @@ export class AddToCart {
   private _cart: ProductType[] = [];
 
   public addToCart(product: ProductType): void {
-    this._cart.push(product);
+    let found: boolean = false;
+
+    for (const item of this._cart) {
+      if (item.id === product.id) {
+        found = true;
+        break;
+      }
+    }
+    if (!found) {
+      this._cart.push(product);
+    }
   }
 
   public getCart(): ProductType[] {

@@ -1,6 +1,7 @@
 import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {ProductService} from '../../services/product-service';
 import {ProductType} from '../../product/product-type';
+import {AddToCart} from '../../services/add-to-cart';
 
 @Component({
   selector: 'app-product-form',
@@ -18,30 +19,30 @@ export class ProductFormComponent {
   public processing: boolean = false;
   public btnDisabled: boolean = true;
 
-  constructor(private productService: ProductService) { }
+  constructor(private productService: ProductService,  private  cartService: AddToCart) { }
 
   ngOnInit() {
 
     if (this.productType) {
       this.product = this.productService.getProductByType(this.productType);
-
-      if (this.product) {
-        this.product.quantity = 1;
-
-        console.log(this.product);
-      }
     }
   }
 
   public addToBag() {
     this.processing = true;
 
+    if (this.product) {
+      this.product.quantity = 1;
+      this.cartService.addToCart(this.product);
+
+    }
+
     setTimeout(() => {
       this.processing = false;
       this.btnDisabled = true;
       this.addedToBag.emit();
 
-    }, 3000)
+    }, 2000);
   }
 
   public onSizeGuideClick(): void {

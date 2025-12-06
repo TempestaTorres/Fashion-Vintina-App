@@ -113,6 +113,9 @@
   .app-widget-modal-dialog[data-type='slideout'] .modal-dialog-content {
     width: 362px;
   }
+  .app-widget-modal-dialog[data-type='slideout'].modal-dialog-mini-cart .modal-dialog-content {
+    width: 478px;
+  }
   .modal-dialog-header {
     padding: 1.5rem;
   }
@@ -128,13 +131,11 @@
 /*=================================================== 767 ====================================================*/
 @media (max-width: 767px) {
 
+  .app-widget-modal-dialog[data-type='slideout'].modal-dialog-mini-cart .modal-dialog-content,
   .app-widget-modal-dialog[data-type='slideout'] .modal-dialog-content {
-    bottom: 0;
-    right: auto;
-    height: fit-content;
-    max-height: 90dvh;
-    transform: translate(0, 100%)
+    width: 340px;
   }
+
   .app-element.app-element-modal-heading-traditional .app-heading-title {
     font-size:var( --global-typography-accent-font-size );
   }
@@ -146,5 +147,14 @@
     --column-margin-right: 0px;
     --column-margin-left: 0px;
     padding: 0 .75rem 0 .75rem;
+  }
+  .app-element-free-shipping-progress-heading i {
+    margin-left: .75rem;
+  }
+}
+@media (max-width: 340px) {
+  .app-widget-modal-dialog[data-type='slideout'].modal-dialog-mini-cart .modal-dialog-content,
+  .app-widget-modal-dialog[data-type='slideout'] .modal-dialog-content {
+    width: 100%;
   }
 }

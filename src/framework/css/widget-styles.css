@@ -5015,6 +5015,7 @@ body.rtl .app .app-element.app-widget-star-rating-traditional .app-star-rating i
   background-color: transparent;
   line-height: 21px;
   cursor: pointer;
+  color: #000;
 }
 .app-element.app-widget-button-link-icon .app-button i {
   font-size: 10px;
@@ -5038,6 +5039,50 @@ body.rtl .app .app-element.app-widget-star-rating-traditional .app-star-rating i
 .app-element.app-widget-button-link-icon .app-button:hover::after {
   transform-origin: left;
   transform: translate(0,0) scaleY(1) scaleX(1);
+}
+.app-element.app-widget-button-link .app-button {
+  position: relative;
+  cursor: pointer;
+  text-transform: uppercase;
+  text-decoration-line: none;
+  padding: 0 0 .25rem 0;
+  color:#fff;
+}
+.app-element.app-widget-button-link .app-button::before,
+.app-element.app-widget-button-link .app-button::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+  height: 1px;
+  width: 100%;
+  background-color: #fff;
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+.app-element.app-widget-button-link .app-button::before {
+  transform-origin: left;
+  transform: scaleX(0) scaleY(1);
+  transition-duration: 500ms;
+}
+.app-element.app-widget-button-link .app-button::after {
+  transform-origin: left;
+  transform: scaleX(1) scaleY(1);
+  transition-duration: 0s;
+}
+.app-element.app-widget-button-link .app-button:hover {
+  color: #fff;
+}
+.app-element.app-widget-button-link .app-button:hover::before {
+  transform: scaleX(1) scaleY(1);
+  transition-delay: 500ms;
+}
+.app-element.app-widget-button-link .app-button:hover::after {
+  transform-origin: right;
+  transform: scaleX(0) scaleY(1);
+  transition-duration: 300ms;
 }
 .line-through {
   text-decoration-line: none;

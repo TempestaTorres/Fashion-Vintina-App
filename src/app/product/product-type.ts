@@ -12,6 +12,7 @@ export interface ProductType {
   image?: string,
   onSale?: boolean,
   quantity?: number,
+  color?: string,
   thumbnail?: string[],
   model?: {
     photo: string,
@@ -38,6 +39,7 @@ export const  Products: ProductType[] = [
     originalPrice: 65.00,
     image: '/assets/images/sensual-woman-beautiful-young-woman-in-lingerie-smiling-while-standing.jpg',
     onSale: true,
+    color: 'white',
     thumbnail: [
       "/assets/images/sensual-woman-beautiful-young-woman-in-lingerie.jpg",
       "/assets/images/sensual-beauty-beautiful-young-woman-in-lingerie-2.jpg",

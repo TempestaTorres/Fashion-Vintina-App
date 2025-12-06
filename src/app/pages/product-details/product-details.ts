@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {ModalBioComponent} from '../../components/modal-bio.component/modal-bio.component';
 import {ProductType} from '../../product/product-type';
 import {ActivatedRoute} from '@angular/router';
@@ -9,6 +9,8 @@ import {ScrollTotopService} from '../../services/scrolltotop-service';
 import {ModalPayLaterComponent} from '../../components/modal-pay-later.component/modal-pay-later.component';
 import {FindInStoreComponent} from '../../components/find-in-store.component/find-in-store.component';
 import {ProductFormComponent} from '../../components/product-form.component/product-form.component';
+import {MiniCartComponent} from '../../components/mini-cart.component/mini-cart.component';
+
 declare var Swiper: any;
 
 @Component({
@@ -19,7 +21,8 @@ declare var Swiper: any;
     NgClass,
     ModalPayLaterComponent,
     FindInStoreComponent,
-    ProductFormComponent
+    ProductFormComponent,
+    MiniCartComponent
   ],
   templateUrl: './product-details.html',
   styleUrl: './product-details.css',
@@ -31,6 +34,8 @@ export class ProductDetails {
   public payLaterOpened: boolean = false;
   public findInStoreOpened: boolean = false;
   public sizeGuidOpened: boolean = false;
+  public miniCartOpened: boolean = false;
+  public miniCartAdded: boolean = false;
   private swiper: any;
   private swInitialized: boolean = false;
   // Tabs
@@ -50,6 +55,17 @@ export class ProductDetails {
 
     this.productInit();
 
+    this.zoomed = false;
+    this.bioOpened = false;
+    this.payLaterOpened = false;
+    this.findInStoreOpened = false;
+    this.sizeGuidOpened = false;
+    this.miniCartOpened = false;
+    this.miniCartAdded = false;
+    // Tabs
+    this.tabDescActive = true;
+    this.tabAdditionalInfoActive = false;
+
     if (this.swInitialized) {
       this.swiper.destroy();
     }
@@ -63,7 +79,6 @@ export class ProductDetails {
   }
 
   ngOnDestroy() {
-    this.swiper.destroy();
   }
 
   public toggleTab(tabIndex: number): void {
@@ -101,13 +116,23 @@ export class ProductDetails {
   public closeModalSizeGuide(): void {
     this.sizeGuidOpened = false;
   }
+  public closeModalMiniCart(): void {
+    this.miniCartOpened = false;
+    this.miniCartAdded = false;
+  }
 
   public onOpenSizeGuideClick(): void {
     this.sizeGuidOpened = true;
   }
 
   public addToBag(): void {
-    alert("added toBag");
+
+    this.miniCartAdded = true;
+
+    setTimeout(() => {
+      this.miniCartOpened = true;
+      this.miniCartAdded = false;
+    }, 500);
   }
 
   public onZoomedClick(e: MouseEvent): void {
@@ -203,7 +228,6 @@ export class ProductDetails {
         if (this.product) {
           if (this.product.thumbnail) {
             this.thumbnails = this.product.thumbnail;
-            console.log(this.thumbnails);
           }
         }
       }

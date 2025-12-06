@@ -1,0 +1,556 @@
+<div
+  [class.opened]="opened"
+  class="app-widget-modal-dialog modal-dialog-mini-cart"
+  data-type='slideout'>
+  <div class="modal-dialog-overlay"></div>
+  <!-- Content -->
+  <div class="modal-dialog-content">
+    <!-- Header -->
+    <div class="modal-dialog-header">
+      <!-- Close Button -->
+      <a
+        (click)="close()"
+        class="close-modal-dialog-button"><i aria-hidden="true" class="jki jki-times-solid"></i>
+      </a>
+      <!-- Heading -->
+      <div class="app-element app-element-modal-heading-traditional app-widget app-widget-heading">
+        <div class="app-widget-container">
+          <strong class="app-heading-title">Your bag</strong>
+          @if (cartItems.length > 0) {
+            <span class="mini-cart-bag-quantity">{{ cartItems.length }}</span>
+          }
+        </div>
+      </div>
+    </div>
+    <!-- Modal Content -->
+    <div class="app app-home">
+      <section class="app-element mini-cart-content app-section app-section-boxed">
+        <div class="app-container">
+          <div class="app-element app-element-modal-inner-content app-column app-col-100" data-element_type="column">
+            <div class="app-widget-wrap app-element-populated">
+                <!-- Mini Cart Notice -->
+                <div class="mini-cart-notice"
+                     [class.active]="noticeActive">
+                  <div class="heading">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 16" fill="none" aria-hidden="true"
+                         focusable="false" width="16" height="16">
+                      <path
+                        d="M13.5 2.5H3.5C3.22386 2.5 3 2.72386 3 3V13C3 13.2761 3.22386 13.5 3.5 13.5H13.5C13.7761 13.5 14 13.2761 14 13V3C14 2.72386 13.7761 2.5 13.5 2.5Z"
+                        fill="currentColor"></path>
+                      <path d="M11.25 6.5L7.58125 10L5.75 8.25" stroke="black" stroke-width="0.8"
+                            stroke-linecap="square"></path>
+                    </svg>
+                    It’s in Your BAG
+                  </div>
+                  <!-- Button link -->
+                  <div class="app-element app-widget-button-link app-widget app-widget-button">
+                    <div class="app-widget-container">
+                      <div class="app-button-wrapper">
+                        <a class="app-button"
+                           (click)="closeNotice()">
+                        <span class="app-button-content-wrapper">
+                          <span class="app-button-text">Close</span>
+                        </span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Mini Cart Form -->
+                <section class="app-section app-element app-section-boxed">
+                  <div class="app-container app-column-gap-default">
+                    <div class="app-element app-element-section-form app-element-no-padding app-column app-col-100">
+                      <div class="app-widget-wrap app-element-populated">
+
+                        <form class="mini-cart-form" novalidate>
+                          <div class="mini-cart-form-content">
+                            <!-- Login Panel -->
+                            <div class="mini-cart-form-login-panel">
+                              <p>THE VINTINA CLUB</p>
+                              <p>
+                                <a
+                                  [routerLink]="['/signup']"
+                                  class="link"><span class="link-text">Sign up</span></a>
+                                OR
+                                <a
+                                  [routerLink]="['/login']"
+                                  class="link"><span class="link-text">Login</span></a>
+                                TO ACCESS YOUR EXCLUSIVE BENEFITS
+                              </p>
+                            </div>
+
+                            @if (cartItems.length > 0){
+
+                              <!-- Free shipping progress Computed value -->
+                              <div class="app-element app-element-free-shipping-progress app-column-wrap">
+                                <!-- Heading -->
+                                <div
+                                  class="app-element app-element-free-shipping-progress-heading mini-cart-heading app-row">
+                                  <div class="app-container">
+                                    <i class="fas fa-shopping-bag" aria-hidden="true"></i>
+                                    <span>You’re only
+                                     <strong>$25</strong>
+                                     away from free shipping</span>
+                                  </div>
+                                </div>
+                                <!--Progress bar -->
+                                <div class="app-widget_progress_bar">
+                                  <div class="progress-bar"></div>
+                                </div>
+                              </div>
+                              <!-- Products -->
+                              <div class="app-element-mini-cart-products">
+
+                                @for (product of cartItems; track product.id) {
+
+                                  <div class="app-element app-element-mini-cart-item app-column">
+                                    <!-- Image -->
+                                    <div class="mini-cart-item-img">
+                                      <a
+                                        class="ap-element-button"
+                                        [routerLink]="['/product/details', product.type]"
+                                        [title]="product.name">
+                                        <figure>
+                                          <picture>
+                                            <img [src]="product.image" [alt]="product.name">
+                                          </picture>
+                                        </figure>
+                                      </a>
+                                    </div>
+                                    <!-- Details -->
+                                    <div class="mini-cart-item-details">
+                                      <!-- Heading -->
+                                      <div class="app-row app-element-mini-cart-item-details-heading mini-cart-heading">
+                                        <span>{{ product.name }}</span>
+                                        <!-- Button add to favorites -->
+                                        <a
+                                          (click)="addToFavorite(product)"
+                                          [class.added]="product.favorite"
+                                          class="ap-element-button button-icon">
+                                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" fill="none"
+                                               aria-hidden="true" focusable="false" class="!size-4 text-primary">
+                                            <path
+                                              d="M7.59571 2.96285L7.00458 3.55698L6.41345 2.96285C5.26474 1.81251 3.40331 1.81251 2.25878 2.96285C1.11426 4.11319 1.11426 5.98407 2.25878 7.13441L2.84991 7.72854L7.00039 11.9001L11.1509 7.72854L11.742 7.13441C12.8865 5.98407 12.8865 4.11319 11.742 2.96285C10.5975 1.81251 8.73605 1.81251 7.59152 2.96285H7.59571Z"
+                                              stroke="currentColor" stroke-miterlimit="10"></path>
+                                          </svg>
+                                        </a>
+                                      </div>
+                                      <!--  Price -->
+                                      <span class="mini-cart-price">
+                                      @if (product.originalPrice) {
+                                        <del aria-hidden="true">
+                                          <span class="amount">
+                                            <bdi>{{ product.originalPrice | currency: 'USD' : 'symbol' : '.2-2' : 'en-US' }}</bdi>
+                                          </span>
+                                        </del>
+                                      }
+                                        <ins>
+                                        <span class="amount">
+                                          <bdi>{{ product.price | currency: 'USD' : 'symbol' : '.2-2' : 'en-US' }}</bdi>
+                                        </span>
+                                      </ins>
+                                    </span>
+                                      <!-- Color & Sizes-->
+                                      @if (product.color) {
+                                        <div class="app-row product-color-sizes mini-cart-heading">
+                                          <span>{{ product.color }}</span>
+                                          <span class="text-divider">|</span>
+                                          <span>14 / E</span>
+                                        </div>
+                                      }
+                                      <!--  Footer -->
+                                      <div class="app-row app-element-mini-cart-item-details-heading-footer">
+                                        <div class="item-counter-wrapper">
+                                          <div class="counter">
+                                            <!-- Button minus -->
+                                            <a (click)="counterClicked(product, -1)"
+                                               class="counter-button button-minus">
+                                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" fill="none"
+                                                   aria-hidden="true" focusable="false">
+                                                <path id="icon-minus" d="M1.875 6H10.125" stroke="currentColor"
+                                                      stroke-linecap="square" stroke-linejoin="round"></path>
+                                              </svg>
+                                            </a>
+                                            <!-- Input -->
+                                            <div class="input-counter">
+                                              <input
+                                                type="number"
+                                                min="0"
+                                                max="1"
+                                                [value]="product.quantity"
+                                                aria-label="Quantity"
+                                              >
+                                            </div>
+                                            <!-- Button plus -->
+                                            <a
+                                              (click)="counterClicked(product, 1)"
+                                              [class.disabled]="isLastItem(product)"
+                                              class="counter-button button-plus">
+                                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" fill="none"
+                                                   aria-hidden="true" focusable="false">
+                                                <g>
+                                                  <path d="M1.875 6H10.125" stroke="currentColor" stroke-linecap="square"
+                                                        stroke-linejoin="round"></path>
+                                                  <path d="M6 1.875V10.125" stroke="currentColor" stroke-linecap="square"
+                                                        stroke-linejoin="round"></path>
+                                                </g>
+                                              </svg>
+                                            </a>
+                                          </div>
+                                        </div>
+                                        <!-- Button remove -->
+                                        <button
+                                          (click)="removeFromCart(product)"
+                                          class="link"
+                                          type="button"
+                                          aria-label="Remove"><span class="link-text">Remove</span></button>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                }
+
+                              </div>
+
+                            } @else {
+                              <!-- Empty Panel -->
+                              <div class="app-element app-element-empty-mini-cart app-column app-col-100">
+                                <div class="app-widget-wrap app-element-populated">
+                                  <!-- Heading -->
+                                  <div class="app-element app-element-mini-cart-heading align-center app-widget app-widget-heading">
+                                    <div class="app-widget-container">
+                                      <h3 class="app-heading-title">Your shopping Bag is empty!</h3>
+                                    </div>
+                                  </div>
+                                  <!-- Button Shop -->
+                                  <div class="app-element app-element-button-icon-beige">
+                                    <div class="app-button-wrapper">
+                                      <a
+                                        [routerLink]="['/shop']"
+                                        class="ap-element-button app-button">
+                                        <span class="app-button-content-wrapper">
+                                          <span class="app-button-text">Start shopping</span>
+                                        </span>
+                                      </a>
+                                  </div>
+                                  </div>
+                                </div>
+                            </div>
+                            }
+
+                            <!-- Pair with Swiper -->
+                            <div class="app-element app-element-pair-with app-column app-col-100">
+                              <div class="app-widget-wrap app-element-populated a-swiper-container">
+                                <!-- Heading -->
+                                <div class="app-element app-element-mini-cart-heading app-widget app-widget-heading">
+                                  <div class="app-widget-container">
+                                    @if (cartItems.length > 0) {
+                                      <h3 class="app-heading-title">Pair with</h3>
+                                    } @else {
+                                      <h3 class="app-heading-title">Recommended</h3>
+                                    }
+
+                                  </div>
+                                </div>
+                                <div
+                                  class="app-element app-element-mini-cart-gallery app-widget app-widget-image-carousel">
+                                  <div class="app-widget-container">
+                                    <!-- Swiper container -->
+                                    <div
+                                      class="app-image-carousel-wrapper swiper swiper-container carousel-swiper-mini-cart-related">
+                                      <!-- Slides -->
+                                      <div class="app-image-carousel swiper-wrapper">
+                                        <!-- Slide -->
+                                        <div class="swiper-slide">
+                                          <div class="pair-with-card">
+                                            <!-- Product Image -->
+                                            <a
+                                              class="ap-element-button mini-cart-product-link"
+                                              title="Venus Metallic Red">
+                                              <figure>
+                                                <picture>
+                                                  <img class="product-img" src="/assets/images/Venus_MetallicRed.jpg"
+                                                       alt="Venus Metallic Red">
+                                                </picture>
+                                              </figure>
+                                            </a>
+                                            <!-- Card Body -->
+                                            <div class="pair-with-card-body">
+                                              <div class="pair-with-card-content">
+                                                <!-- Heading -->
+                                                <div
+                                                  class="app-element mini-cart-pair-with-heading app-element-mini-cart-heading app-widget app-widget-heading">
+                                                  <div class="app-widget-container">
+                                                    <h3 class="app-heading-title">
+                                                      <a class="ap-element-button">
+                                                        <span class="text-title">VENUS</span>
+                                                        <span class="text-desc">Metallic Red</span>
+                                                      </a>
+                                                    </h3>
+                                                  </div>
+                                                </div>
+                                                <!-- Price -->
+                                                <div class="pair-with-card-price">$200</div>
+                                                <!-- Button Add to bag -->
+                                                <button class="ap-element-button button-icon-widget small styled"
+                                                        type="button"
+                                                        aria-label="Add to bag - Venus Metallic Red">
+                                                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" aria-hidden="true"
+                                                       focusable="false" class="!h-4 !w-[18px] text-white">
+                                                      <path
+                                                        d="M8.98173 13.5H2.55601C2.48586 13.4996 2.41659 13.4844 2.35269 13.4554C2.2888 13.4265 2.23171 13.3844 2.18515 13.3319C2.13858 13.2795 2.10357 13.2178 2.0824 13.1509C2.06123 13.084 2.05436 13.0135 2.06226 12.9438L2.94976 4.94375C2.96495 4.82166 3.02408 4.70927 3.11609 4.62761C3.20811 4.54594 3.32673 4.50058 3.44976 4.5H13.5498C13.6728 4.50058 13.7914 4.54594 13.8834 4.62761C13.9754 4.70927 14.0346 4.82166 14.0498 4.94375L14.4998 7.33333"
+                                                        stroke="currentColor" stroke-linecap="square"
+                                                        stroke-linejoin="round"></path>
+                                                      <path
+                                                        d="M6 4.5C6 3.83696 6.26339 3.20107 6.73223 2.73223C7.20107 2.26339 7.83696 2 8.5 2C9.16304 2 9.79893 2.26339 10.2678 2.73223C10.7366 3.20107 11 3.83696 11 4.5"
+                                                        stroke="currentColor" stroke-linecap="round"
+                                                        stroke-linejoin="round"></path>
+                                                      <path d="M14.5 10V15.3333" stroke="currentColor"
+                                                            stroke-linecap="square"></path>
+                                                      <path d="M17.1665 12.6667L11.8332 12.6667" stroke="currentColor"
+                                                            stroke-linecap="square"></path>
+                                                  </svg>
+                                                  Add To Bag
+                                                </button>
+                                              </div>
+                                              <!-- Button Add To Wishlist-->
+                                              <a
+                                                (click)="addToWishList($event)"
+                                                class="add-to-wish-list">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" fill="none"
+                                                     aria-hidden="true" focusable="false" class="!size-4 text-primary">
+                                                  <path
+                                                    d="M7.59571 2.96285L7.00458 3.55698L6.41345 2.96285C5.26474 1.81251 3.40331 1.81251 2.25878 2.96285C1.11426 4.11319 1.11426 5.98407 2.25878 7.13441L2.84991 7.72854L7.00039 11.9001L11.1509 7.72854L11.742 7.13441C12.8865 5.98407 12.8865 4.11319 11.742 2.96285C10.5975 1.81251 8.73605 1.81251 7.59152 2.96285H7.59571Z"
+                                                    stroke="currentColor" stroke-miterlimit="10"></path>
+                                                </svg>
+                                              </a>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <!-- Slide -->
+                                        <div class="swiper-slide">
+                                          <div class="pair-with-card">
+                                            <!-- Product Image -->
+                                            <a
+                                              class="ap-element-button mini-cart-product-link"
+                                              title="Fashion Fetish Leather Wrist Cuffs">
+                                              <figure>
+                                                <picture>
+                                                  <img class="product-img" src="/assets/images/BlackHandCuffs_BB.jpg"
+                                                       alt="Fashion Fetish Leather Wrist Cuffs">
+                                                </picture>
+                                              </figure>
+                                            </a>
+                                            <!-- Card Body -->
+                                            <div class="pair-with-card-body">
+                                              <div class="pair-with-card-content">
+                                                <!-- Heading -->
+                                                <div
+                                                  class="app-element mini-cart-pair-with-heading app-element-mini-cart-heading app-widget app-widget-heading">
+                                                  <div class="app-widget-container">
+                                                    <h3 class="app-heading-title">
+                                                      <a class="ap-element-button">
+                                                        <span class="text-title">Fashion Fetish</span>
+                                                        <span class="text-desc">Leather Wrist Cuffs</span>
+                                                      </a>
+                                                    </h3>
+                                                  </div>
+                                                </div>
+                                                <!-- Price -->
+                                                <div class="pair-with-card-price">$140</div>
+                                                <!-- Button Add to bag -->
+                                                <button class="ap-element-button button-icon-widget small styled"
+                                                        type="button"
+                                                        aria-label="Add to bag - Venus Metallic Red">
+                                                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" aria-hidden="true"
+                                                       focusable="false" class="!h-4 !w-[18px] text-white">
+                                                      <path
+                                                        d="M8.98173 13.5H2.55601C2.48586 13.4996 2.41659 13.4844 2.35269 13.4554C2.2888 13.4265 2.23171 13.3844 2.18515 13.3319C2.13858 13.2795 2.10357 13.2178 2.0824 13.1509C2.06123 13.084 2.05436 13.0135 2.06226 12.9438L2.94976 4.94375C2.96495 4.82166 3.02408 4.70927 3.11609 4.62761C3.20811 4.54594 3.32673 4.50058 3.44976 4.5H13.5498C13.6728 4.50058 13.7914 4.54594 13.8834 4.62761C13.9754 4.70927 14.0346 4.82166 14.0498 4.94375L14.4998 7.33333"
+                                                        stroke="currentColor" stroke-linecap="square"
+                                                        stroke-linejoin="round"></path>
+                                                      <path
+                                                        d="M6 4.5C6 3.83696 6.26339 3.20107 6.73223 2.73223C7.20107 2.26339 7.83696 2 8.5 2C9.16304 2 9.79893 2.26339 10.2678 2.73223C10.7366 3.20107 11 3.83696 11 4.5"
+                                                        stroke="currentColor" stroke-linecap="round"
+                                                        stroke-linejoin="round"></path>
+                                                      <path d="M14.5 10V15.3333" stroke="currentColor"
+                                                            stroke-linecap="square"></path>
+                                                      <path d="M17.1665 12.6667L11.8332 12.6667" stroke="currentColor"
+                                                            stroke-linecap="square"></path>
+                                                  </svg>
+                                                  Add To Bag
+                                                </button>
+                                              </div>
+                                              <!-- Button Add To Wishlist-->
+                                              <a
+                                                (click)="addToWishList($event)"
+                                                class="add-to-wish-list">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" fill="none"
+                                                     aria-hidden="true" focusable="false" class="!size-4 text-primary">
+                                                  <path
+                                                    d="M7.59571 2.96285L7.00458 3.55698L6.41345 2.96285C5.26474 1.81251 3.40331 1.81251 2.25878 2.96285C1.11426 4.11319 1.11426 5.98407 2.25878 7.13441L2.84991 7.72854L7.00039 11.9001L11.1509 7.72854L11.742 7.13441C12.8865 5.98407 12.8865 4.11319 11.742 2.96285C10.5975 1.81251 8.73605 1.81251 7.59152 2.96285H7.59571Z"
+                                                    stroke="currentColor" stroke-miterlimit="10"></path>
+                                                </svg>
+                                              </a>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <!-- Slide -->
+                                        <div class="swiper-slide">
+                                          <div class="pair-with-card">
+                                            <!-- Product Image -->
+                                            <a
+                                              class="ap-element-button mini-cart-product-link"
+                                              title="XMAS 2025 Gold Decorations">
+                                              <figure>
+                                                <picture>
+                                                  <img class="product-img" src="/assets/images/Xmas26_Decorations_Box.jpg"
+                                                       alt="XMAS 2025 Gold Decorations">
+                                                </picture>
+                                              </figure>
+                                            </a>
+                                            <!-- Card Body -->
+                                            <div class="pair-with-card-body">
+                                              <div class="pair-with-card-content">
+                                                <!-- Heading -->
+                                                <div
+                                                  class="app-element mini-cart-pair-with-heading app-element-mini-cart-heading app-widget app-widget-heading">
+                                                  <div class="app-widget-container">
+                                                    <h3 class="app-heading-title">
+                                                      <a class="ap-element-button">
+                                                        <span class="text-title">XMAS 2025</span>
+                                                        <span class="text-desc">Gold Decorations </span>
+                                                      </a>
+                                                    </h3>
+                                                  </div>
+                                                </div>
+                                                <!-- Price -->
+                                                <div class="pair-with-card-price">$70</div>
+                                                <!-- Button Add to bag -->
+                                                <button class="ap-element-button button-icon-widget small styled"
+                                                        type="button"
+                                                        aria-label="Add to bag - Venus Metallic Red">
+                                                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" aria-hidden="true"
+                                                       focusable="false" class="!h-4 !w-[18px] text-white">
+                                                      <path
+                                                        d="M8.98173 13.5H2.55601C2.48586 13.4996 2.41659 13.4844 2.35269 13.4554C2.2888 13.4265 2.23171 13.3844 2.18515 13.3319C2.13858 13.2795 2.10357 13.2178 2.0824 13.1509C2.06123 13.084 2.05436 13.0135 2.06226 12.9438L2.94976 4.94375C2.96495 4.82166 3.02408 4.70927 3.11609 4.62761C3.20811 4.54594 3.32673 4.50058 3.44976 4.5H13.5498C13.6728 4.50058 13.7914 4.54594 13.8834 4.62761C13.9754 4.70927 14.0346 4.82166 14.0498 4.94375L14.4998 7.33333"
+                                                        stroke="currentColor" stroke-linecap="square"
+                                                        stroke-linejoin="round"></path>
+                                                      <path
+                                                        d="M6 4.5C6 3.83696 6.26339 3.20107 6.73223 2.73223C7.20107 2.26339 7.83696 2 8.5 2C9.16304 2 9.79893 2.26339 10.2678 2.73223C10.7366 3.20107 11 3.83696 11 4.5"
+                                                        stroke="currentColor" stroke-linecap="round"
+                                                        stroke-linejoin="round"></path>
+                                                      <path d="M14.5 10V15.3333" stroke="currentColor"
+                                                            stroke-linecap="square"></path>
+                                                      <path d="M17.1665 12.6667L11.8332 12.6667" stroke="currentColor"
+                                                            stroke-linecap="square"></path>
+                                                  </svg>
+                                                  Add To Bag
+                                                </button>
+                                              </div>
+                                              <!-- Button Add To Wishlist-->
+                                              <a
+                                                (click)="addToWishList($event)"
+                                                class="add-to-wish-list">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" fill="none"
+                                                     aria-hidden="true" focusable="false" class="!size-4 text-primary">
+                                                  <path
+                                                    d="M7.59571 2.96285L7.00458 3.55698L6.41345 2.96285C5.26474 1.81251 3.40331 1.81251 2.25878 2.96285C1.11426 4.11319 1.11426 5.98407 2.25878 7.13441L2.84991 7.72854L7.00039 11.9001L11.1509 7.72854L11.742 7.13441C12.8865 5.98407 12.8865 4.11319 11.742 2.96285C10.5975 1.81251 8.73605 1.81251 7.59152 2.96285H7.59571Z"
+                                                    stroke="currentColor" stroke-miterlimit="10"></path>
+                                                </svg>
+                                              </a>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <!-- Buttons -->
+                                      <div class="mini-cart-swiper-buttons-wrap">
+                                        <!-- Prev -->
+                                        <div class="mini-cart-swiper-button swiper-button-prev">
+                                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none"
+                                               aria-hidden="true" focusable="false">
+                                            <path id="icon-chevron-left-2" d="M10 13L5 8L10 3" stroke="currentColor"
+                                                  stroke-linecap="round" stroke-linejoin="round"></path>
+                                          </svg>
+                                        </div>
+                                        <!-- Next -->
+                                        <div class="mini-cart-swiper-button swiper-button-next">
+                                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none"
+                                               aria-hidden="true" focusable="false">
+                                            <path id="icon-chevron-right-2" d="M6 2.99969L11 7.99969L6 12.9997"
+                                                  stroke="currentColor" stroke-linecap="square"></path>
+                                          </svg>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          @if (cartItems.length > 0) {
+                            <!-- Check Out -->
+                            <div class="app-element-checkout">
+                              <div class="app-element-checkout-wrap">
+                                <!-- Heading -->
+                                <div class="app-element-checkout-heading">
+                                  <span class="heading-title">Subtotal</span>
+                                  <span class="heading-amount">
+                                  <bdi>{{ totalSum | currency: 'USD' : 'symbol' : '.2-2' : 'en-US' }}</bdi>
+                                </span>
+                                </div>
+                                <!-- Button -->
+                                <div class="app-element-checkout-submit-input-holder">
+                                  <button class="submit-input-button">Checkout</button>
+                                </div>
+                              </div>
+                              <!-- Body -->
+                              <div class="app-element-checkout-body">
+                                <!-- Buttons -->
+                                <div class="app-element-checkout-body-buttons">
+                                  <button type="button" aria-label="YouPay" class="link">Get it paid for you with</button>
+                                  <a class="ap-element-button" aria-label="YouPay">
+                                    <figure>
+                                      <picture>
+                                        <img src="/assets/images/icon-youpay-grey.png" alt="YouPay" decoding="async">
+                                      </picture>
+                                    </figure>
+                                  </a>
+                                </div>
+                                <!-- Text -->
+                                <div class="app-element-checkout-body-text-wrap">
+                                  <p>Or 4 payments of $31.25 per fortnight with</p>
+                                  <div class="img-container">
+                                    <figure>
+                                      <picture>
+                                        <img src="/assets/images/icon-afterpay.png" alt="Payment 1" decoding="async">
+                                      </picture>
+                                    </figure>
+                                    <figure>
+                                      <picture>
+                                        <img src="/assets/images/icon-zip.png" alt="Payment 2" decoding="async">
+                                      </picture>
+                                    </figure>
+                                    <figure>
+                                      <picture>
+                                        <img src="/assets/images/klarna-uk.png" alt="Payment 1" decoding="async">
+                                      </picture>
+                                    </figure>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          }
+
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+</div>

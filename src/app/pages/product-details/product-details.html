@@ -363,4 +363,9 @@
     (openSizeGuide)="onOpenSizeGuideClick()"
   [opened]="findInStoreOpened"
   [productType]="product?.type"></app-find-in-store>
+  <!--  Mini cart -->
+  <app-mini-cart
+  [opened]="miniCartOpened"
+  [cartAdded]="miniCartAdded"
+  (miniCartClosed)="closeModalMiniCart()"></app-mini-cart>
 </div>

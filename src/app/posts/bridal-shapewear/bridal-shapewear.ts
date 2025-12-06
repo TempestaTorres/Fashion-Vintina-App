@@ -59,7 +59,6 @@ export class BridalShapewear {
   }
 
   ngOnDestroy() {
-    this.swiper.destroy();
   }
 
   public toTopSmooth(): void {

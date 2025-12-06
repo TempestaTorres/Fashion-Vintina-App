@@ -12,6 +12,8 @@ import {ReturnsExchanges} from './pages/returns-exchanges/returns-exchanges';
 import {Contact} from './pages/contact/contact';
 import {FiveTypesOfBras} from './posts/five-types-of-bras/five-types-of-bras';
 import {ProductDetails} from './pages/product-details/product-details';
+import {Signup} from './pages/signup/signup';
+import {Login} from './pages/login/login';
 
 export const routes: Routes = [
   {path: '', component: Home},
@@ -28,4 +30,6 @@ export const routes: Routes = [
   {path: 'privacy-policy', component: PrivacyPolicy},
   {path: 'returns-exchanges', component: ReturnsExchanges},
   {path: 'contact', component: Contact},
+  {path: 'signup', component: Signup},
+  {path: 'login', component: Login},
 ];
