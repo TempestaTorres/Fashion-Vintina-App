@@ -394,13 +394,18 @@ input[type="email"] {
 .checkbox-control:checked {
   box-shadow: 0 0 0 .7142857142857143em #000000 inset;
 }
+
+.checkbox-control:checked + .check-icon-box {
+  opacity: 1;
+}
+
 .checkbox-control:active:enabled {
   box-shadow: 0 0 0 .1rem #000000 inset;
   outline: none;
 }
 .check-icon-box {
   position: absolute;
-  opacity: 1;
+  opacity: 0;
   top: calc(50% + 1px);
   left: calc(50% + 1px);
   transform: translate(-50%,-50%);
@@ -468,7 +473,7 @@ input[type="email"] {
   row-gap: 30px;
   position: relative;
 }
-delivery-options, .delivery-info {
+delivery-options, .delivery-info, .pickup-point {
   position: relative;
 }
 delivery-options > .inner {
@@ -605,7 +610,7 @@ fieldset {
   height: 18px;
 }
 .option-radio:checked {
-  background-color: #ffffff;
+  background-color: #ffffff !important;
   border: .35em solid #000000 !important;
 }
 .option-radio:before {
@@ -971,6 +976,411 @@ span.eael-tooltip-content {
   line-height: inherit;
   margin: 0;
   padding: 0;
+}
+.sms-wrapper {padding-top:14px}
+.floating-label.prepended-label{margin-left: 28px;}
+.prepended-icon-wrapper {
+  position: relative;
+  padding-left: 11px;
+  grid-area: iconStart;
+  z-index: 1;
+  align-self: center;
+}
+.prepended-icon-wrapper span {
+  color: rgba(0, 0, 0, 0.56);
+  cursor: text;
+  display: block;
+  height: 18px;
+  width: 18px;
+  max-height: 100%;
+  max-width: 100%;
+  min-height: 18px;
+  min-width: 18px;
+  overflow-wrap: break-word;
+  stroke: rgba(0, 0, 0, 0.56);
+  text-transform: none;
+  transition-duration: 0.2s;
+  transition-property: color, background-color, border-color, box-shadow;
+  transition-timing-function: ease-in-out
+}
+.prepended-icon-wrapper span svg {
+  fill: none;
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+}
+.privacy-policy-text-block {
+  position: relative;
+  margin: 0;
+  padding-top: 14px;
+  line-height: 18px;
+  font-family: var(--global-typography-text-font-family), sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.56);
+}
+.privacy-policy-text-block > .inner {
+  display: block;
+}
+.special-link-button {
+  appearance: button;
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  width: fit-content;
+  outline: transparent solid 1px;
+  text-decoration: underline !important;
+  user-select: none;
+  color: rgba(0, 0, 0, 0.56);
+  background-color: transparent;
+  text-align: center;
+}
+.shippingMethodForm {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 14px;
+}
+.shipping-method-form-container {
+  position: relative;
+  font-family: var(--global-typography-text-font-family), sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.56);
+  background-color: rgb(235, 227, 215);
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+}
+.shipping-method-form-container > * {
+  margin: 0 !important;
+}
+.pickup-point > .inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 5px;
+}
+.pickup-point > .inner .delivery-heading {
+  margin-bottom: 3px;
+}
+.form-outline-button {
+  appearance: button;
+  display: block;
+  position: relative;
+  width: 100%;
+  background-color: transparent;
+  outline: transparent solid 1px;
+  box-shadow: rgb(211, 204, 193) 0px 0px 0px 1px inset;
+  color: black;
+  font-family: var(--global-typography-text-font-family), sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 600;
+  overflow: visible;
+  padding: 14px;
+  margin: 0;
+  transition-duration: 0.2s;
+  transition-property: color, background-color, border-color, box-shadow, opacity, transform, outline;
+  transition-timing-function: ease-in-out;
+  user-select: none;
+  outline-offset: 1px;
+  border: 0;
+  border-radius: 8px;
+}
+.button-content-wrapper {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /*align-items: center;*/
+  gap: 5px;
+  pointer-events: none;
+  transition-duration: 0.2s;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.3, 0.5, 0.5, 1);
+}
+.button-content-wrapper .button-content-icon {
+  color: rgba(0, 0, 0, 1);
+  display: block;
+  height: 18px;
+  width: 18px;
+  max-height: 100%;
+  max-width: 100%;
+  min-height: 18px;
+  min-width: 18px;
+  overflow-wrap: break-word;
+  pointer-events: none;
+  stroke: rgb(0, 0, 0);
+  text-align: center;
+  text-transform: none;
+  transition-duration: 0.2s;
+  transition-property: color, background-color, border-color, box-shadow, opacity, transform, outline;
+  transition-timing-function: ease-in-out;
+}
+.button-content-wrapper .button-content-icon svg {
+  fill: none;
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+}
+.button-content-wrapper.loading .button-content-icon {
+  opacity: 0;
+  scale: .8;
+}
+.button-content-wrapper p {
+  margin: 0;
+  opacity: 1;
+}
+.button-content-wrapper.loading p {
+  opacity: 0;
+}
+.button-loading-wrapper {
+  position: absolute;
+  opacity: 0;
+  scale: 0;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translate(-50%,-50%);
+  transform-origin: left top;
+  transition-delay: 0.1333s;
+  transition-duration: 0.1333s;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.3, 0.5, 0.5, 1);
+}
+.button-content-wrapper.loading .button-loading-wrapper {
+  opacity: 1;
+  scale: 1;
+}
+
+.button-loading-wrapper > div {
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  width: 18px;
+  height: 18px;
+  min-height: 18px;
+  min-width: 18px;
+  max-height: 100%;
+  max-width: 100%;
+  overflow-wrap: break-word;
+  pointer-events: none;
+  transition-duration: 0.2s;
+  transition-property: color, background-color, border-color, box-shadow, transform, outline;
+  transition-timing-function: ease-in-out;
+  animation: shownIn .5s ease-in-out, spin .5s linear infinite;
+}
+.button-loading-wrapper > div svg {
+  fill: rgb(0, 0, 0);
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  transform: scale(0);
+}
+
+.button-content-wrapper.loading .button-loading-wrapper > div svg {
+  transform: scale(1);
+}
+@keyframes spin {
+  from {
+    transform:rotate(0);
+  }
+  to {
+    transform:rotate(360deg);
+  }
+}
+@keyframes shownIn {
+  from {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+.invalid-feedback.top {
+  bottom: -32%;
+}
+.delay-dispatch > .inner {
+  margin-bottom: 26px;
+}
+.text-sm-centered {
+  text-align: center;
+  font-family: var(--global-typography-text-font-family), sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  color: rgba(0, 0, 0, 0.56);
+}
+.form-group-column {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 14px;
+}
+.payment-section {
+  position: relative;
+  padding-top: 32px;
+  color: rgb(0, 0, 0);
+  /*background-color: rgb(241, 236, 228);*/
+}
+.payment-section > .inner {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 14px;
+  position: relative;
+}
+.small-block-column {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 5px;
+}
+.small-block-column.has-description p {
+  font-family: var(--global-typography-text-font-family), sans-serif;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  color: rgba(0, 0, 0, 0.56);
+}
+.payment-details {
+  position: relative;
+}
+.payment-details > .inner {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 26px;
+}
+.payment-options-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  position: relative;
+}
+.radio-accordion-widget {
+  position: relative;
+  width: 100%;
+  border: 1px solid rgb(211, 204, 193);
+  border-radius: 0;
+  min-height: 1px;
+}
+.radio-accordion-widget:last-of-type {
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+.radio-accordion-widget:first-of-type {
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+}
+.radio-accordion-widget-header {
+  position: relative;
+  display: grid;
+  grid-template-columns: 0px [label] 1fr minmax(0, min-content);
+  column-gap: 11px;
+  cursor: pointer;
+  color: rgb(0, 0, 0);
+  padding: 14px;
+  border-radius: 0;
+  transition: all .2s ease-in-out;
+}
+.radio-accordion-widget-header::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  bottom: -1px;
+  left: -1px;
+  z-index: 1;
+  border: 1px solid rgb(211, 204, 193);
+  display: block;
+  pointer-events: none;
+  opacity: 0;
+  transition: all .2s ease-in-out;
+  border-radius: 0;
+}
+.radio-accordion-widget-header.active {
+  border-top-right-radius: 7px;
+  border-top-left-radius: 7px;
+  border: 1px solid black;
+}
+.radio-accordion-widget-header.active::before {
+  opacity: 1;
+  border: 1px solid black;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+}
+.radio-accordion-input-wrapper {
+  display: flex;
+  column-gap: 11px;
+  align-self: center;
+  grid-column: 1 / span 2;
+}
+.radio-accordion-input-wrapper .radio-button-wrapper {
+  position: relative;
+}
+.credit-cards-wrapper {
+  margin-bottom: -1px;
+  margin-top: -1px;
+  cursor: default;
+}
+.credit-cards-wrapper > .inner {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+span.credit-card {
+  display: flex;
+  width: 38px;
+}
+.radio-accordion-widget .content {
+  overflow: hidden;
+  position: relative;
+  height: 0px;
+  opacity: 0;
+  transition-duration: 0.3s;
+  transition-property: height, opacity;
+  transition-timing-function: cubic-bezier(0.3, 0.5, 0.5, 1);
+  will-change: height, opacity;
+}
+.radio-accordion-widget .content.active {
+  opacity: 1;
+  height: auto;
+  overflow: visible;
+}
+.radio-accordion-widget .content > .inner {
+  padding: 14px;
+  background-color: rgba(0, 0, 0, 0.045);
+  border-radius: 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 14px;
+}
+.payment-method-details {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 24px;
+}
+.billingAddressDetails {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 14px;
+  padding-bottom: 14px;
 }
 /*=============================== Media =============================================*/
 @media screen and (min-width: 580px) {
