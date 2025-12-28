@@ -1,0 +1,13 @@
+.basic-modal-window-heading .heading-title {
+  margin: 0;
+  font-family: var( --global-typography-accent-font-family ), sans-serif;
+  font-size: var( --global-typography-accent-font-size );
+  font-weight: var( --global-typography-accent-font-weight);
+  text-transform: uppercase;
+}
+.modal-text {
+  font-family: var(--global-typography-text-font-family), sans-serif;
+  font-size: 12px;
+  line-height: 21px;
+  font-weight: 400;
+}

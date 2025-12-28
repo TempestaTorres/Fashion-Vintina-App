@@ -1,0 +1,56 @@
+<div
+  [class.opened]="opened"
+  class="basic-modal-wrapper">
+  <div class="basic-modal-window">
+    <div class="inner">
+      <!-- Header -->
+      <div class="header">
+        <!-- Heading -->
+        <div class="basic-modal-window-heading">
+          <h2 class="heading-title">{{ type }}</h2>
+        </div>
+        <!-- Button close -->
+        <button
+          (click)="close()"
+          class="basic-modal-window-close-button">
+          <span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" focusable="false" aria-hidden="true"><path
+              stroke-linecap="round" d="M2.5 2.5 7 7m4.5 4.5L7 7m0 0 4.5-4.5M7 7l-4.5 4.5"></path>
+            </svg>
+          </span>
+        </button>
+      </div>
+      <!-- Content -->
+      <div class="content">
+        <div class="body">
+          <div class="populated">
+          @if (type === 'Privacy Policy' || type === 'Terms of Service') {
+            <span class="modal-text">Please review our&nbsp;</span>
+            <a
+              [routerLink]="['/privacy-policy']"
+              class="underlined-info-button"
+              target="_blank">
+              <span class="app-button-content-wrapper">
+                <span class="app-button-text">Privacy policy</span>
+              </span>
+            </a>
+            <span class="modal-text">&nbsp;on the website.&nbsp;<br><br></span>
+            <span class="modal-text">or ask the project migelangelo10&#64;gmail.com</span>
+          } @else if (type === 'Contact us') {
+            <span class="modal-text">Our customer obsessive honeys are here to help you. If you have any enquiries, please do not hesitate to contact us at&nbsp;</span>
+            <a
+              [routerLink]="['/contact']"
+              class="underlined-info-button"
+              target="_blank">
+              <span class="app-button-content-wrapper">
+                <span class="app-button-text">Contact page&nbsp;</span>
+              </span>
+            </a>
+            <span class="modal-text">or ask the project migelangelo10&#64;gmail.com</span>
+          }
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

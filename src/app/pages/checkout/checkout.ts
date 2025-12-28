@@ -6,12 +6,14 @@ import {RouterLink} from '@angular/router';
 import {FormControl, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
 import {CustomValidators} from '../../validators/validators';
 import {Phones, PhoneType} from '../../phones/phones-types';
+import {ModalTextPrompt} from '../../components/modal-text-prompt/modal-text-prompt';
 
 @Component({
   selector: 'app-checkout',
   imports: [
     RouterLink,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ModalTextPrompt
   ],
   templateUrl: './checkout.html',
   styleUrl: './checkout.css',
@@ -39,6 +41,7 @@ export class Checkout {
   public labelPhoneActive: boolean = false;
   public labelBillingPhoneActive: boolean = false;
   public labelSmsActive: boolean = false;
+  public labelSmsRememberMeActive: boolean = false;
   public labelCardNumberActive: boolean = false;
   public labelExpirationDateActive: boolean = false;
   public labelCvvActive: boolean = false;
@@ -53,14 +56,22 @@ export class Checkout {
   public currentBillingPhoneFlag: string = this.phones[0].flag;
   public userPhone: string = '';
   public userBillingPhone: string = '';
+  public userRememberMePhone: string = '';
   public phoneCodeDetected: boolean = false;
   public phoneBillingCodeDetected: boolean = false;
   public sendSmsMessage: boolean = false;
-  public useShippingAddressAsBillingAddress: boolean = false;
+  public useShippingAddressAsBillingAddress: boolean = true;
+  public rememberMeChecked: boolean = false;
+  public checkBoxDeprecatedChecked: boolean = false;
   public processing: boolean = false;
   public locationAllowed: boolean = true;
 
   public basicCardChecked: boolean = true;
+  public shopPayChecked: boolean = false;
+  public payPalChecked: boolean = false;
+
+  public prompting: boolean = false;
+  public promptType: string = '';
 
   public formCheckoutGroup: FormGroup = new FormGroup({
     email: new FormControl('', [Validators.email]),
@@ -89,9 +100,11 @@ export class Checkout {
     phone: new FormControl('', [Validators.required, CustomValidators.phoneValidator]),
     billing_phone: new FormControl('', [Validators.required, CustomValidators.phoneValidator]),
     phoneSms: new FormControl('', [Validators.required, CustomValidators.phoneValidator]),
+    phoneSmsRememberMe: new FormControl('', [Validators.required, CustomValidators.phoneValidator]),
     phone_country_select: new FormControl(''),
     billing_phone_country_select: new FormControl(''),
     phoneSms_country_select: new FormControl(''),
+    phoneSmsRememberMe_country_select: new FormControl(''),
     checkBoxTextMe: new FormControl(false),
     paymentMethod: new FormControl('Basic card'),
     credit_card_number: new FormControl('', [Validators.required, Validators.minLength(12), Validators.pattern('^[0-9]*$')]),
@@ -99,6 +112,8 @@ export class Checkout {
     cvv: new FormControl('', [Validators.required]),
     card_name: new FormControl('', [Validators.required]),
     checkBoxUseBillingAddress: new FormControl(true),
+    checkBoxRememberMe: new FormControl(false),
+    checkBoxDeprecated: new FormControl(false),
   });
 
   constructor(private  cartService: AddToCart, private scrollTotopService: ScrollTotopService) {
@@ -125,11 +140,15 @@ export class Checkout {
   get phone() { return this.formCheckoutGroup.get('phone'); }
   get billingPhone() { return this.formCheckoutGroup.get('billing_phone'); }
   get phoneSms() { return this.formCheckoutGroup.get('phoneSms'); }
+  get phoneSmsRememberMe() { return this.formCheckoutGroup.get('phoneSmsRememberMe'); }
   get creditCardNumber() { return this.formCheckoutGroup.get('credit_card_number'); }
   get expirationDate() { return this.formCheckoutGroup.get('expiry'); }
   get cvv() { return this.formCheckoutGroup.get('cvv'); }
   get cardName() { return this.formCheckoutGroup.get('card_name'); }
 
+  public onSubmit(e: SubmitEvent): void {
+    e.preventDefault();
+  }
   public onInputChange(): void {
     this.labelActive = this.formCheckoutGroup.value.email.length > 0;
   }
@@ -207,6 +226,14 @@ export class Checkout {
       this.checkBillingUserPhone();
     }
   }
+  public onInputRememberMePhoneChange(): void {
+    this.labelSmsRememberMeActive = this.formCheckoutGroup.value.phoneSmsRememberMe.length > 0;
+
+    if (this.formCheckoutGroup.value.phoneSmsRememberMe.length > 0) {
+      this.userRememberMePhone = this.formCheckoutGroup.value.phoneSmsRememberMe;
+      this.checkRememberMeUserPhone();
+    }
+  }
   public onInputMobilePhoneChange(): void {
     this.labelSmsActive = this.formCheckoutGroup.value.phoneSms.length > 0;
 
@@ -214,7 +241,8 @@ export class Checkout {
       this.userPhone = this.formCheckoutGroup.value.phoneSms;
       this.checkUserPhone();
       this.formCheckoutGroup.patchValue({
-        phone: this.userPhone
+        phone: this.userPhone,
+        phoneSmsRememberMe: this.userPhone
       });
     }
   }
@@ -259,6 +287,21 @@ export class Checkout {
       }
     }
   }
+  private checkRememberMeUserPhone(): void {
+    this.phoneCodeDetected = false;
+
+    for (let i:number = 0; i <= this.phones.length; i++) {
+      if (this.userRememberMePhone.includes(this.phones[i].code)) {
+        this.currentPhoneFlag = this.phones[i].flag;
+        this.phoneCodeDetected = true;
+        this.formCheckoutGroup.patchValue({
+          billing_phone_country_select: this.phones[i].id,
+          phone_country_select: this.phones[i].id,
+        });
+        break;
+      }
+    }
+  }
   public onInputPhoneCountryChange(): void {
 
     let code: string | null = this.getPhoneCode(this.formCheckoutGroup.value.phone_country_select);
@@ -269,7 +312,27 @@ export class Checkout {
 
       this.formCheckoutGroup.patchValue({
         phone: value,
-        phoneSms: value
+        phoneSms: value,
+        phoneSmsRememberMe: value
+      });
+    }
+
+    if (flag !== null) {
+      this.currentPhoneFlag = flag;
+    }
+  }
+  public onInputPhoneRememberMeCountryChange(): void {
+
+    let code: string | null = this.getPhoneCode(this.formCheckoutGroup.value.phoneSmsRememberMe_country_select);
+    let flag: string | null = this.getPhoneFlag(this.formCheckoutGroup.value.phoneSmsRememberMe_country_select);
+
+    if (code !== null) {
+      let value: string = code + " ";
+
+      this.formCheckoutGroup.patchValue({
+        phone: value,
+        phoneSms: value,
+        phoneSmsRememberMe: value
       });
     }
 
@@ -287,6 +350,7 @@ export class Checkout {
 
       this.formCheckoutGroup.patchValue({
         billing_phone: value,
+        phoneSmsRememberMe: value
       });
     }
 
@@ -299,6 +363,12 @@ export class Checkout {
   }
   public onInputUseShippingAddressChange(): void {
     this.useShippingAddressAsBillingAddress = this.formCheckoutGroup.value.checkBoxUseBillingAddress;
+  }
+  public onInputRememberMeChange(): void {
+    this.rememberMeChecked = this.formCheckoutGroup.value.checkBoxRememberMe;
+  }
+  public onInputDeprecatedChange(): void {
+    this.checkBoxDeprecatedChecked = this.formCheckoutGroup.value.checkBoxDeprecated;
   }
 
   public shipToAddressClick(): void {
@@ -340,6 +410,18 @@ export class Checkout {
   }
   public optionBasicCardClick(): void {
     this.basicCardChecked = true;
+    this.shopPayChecked = false;
+    this.payPalChecked = false;
+  }
+  public optionShopPayClick(): void {
+    this.shopPayChecked = true;
+    this.basicCardChecked = false;
+    this.payPalChecked = false;
+  }
+  public optionPayPalClick(): void {
+    this.payPalChecked = true;
+    this.shopPayChecked = false;
+    this.basicCardChecked = false;
   }
   public numericInputOnly(e: KeyboardEvent): void {
     if (e.code.includes('Digit') || e.code.includes('Backspace')) {
@@ -381,5 +463,13 @@ export class Checkout {
       return;
     }
     e.preventDefault();
+  }
+
+  public onPrivacyPolicyClick(type: string): void {
+    this.prompting = true;
+    this.promptType = type;
+  }
+  public onPromptClose(): void {
+    this.prompting = false;
   }
 }
