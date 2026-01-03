@@ -4,6 +4,8 @@ import {AddToCart} from '../../services/add-to-cart';
 import {ProductService} from '../../services/product-service';
 import {Router, RouterLink} from '@angular/router';
 import {CurrencyPipe} from '@angular/common';
+import {Observable, Subscription} from 'rxjs';
+
 declare var Swiper: any;
 
 @Component({
@@ -27,30 +29,64 @@ export class MiniCartComponent {
   public noticeActive: boolean = false;
 
   private swiper: any | null = null;
+  private swiperInitialized: boolean = false;
+
+  private observable:Observable<boolean>;
+  private subscription: Subscription | null = null;
 
   constructor(private  cartService: AddToCart, private productService: ProductService,
               private router: Router) {
-  }
 
-  public close(): void {
+    this.observable = new Observable(observer => {
 
-    if (this.swiper !== null) {
-      this.swiper.destroy();
-      this.swiper = null;
-    }
-    this.startTimer();
-    this.miniCartClosed.emit();
+      this.timerId = setInterval(() => {
+        observer.next(this.cartAdded);
+      }, 500);
 
+      return {
+        unsubscribe: () => {
+          clearInterval(this.timerId);
+        }
+      }
+    });
   }
 
   ngOnInit() {
 
-    this.startTimer();
+    this.subscribeToCart();
+    //this.startTimer();
   }
 
+  private subscribeToCart(): void {
+    this.subscription = this.observable.subscribe(value => {
+
+      if (value) {
+        this.subscription?.unsubscribe();
+        this.cartItems = this.cartService.getCart();
+        this.setCartSubTotalAmount();
+        this.noticeActive = true;
+
+        setTimeout(() => {
+          this.swInit();
+        }, 1000);
+      }
+    });
+  }
   ngOnDestroy() {
 
-    this.stopTimer();
+    this.subscription?.unsubscribe();
+    //this.stopTimer();
+  }
+
+  public close(): void {
+
+    if (this.swiperInitialized) {
+      this.swiper.destroy(true, false);
+    }
+    this.subscribeToCart();
+    //this.startTimer();
+    this.miniCartClosed.emit();
+
   }
 
   public onSubmit(e: SubmitEvent): void {
@@ -142,5 +178,6 @@ export class MiniCartComponent {
       keyboard: true,
       thumbnail: null,
     });
+    this.swiperInitialized = true;
   }
 }

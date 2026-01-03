@@ -32,10 +32,16 @@ export class Category {
     this.toTop();
     this.route.params.subscribe(params => {
 
-      if (params['name']) {
+      if (params['name'] || params['tag']) {
 
-        this.categoryName = params['name'];
-        this.products = this.productService.getProductsByCategory(params['name']);
+        if (params['name']) {
+          this.categoryName = params['name'];
+          this.products = this.productService.getProductsByCategory(params['name']);
+        }
+        else if (params['tag']) {
+          this.categoryName = params['tag'];
+          this.products = this.productService.getProductsByTag(params['tag']);
+        }
 
         if (this.products.length > 0) {
           for (let i = 0; i < this.products.length; i++) {

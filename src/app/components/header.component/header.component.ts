@@ -2,6 +2,7 @@ import {Component, signal, ViewChild, WritableSignal} from '@angular/core';
 import {DidOpenEvent, SwalComponent, SwalDirective, SwalPortalTargets} from '@sweetalert2/ngx-sweetalert2';
 import {SidebarComponent} from '../sidebar.component/sidebar.component';
 import {Router, RouterLink, RouterLinkActive} from '@angular/router';
+import {ModalViewOffer} from '../modal-view-offer/modal-view-offer';
 
 @Component({
   selector: 'app-header',
@@ -10,7 +11,8 @@ import {Router, RouterLink, RouterLinkActive} from '@angular/router';
     SwalComponent,
     SidebarComponent,
     RouterLink,
-    RouterLinkActive
+    RouterLinkActive,
+    ModalViewOffer
   ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css',
@@ -28,8 +30,18 @@ export class HeaderComponent {
   public openSubmenu: WritableSignal<boolean> = signal(false);
   public openSubmenu2: WritableSignal<boolean> = signal(false);
 
+  public viewOfferOpened: boolean = false;
+
   public constructor(public readonly swalTargets: SwalPortalTargets, private readonly router: Router) {
 
+  }
+
+  public onViewOfferClick(): void {
+    this.viewOfferOpened = true;
+  }
+
+  public onViewOfferClosed(): void {
+    this.viewOfferOpened = false;
   }
 
   public toTop(e: MouseEvent): void {

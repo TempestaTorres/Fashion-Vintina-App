@@ -430,12 +430,16 @@ body:not([class*=app-page-]) .site-main {
   padding-bottom: 0 !important;
 }
 /*Accordion*/
+.wysiwyg {
+  overflow-x: auto;
+}
 .accordion-item {
   position: relative;
   display: flex;
   flex-direction: column;
   border: 0 solid rgba(0, 0, 0, 0.08);
   border-bottom-width: 1px;
+  padding-bottom: 1.5rem;
 }
 
 .accordion-item.accordion-item--shipping::after {
@@ -492,7 +496,7 @@ body:not([class*=app-page-]) .site-main {
   letter-spacing: 1px;
   font-weight: 500;
   text-transform: uppercase;
-  color: rgba(0, 0, 0, 1);
+  color: rgb(0, 0, 0)!important;
   outline: 2px solid transparent;
   outline-offset: 2px;
   transition-property: all;
@@ -519,7 +523,22 @@ body:not([class*=app-page-]) .site-main {
   opacity: 1;
   height: auto;
 }
-
+.accordion-item-title {
+  padding-bottom: 0;
+}
+.accordion-item-description .wysiwyg {
+  padding-top: 1.5rem;
+}
+.accordion-item-title .heading {
+  flex: 1 1 0;
+  margin-right: 2rem;
+}
+.accordion-item-button-wrapper {
+  position: relative;
+  height: .75rem;
+  width: .75rem;
+  flex-shrink: 0;
+}
 .accordion-item-icon-open,
 .accordion-item-icon-close {
   position: absolute;

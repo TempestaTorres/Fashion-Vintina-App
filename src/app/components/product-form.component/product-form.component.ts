@@ -2,6 +2,7 @@ import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {ProductService} from '../../services/product-service';
 import {ProductType} from '../../product/product-type';
 import {AddToCart} from '../../services/add-to-cart';
+import {Observable, Subscription} from 'rxjs';
 
 @Component({
   selector: 'app-product-form',
@@ -10,7 +11,7 @@ import {AddToCart} from '../../services/add-to-cart';
   styleUrl: './product-form.component.css',
 })
 export class ProductFormComponent {
-  @Input({ required: true }) productType: string | undefined = undefined;
+  @Input({required: true}) productType: string | undefined = '';
   @Output() openSizeGuide = new EventEmitter<void>();
   @Output() addedToBag = new EventEmitter<void>();
 
@@ -19,30 +20,59 @@ export class ProductFormComponent {
   public processing: boolean = false;
   public btnDisabled: boolean = true;
 
-  constructor(private productService: ProductService,  private  cartService: AddToCart) { }
+  private observable: Observable<string>;
+  private subscription: Subscription | null = null;
+
+  constructor(private productService: ProductService,  private  cartService: AddToCart) {
+
+    this.observable = new Observable(subscriber => {
+      let timerId = setInterval(() => {
+        if (this.productType)
+          subscriber.next(this.productType);
+      }, 500);
+
+      return {
+        unsubscribe: () => {
+          clearInterval(timerId);
+        }
+      }
+    });
+  }
 
   ngOnInit() {
 
-    if (this.productType) {
-      this.product = this.productService.getProductByType(this.productType);
-    }
+    this.subscribe();
+
+  }
+
+  ngOnDestroy() {
+    this.subscription?.unsubscribe();
+  }
+
+  private subscribe(): void {
+    this.subscription = this.observable.subscribe(value => {
+
+      if (value.length > 0) {
+        this.product = this.productService.getProductByType(value);
+      }
+    });
   }
 
   public addToBag() {
-    this.processing = true;
 
     if (this.product) {
+      this.processing = true;
       this.product.quantity = 1;
       this.cartService.addToCart(this.product);
 
+      setTimeout(() => {
+        this.processing = false;
+        this.btnDisabled = true;
+        this.productType = '';
+        this.addedToBag.emit();
+
+      }, 2000);
     }
-
-    setTimeout(() => {
-      this.processing = false;
-      this.btnDisabled = true;
-      this.addedToBag.emit();
-
-    }, 2000);
   }
 
   public onSizeGuideClick(): void {

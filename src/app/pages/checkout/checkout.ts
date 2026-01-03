@@ -281,7 +281,7 @@ export class Checkout {
   private checkUserPhone(): void {
     this.phoneCodeDetected = false;
 
-    for (let i:number = 0; i <= this.phones.length; i++) {
+    for (let i:number = 0; i < this.phones.length; i++) {
       if (this.userPhone.includes(this.phones[i].code)) {
         this.currentPhoneFlag = this.phones[i].flag;
         this.phoneCodeDetected = true;
@@ -296,7 +296,7 @@ export class Checkout {
   private checkBillingUserPhone(): void {
     this.phoneBillingCodeDetected = false;
 
-    for (let i:number = 0; i <= this.phones.length; i++) {
+    for (let i:number = 0; i < this.phones.length; i++) {
       if (this.userBillingPhone.includes(this.phones[i].code)) {
         this.currentBillingPhoneFlag = this.phones[i].flag;
         this.phoneBillingCodeDetected = true;
@@ -310,7 +310,7 @@ export class Checkout {
   private checkRememberMeUserPhone(): void {
     this.phoneCodeDetected = false;
 
-    for (let i:number = 0; i <= this.phones.length; i++) {
+    for (let i:number = 0; i < this.phones.length; i++) {
       if (this.userRememberMePhone.includes(this.phones[i].code)) {
         this.currentPhoneFlag = this.phones[i].flag;
         this.phoneCodeDetected = true;

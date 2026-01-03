@@ -3,9 +3,13 @@ import {provideRouter, withInMemoryScrolling, withRouterConfig} from '@angular/r
 
 import { routes } from './app.routes';
 import {provideSweetAlert2} from '@sweetalert2/ngx-sweetalert2';
+import {HTTP_INTERCEPTORS, provideHttpClient, withInterceptorsFromDi} from '@angular/common/http';
+import {loggingInterceptor} from './interceptors/logging-interceptor';
 
 export const appConfig: ApplicationConfig = {
   providers: [
+    provideHttpClient(withInterceptorsFromDi(),),
+    {provide: HTTP_INTERCEPTORS, useClass: loggingInterceptor, multi: true},
     provideBrowserGlobalErrorListeners(),
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideSweetAlert2({

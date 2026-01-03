@@ -62,17 +62,19 @@ export class ModalComponent {
 
         console.log(this.offerFormGroup.value);
         this.offerFormGroup.reset();
-        this.bOpen = false;
+        this.onCancel();
       }
 
     }
   }
+
   public onCancel(): void {
 
     this.shutdown = true;
 
     setTimeout(() => {
       this.bOpen = false;
+      this.shutdown = false;
     }, 1000);
   }
 

@@ -1,3 +1,6 @@
+<app-modal-view-offer
+[opened]="viewOfferOpened"
+(close)="onViewOfferClosed()"></app-modal-view-offer>
 <!--Header-->
 <header class="app app-home app-header">
     <!-- Top header -->
@@ -15,7 +18,7 @@
             <div class="app-element app-element-top-header-button app-widget__width-auto app-widget app-widget-jkit_button">
               <div class="app-widget-container">
                 <div class="jeg-app-kit jkit-button icon-position-before">
-                  <a href="" class="jkit-button-wrapper">View Offer</a>
+                  <a class="ap-element-button jkit-button-wrapper" (click)="onViewOfferClick()">View Offer</a>
                 </div>
               </div>
             </div>

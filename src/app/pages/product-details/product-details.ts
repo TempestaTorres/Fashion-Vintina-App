@@ -14,6 +14,8 @@ import {InstagramFeeds} from '../../components/instagram-feeds/instagram-feeds';
 import {ModalInstagram} from '../../components/modal-instagram/modal-instagram';
 import {AddToCart} from '../../services/add-to-cart';
 import {SizeGuideModal} from '../../components/size-guide-modal/size-guide-modal';
+import {HttpClient} from '@angular/common/http';
+import {catchError, map, of, Subscription} from 'rxjs';
 
 declare var Swiper: any;
 
@@ -32,7 +34,7 @@ declare var Swiper: any;
     TitleCasePipe,
     RouterLink,
     CurrencyPipe,
-    SizeGuideModal
+    SizeGuideModal,
   ],
   templateUrl: './product-details.html',
   styleUrl: './product-details.css',
@@ -61,8 +63,11 @@ export class ProductDetails {
   public product: ProductType | undefined = undefined;
   public thumbnails: Array<string> = [];
 
+  private subscription: Subscription | null = null;
+
   constructor(private activatedRoute: ActivatedRoute, private productService: ProductService,
-              private scrollTotopService: ScrollTotopService, private router: Router, private  cartService: AddToCart) {
+              private scrollTotopService: ScrollTotopService, private router: Router, private  cartService: AddToCart,
+              private http: HttpClient) {
   }
 
   public ngOnInit() {
@@ -80,6 +85,7 @@ export class ProductDetails {
   }
 
   ngOnDestroy() {
+    this.subscription?.unsubscribe();
   }
 
   public toggleTab(tabIndex: number): void {
@@ -250,9 +256,12 @@ export class ProductDetails {
           this.swiper.destroy(true, false);
         }
 
-        this.product = this.productService.getProductByType(params['type']);
-
-        if (this.product) {
+        this.subscription = this.productService.getProduct(params['type'])
+        .subscribe(
+          {
+            next: (res) => {
+              this.product = res;
+              if (this.product) {
           if (this.product.thumbnail) {
             this.thumbnails = this.product.thumbnail;
 
@@ -262,8 +271,7 @@ export class ProductDetails {
               }, 500);
 
             }
-          }
-          else {
+          } else {
             this.thumbnails = [];
           }
           // Related products
@@ -274,9 +282,17 @@ export class ProductDetails {
           this.signalsloading = [false, false, false, false];
 
         }
+            },
+            error: (err) => {
+              console.log(err);
+            }
+          })
+        //this.product = this.productService.getProductByType(params['type']);
+
       }
     });
   }
+
   goToNextProduct(type: string): void {
     this.router.navigate(['/product/details', type], { relativeTo: null });
 
