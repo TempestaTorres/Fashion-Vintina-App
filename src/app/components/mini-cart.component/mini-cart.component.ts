@@ -1,10 +1,10 @@
-import {Component, EventEmitter, Input, Output} from '@angular/core';
+import {Component} from '@angular/core';
 import {ProductType} from '../../product/product-type';
 import {AddToCart} from '../../services/add-to-cart';
 import {ProductService} from '../../services/product-service';
 import {Router, RouterLink} from '@angular/router';
 import {CurrencyPipe} from '@angular/common';
-import {Observable, Subscription} from 'rxjs';
+import {Subscription} from 'rxjs';
 
 declare var Swiper: any;
 
@@ -18,82 +18,89 @@ declare var Swiper: any;
   styleUrls: ['./mini-cart.component.css'],
 })
 export class MiniCartComponent {
-  @Input({ required: true }) opened: boolean = false;
-  @Input() cartAdded: boolean = false;
-  @Output() miniCartClosed = new EventEmitter<void>();
+
+  public opened: boolean = false;
 
   public cartItems: ProductType[] = [];
   public totalSum: number = 0;
-  protected timerId: number = 0;
-
   public noticeActive: boolean = false;
 
   private swiper: any | null = null;
   private swiperInitialized: boolean = false;
 
-  private observable:Observable<boolean>;
   private subscription: Subscription | null = null;
+  private subscriptionOpen: Subscription | null = null;
 
   constructor(private  cartService: AddToCart, private productService: ProductService,
               private router: Router) {
 
-    this.observable = new Observable(observer => {
-
-      this.timerId = setInterval(() => {
-        observer.next(this.cartAdded);
-      }, 500);
-
-      return {
-        unsubscribe: () => {
-          clearInterval(this.timerId);
-        }
-      }
-    });
   }
 
   ngOnInit() {
 
-    this.cartItems = this.cartService.getCart();
     this.subscribeToCart();
-    //this.startTimer();
+
   }
 
   private subscribeToCart(): void {
-    this.subscription = this.observable.subscribe(value => {
+
+    this.subscription = this.cartService.itemAdded.subscribe(value => {
 
       if (value) {
-        this.subscription?.unsubscribe();
+        this.cartService.resetNewItemAdded();
+
         this.cartItems = this.cartService.getCart();
         this.setCartSubTotalAmount();
         this.noticeActive = true;
 
+        if (this.swiperInitialized) {
+          this.swiper.destroy(true, false);
+        }
+
         setTimeout(() => {
           this.swInit();
-        }, 1000);
+        }, 500);
       }
     });
+
+    this.subscriptionOpen = this.cartService.showCart.subscribe(value => {
+
+      if (value) {
+        this.cartService.closeCart();
+
+        this.cartItems = this.cartService.getCart();
+        this.setCartSubTotalAmount();
+        this.noticeActive = true;
+
+        if (this.swiperInitialized) {
+          this.swiper.destroy(true, false);
+        }
+
+        setTimeout(() => {
+          this.swInit();
+          this.opened = true;
+        }, 500);
+      }
+    });
+
   }
   ngOnDestroy() {
-
     this.subscription?.unsubscribe();
-    //this.stopTimer();
+    this.subscriptionOpen?.unsubscribe();
   }
 
   public close(): void {
 
-    if (this.swiperInitialized) {
-      this.swiper.destroy(true, false);
-    }
-    this.subscribeToCart();
-    //this.startTimer();
-    this.miniCartClosed.emit();
-
+    this.opened = false;
   }
 
   public onSubmit(e: SubmitEvent): void {
     e.preventDefault();
-    this.router.navigate(['/checkout']).then();
+    this.opened = false;
 
+    setTimeout(() => {
+      this.router.navigate(['/checkout']).then();
+    }, 500);
   }
 
   public counterClicked(product: ProductType, increment: number): void {
@@ -143,29 +150,8 @@ export class MiniCartComponent {
     product.favorite = !product.favorite;
   }
 
-  private miniCartObserver(): void {
-
-    if (this.cartAdded) {
-      this.cartItems = this.cartService.getCart();
-      this.setCartSubTotalAmount();
-      this.stopTimer();
-      this.noticeActive = true;
-
-      setTimeout(() => {
-        this.swInit();
-      }, 1000);
-    }
-  }
-
   public isLastItem(item: ProductType): boolean {
     return item.quantity === 1;
-  }
-
-  private startTimer(): void {
-    this.timerId = setInterval(this.miniCartObserver.bind(this), 500);
-  }
-  private stopTimer(): void {
-    clearInterval(this.timerId);
   }
 
   private swInit(): void {

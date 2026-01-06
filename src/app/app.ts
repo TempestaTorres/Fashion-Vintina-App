@@ -4,10 +4,11 @@ import {HeaderComponent} from './components/header.component/header.component';
 import {FooterComponent} from './components/footer.component/footer.component';
 import {ModalComponent} from './components/modal.component/modal.component';
 import {CookieConsent} from './components/cookie-consent/cookie-consent';
+import {MiniCartComponent} from './components/mini-cart.component/mini-cart.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, HeaderComponent, FooterComponent, ModalComponent, CookieConsent],
+  imports: [RouterOutlet, HeaderComponent, FooterComponent, ModalComponent, CookieConsent, MiniCartComponent],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

@@ -272,8 +272,7 @@
                       </section>
                       <!-- Product form -->
                       <app-product-form [productType]="product?.type"
-                                        (openSizeGuide)="onOpenSizeGuideClick()"
-                                        (addedToBag)="addToBag()"></app-product-form>
+                                        (openSizeGuide)="onOpenSizeGuideClick()"></app-product-form>
                     </div>
                   </div>
                   <!-- Additional Info -->
@@ -580,11 +579,6 @@
     (openSizeGuide)="onOpenSizeGuideClick()"
   [opened]="findInStoreOpened"
   [productType]="product?.type"></app-find-in-store>
-  <!--  Mini cart -->
-  <app-mini-cart
-  [opened]="miniCartOpened"
-  [cartAdded]="miniCartAdded"
-  (miniCartClosed)="closeModalMiniCart()"></app-mini-cart>
   <!--  Instagram Feeds -->
   <app-instagram-feeds (timelineClicked)="onInstagramTimelineClick($event)"></app-instagram-feeds>
 

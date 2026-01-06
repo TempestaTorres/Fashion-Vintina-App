@@ -15,7 +15,7 @@ import {ModalInstagram} from '../../components/modal-instagram/modal-instagram';
 import {AddToCart} from '../../services/add-to-cart';
 import {SizeGuideModal} from '../../components/size-guide-modal/size-guide-modal';
 import {HttpClient} from '@angular/common/http';
-import {catchError, map, of, Subscription} from 'rxjs';
+import {Subscription} from 'rxjs';
 
 declare var Swiper: any;
 
@@ -28,7 +28,6 @@ declare var Swiper: any;
     ModalPayLaterComponent,
     FindInStoreComponent,
     ProductFormComponent,
-    MiniCartComponent,
     InstagramFeeds,
     ModalInstagram,
     TitleCasePipe,
@@ -46,8 +45,6 @@ export class ProductDetails {
   public payLaterOpened: boolean = false;
   public findInStoreOpened: boolean = false;
   public sizeGuidOpened: boolean = false;
-  public miniCartOpened: boolean = false;
-  public miniCartAdded: boolean = false;
   public  tmLineIndex: number = -1;
   private swiper: any;
   private swInitialized: boolean = false;
@@ -123,10 +120,6 @@ export class ProductDetails {
   public closeModalSizeGuide(): void {
     this.sizeGuidOpened = false;
   }
-  public closeModalMiniCart(): void {
-    this.miniCartOpened = false;
-    this.miniCartAdded = false;
-  }
 
   public closeModalInstagram(): void {
     this.tmLineIndex = -1;
@@ -134,16 +127,6 @@ export class ProductDetails {
 
   public onOpenSizeGuideClick(): void {
     this.sizeGuidOpened = true;
-  }
-
-  public addToBag(): void {
-
-    this.miniCartAdded = true;
-
-    setTimeout(() => {
-      this.miniCartOpened = true;
-      this.miniCartAdded = false;
-    }, 500);
   }
 
   public onInstagramTimelineClick(index: number): void {
@@ -244,8 +227,6 @@ export class ProductDetails {
         this.payLaterOpened = false;
         this.findInStoreOpened = false;
         this.sizeGuidOpened = false;
-        this.miniCartOpened = false;
-        this.miniCartAdded = false;
         this.tmLineIndex = -1;
 
         // Tabs

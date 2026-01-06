@@ -13,7 +13,6 @@ import {Observable, Subscription} from 'rxjs';
 export class ProductFormComponent {
   @Input({required: true}) productType: string | undefined = '';
   @Output() openSizeGuide = new EventEmitter<void>();
-  @Output() addedToBag = new EventEmitter<void>();
 
   public product: ProductType | undefined = undefined;
   public error:boolean = false;
@@ -88,7 +87,6 @@ export class ProductFormComponent {
     if (this.product) {
       this.processing = true;
       this.product.quantity = 1;
-      this.cartService.addToCart(this.product);
       this.error = false;
 
       setTimeout(() => {
@@ -96,7 +94,9 @@ export class ProductFormComponent {
         this.btnDisabled = true;
         this.productType = '';
         this.reset = false;
-        this.addedToBag.emit();
+
+        if (this.product)
+          this.cartService.addToCart(this.product);
 
       }, 2000);
     }

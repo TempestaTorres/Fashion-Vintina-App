@@ -1,0 +1,99 @@
+.mini-cart-trigger {
+  position: absolute;
+  top: 8px;
+  right: 7.5%;
+  appearance: button;
+  background-color: transparent!important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+}
+.cart-count-icon-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 34px;
+  width: 34px;
+  padding: 8px;
+}
+.cart-count-icon-wrapper svg {
+  display: block;
+  height: 18px;
+  width: 18px;
+  transition-duration: 0.3s;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.25, 1, 0.5, 1);
+  fill: none;
+}
+.cart-count-number {
+  position: absolute;
+  left: 16px;
+  bottom: 3px;
+  top: 18px;
+  right: 4px;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(114, 9, 23);
+  color: white;
+  font-size: 9px;
+  line-height: 1;
+  font-weight: 500;
+}
+.cart-count-icon-wrapper svg:nth-child(2) {
+  display: none;
+}
+.cart-count-icon-wrapper .cart-count-number {
+  display: none;
+}
+.cart-count-icon-wrapper.has-items svg:nth-child(1) {
+  display: none;
+}
+.cart-count-icon-wrapper.has-items svg:nth-child(2) {
+  display: block;
+}
+.cart-count-icon-wrapper.has-items .cart-count-number {
+  display: flex;
+}
+@media screen and (max-width: 1024px) {
+  .mini-cart-trigger {
+    right: 5%;
+  }
+}
+@media screen and ( max-width: 768px) {
+  .mini-cart-trigger {
+    top:6px;
+  }
+}
+@media screen and ( max-width: 580px) {
+  .mini-cart-trigger {
+    right: 10%;
+    top: 3px;
+  }
+  .cart-count-icon-wrapper {
+    height: 30px;
+    width: 30px;
+  }
+  .cart-count-icon-wrapper svg {
+    height: 14px;
+    width: 14px;
+  }
+  .cart-count-number {
+    left: 14px;
+    bottom: 3px;
+    top: 16px;
+    right: 4px;
+    width: 12px;
+    height: 12px;
+    font-size: 8px;
+  }
+}
+@media screen and ( max-width: 375px) {
+  .mini-cart-trigger {
+    top:0;
+    right: 15%;
+  }
+}

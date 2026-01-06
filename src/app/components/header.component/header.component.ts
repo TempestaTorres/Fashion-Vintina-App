@@ -3,6 +3,7 @@ import {DidOpenEvent, SwalComponent, SwalDirective, SwalPortalTargets} from '@sw
 import {SidebarComponent} from '../sidebar.component/sidebar.component';
 import {Router, RouterLink, RouterLinkActive} from '@angular/router';
 import {ModalViewOffer} from '../modal-view-offer/modal-view-offer';
+import {CartIndicator} from '../cart-indicator/cart-indicator';
 
 @Component({
   selector: 'app-header',
@@ -12,7 +13,8 @@ import {ModalViewOffer} from '../modal-view-offer/modal-view-offer';
     SidebarComponent,
     RouterLink,
     RouterLinkActive,
-    ModalViewOffer
+    ModalViewOffer,
+    CartIndicator
   ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css',
