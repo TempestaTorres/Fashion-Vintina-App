@@ -59,8 +59,6 @@ export class ModalComponent {
 
       if (this.offerFormGroup.valid) {
 
-
-        console.log(this.offerFormGroup.value);
         this.offerFormGroup.reset();
         this.onCancel();
       }
@@ -105,6 +103,7 @@ export class ModalComponent {
     setTimeout(() => {
       this.bOpen = false;
       this.shutdown = false;
+      this.closed = false;
       this.router.navigate(['/privacy-policy']).then();
     }, 1000);
   }
@@ -114,6 +113,7 @@ export class ModalComponent {
     setTimeout(() => {
       this.bOpen = false;
       this.shutdown = false;
+      this.closed = false;
       this.router.navigate(['/terms-conditions']).then();
     }, 1000);
   }
