@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Angula-Vinita-Project": {
+    "Angular-Vinita-Project": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,6 +13,7 @@
         "build": {
           "builder": "@angular/build:application",
           "options": {
+            "outputPath": "dist/",
             "browser": "src/main.ts",
             "polyfills": [
               "zone.js"
@@ -74,10 +75,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "Angula-Vinita-Project:build:production"
+              "buildTarget": "Angular-Vinita-Project:build:production"
             },
             "development": {
-              "buildTarget": "Angula-Vinita-Project:build:development"
+              "buildTarget": "Angular-Vinita-Project:build:development"
             }
           },
           "defaultConfiguration": "development"
