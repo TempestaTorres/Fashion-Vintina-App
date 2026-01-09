@@ -3,7 +3,7 @@
 }
 .app-home .app-element.app-element-ventina-hero:not(.app-motion-effects-element-type-background),
 .app-home .app-element.app-element-ventina-hero > .app-motion-effects-container > .app-motion-effects-layer {
-  background-image: url("/assets/images/beautiful-seductive-woman-in-sexy-lingerie-posing-at-bed.jpg");
+  background-image: url("assets/images/beautiful-seductive-woman-in-sexy-lingerie-posing-at-bed.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
